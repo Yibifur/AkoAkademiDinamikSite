@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\backend\\akoakademidinamiksite.dataaccesslayer\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|solutionrelative:backend\\akoakademidinamiksite.dataaccesslayer\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\backend\\akoakademidinamiksite.dataaccesslayer\\entityframework\\efcontentdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|solutionrelative:backend\\akoakademidinamiksite.dataaccesslayer\\entityframework\\efcontentdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\backend\\akoakademidinamiksite.dataaccesslayer\\concrete\\akocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|solutionrelative:backend\\akoakademidinamiksite.dataaccesslayer\\concrete\\akocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2739C2E-429A-4C89-AB1E-87730921A4D9}|Backend\\AkoAkademiDinamikSite.WebApi\\AkoAkademiDinamikSite.WebApi.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\backend\\akoakademidinamiksite.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2739C2E-429A-4C89-AB1E-87730921A4D9}|Backend\\AkoAkademiDinamikSite.WebApi\\AkoAkademiDinamikSite.WebApi.csproj|solutionrelative:backend\\akoakademidinamiksite.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,62 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EfContentDal.cs",
-              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\EntityFramework\\EfContentDal.cs",
-              "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\EntityFramework\\EfContentDal.cs",
-              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\EntityFramework\\EfContentDal.cs",
-              "RelativeToolTip": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\EntityFramework\\EfContentDal.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T05:40:29.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T05:39:53.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.WebApi\\Program.cs",
-              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.WebApi\\Program.cs",
-              "RelativeToolTip": "Backend\\AkoAkademiDinamikSite.WebApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T14:49:20.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AkoContext.cs",
-              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Concrete\\AkoContext.cs",
-              "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Concrete\\AkoContext.cs",
-              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Concrete\\AkoContext.cs",
-              "RelativeToolTip": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Concrete\\AkoContext.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAIwBMAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T14:50:35.414Z",
-              "EditorCaption": ""
             }
           ]
         },

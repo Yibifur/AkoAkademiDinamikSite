@@ -1,8 +1,10 @@
 ﻿using AkoAkademiDinamikSite.BusinessLayer.Abstract;
+using AkoAkademiDinamikSite.DataAccessLayer.Concrete;
 using AkoAkademiDinamikSite.DtoLayer.Dtos.PageDtos;
 using AkoAkademiDinamikSite.EntityLayer.ReelConcrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AkoAkademiDinamikSite.WebApi.Controllers
 {
@@ -11,15 +13,18 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
     public class PagesController : ControllerBase
     {
         private readonly IPageService pageService;
+        private readonly AkoContext context;
 
-        public PagesController(IPageService pageService)
+        public PagesController(IPageService pageService, AkoContext context)
         {
             this.pageService = pageService;
+            this.context = context;
         }
         [HttpGet]
         public IActionResult GetAllPages() {
 
-            var entities = pageService.TGetAll();
+            var entities = context.Pages.Include(p=>p.Content).ToList();
+           // var entities = pageService.TGetAll();
             return Ok(entities);
         
         }
@@ -36,7 +41,7 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
         {
             Page page = new Page()
             {
-                ParentPageId = model.ParentPageId,
+                
                 ContentId = model.ContentId,
                 MenuOrder = model.MenuOrder
             };
@@ -51,7 +56,7 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
             Page page = new Page()
             {
                 PageId = model.PageId,
-                ParentPageId = model.ParentPageId,
+                
                 ContentId = model.ContentId,
                 MenuOrder = model.MenuOrder
             };

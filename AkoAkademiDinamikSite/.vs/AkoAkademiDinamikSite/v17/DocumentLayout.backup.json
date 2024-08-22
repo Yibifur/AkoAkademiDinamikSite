@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\backend\\akoakademidinamiksite.dataaccesslayer\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|solutionrelative:backend\\akoakademidinamiksite.dataaccesslayer\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\views\\adminlayout\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\views\\adminlayout\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\backend\\akoakademidinamiksite.dataaccesslayer\\entityframework\\efcontentdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|solutionrelative:backend\\akoakademidinamiksite.dataaccesslayer\\entityframework\\efcontentdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\backend\\akoakademidinamiksite.dataaccesslayer\\concrete\\akocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}|Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj|solutionrelative:backend\\akoakademidinamiksite.dataaccesslayer\\concrete\\akocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\viewcomponents\\default\\_headpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\viewcomponents\\default\\_headpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2739C2E-429A-4C89-AB1E-87730921A4D9}|Backend\\AkoAkademiDinamikSite.WebApi\\AkoAkademiDinamikSite.WebApi.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\backend\\akoakademidinamiksite.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2739C2E-429A-4C89-AB1E-87730921A4D9}|Backend\\AkoAkademiDinamikSite.WebApi\\AkoAkademiDinamikSite.WebApi.csproj|solutionrelative:backend\\akoakademidinamiksite.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\views\\test\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\views\\test\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\controllers\\adminlayoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\controllers\\adminlayoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\views\\article\\updatecontent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\views\\article\\updatecontent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\views\\article\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\views\\article\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\views\\article\\addcontent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\views\\article\\addcontent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,53 +54,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EfContentDal.cs",
-              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\EntityFramework\\EfContentDal.cs",
-              "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\EntityFramework\\EfContentDal.cs",
-              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\EntityFramework\\EfContentDal.cs",
-              "RelativeToolTip": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\EntityFramework\\EfContentDal.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T05:40:29.443Z",
+              "DocumentIndex": 0,
+              "Title": "_Adminlayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\AdminLayout\\_Adminlayout.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\AdminLayout\\_Adminlayout.cshtml",
+              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\AdminLayout\\_Adminlayout.cshtml",
+              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\AdminLayout\\_Adminlayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T12:28:11.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "AdminLayoutController.cs",
+              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\AdminLayoutController.cs",
+              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\AdminLayoutController.cs",
+              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\AdminLayoutController.cs",
+              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\AdminLayoutController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T05:39:53.639Z",
+              "WhenOpened": "2024-08-22T12:11:58.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Test\\Index.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Test\\Index.cshtml",
+              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Test\\Index.cshtml",
+              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Test\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T12:01:38.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.WebApi\\Program.cs",
-              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.WebApi\\Program.cs",
-              "RelativeToolTip": "Backend\\AkoAkademiDinamikSite.WebApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Title": "TestController.cs",
+              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\TestController.cs",
+              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\TestController.cs",
+              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\TestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T14:49:20.443Z"
+              "WhenOpened": "2024-08-22T11:56:33.93Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AkoContext.cs",
-              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Concrete\\AkoContext.cs",
-              "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Concrete\\AkoContext.cs",
-              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Concrete\\AkoContext.cs",
-              "RelativeToolTip": "Backend\\AkoAkademiDinamikSite.DataAccessLayer\\Concrete\\AkoContext.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAIwBMAAAAsAAAAAAAAAA==",
+              "Title": "_HeadPartial.cs",
+              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\ViewComponents\\Default\\_HeadPartial.cs",
+              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\ViewComponents\\Default\\_HeadPartial.cs",
+              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\ViewComponents\\Default\\_HeadPartial.cs",
+              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\ViewComponents\\Default\\_HeadPartial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T14:50:35.414Z",
+              "WhenOpened": "2024-08-22T11:38:40.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T11:37:48.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateContent.cshtml",
+              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\UpdateContent.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\UpdateContent.cshtml",
+              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\UpdateContent.cshtml",
+              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\UpdateContent.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T11:28:22.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\Index.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\Index.cshtml",
+              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\Index.cshtml",
+              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAApwB0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T11:27:53.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddContent.cshtml",
+              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\AddContent.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\AddContent.cshtml",
+              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\AddContent.cshtml",
+              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Article\\AddContent.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T11:27:45.972Z",
               "EditorCaption": ""
             }
           ]

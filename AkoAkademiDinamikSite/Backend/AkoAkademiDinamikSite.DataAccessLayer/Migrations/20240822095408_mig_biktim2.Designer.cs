@@ -4,6 +4,7 @@ using AkoAkademiDinamikSite.DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
 {
     [DbContext(typeof(AkoContext))]
-    partial class AkoContextModelSnapshot : ModelSnapshot
+    [Migration("20240822095408_mig_biktim2")]
+    partial class mig_biktim2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,6 +41,9 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
 
                     b.Property<bool>("IsPublished")
                         .HasColumnType("bit");
+
+                    b.Property<int>("PageId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Slug")
                         .IsRequired()
@@ -107,10 +112,15 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Page", b =>
                 {
                     b.HasOne("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Content", "Content")
-                        .WithMany()
+                        .WithMany("Pages")
                         .HasForeignKey("ContentId");
 
                     b.Navigation("Content");
+                });
+
+            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Content", b =>
+                {
+                    b.Navigation("Pages");
                 });
 #pragma warning restore 612, 618
         }

@@ -3,7 +3,7 @@
     public class UpdateContentViewModel
     {
         public int ContentId { get; set; } // Primary Key
-        public int PageId { get; set; }
+        
         public string Title { get; set; } // Sayfa başlığı
         public string Slug { get; set; } // SEO dostu URL
         public string Body { get; set; } // Sayfa içeriği

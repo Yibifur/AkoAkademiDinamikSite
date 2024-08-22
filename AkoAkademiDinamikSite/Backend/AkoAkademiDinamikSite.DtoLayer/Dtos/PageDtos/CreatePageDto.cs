@@ -9,8 +9,8 @@ namespace AkoAkademiDinamikSite.DtoLayer.Dtos.PageDtos
     public class CreatePageDto
     {
        
-        public int? ParentPageId { get; set; } // Parent sayfa ile ilişki
-        public int ContentId { get; set; } // İçerik ile ilişki
+        //public int? ParentPageId { get; set; } // Parent sayfa ile ilişki
+        public int? ContentId { get; set; } // İçerik ile ilişki
         public int MenuOrder { get; set; } // Menü sırası
     }
 }

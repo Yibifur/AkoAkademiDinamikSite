@@ -1,5 +1,6 @@
 ﻿using AkoAkademiDinamikSite.EntityLayer.ReelConcrete;
 using AkoAkademiDinamikSite.WebUI.Dtos.ContentDtos;
+using AkoAkademiDinamikSite.WebUI.Models.Page;
 using AutoMapper;
 
 namespace AkoAkademiDinamikSite.WebUI.Mapping
@@ -10,6 +11,9 @@ namespace AkoAkademiDinamikSite.WebUI.Mapping
         {
             //Service mapping
             CreateMap<ResultContentDto, Content>().ReverseMap();
+            CreateMap<UpdatePageViewModel, Page>().ReverseMap();
+            CreateMap<PageViewModel, Page>().ReverseMap();
+            CreateMap<AddPageViewModel, Page>().ReverseMap();
             //CreateMap<UpdateServiceDto, Service>().ReverseMap();
             //CreateMap<CreateServiceDto, Service>().ReverseMap();
             //Register mapping
