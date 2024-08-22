@@ -1,0 +1,27 @@
+﻿
+@model List<PageViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang='tr'>
+
+    
+    @foreach (var item in Model)
+    {
+        <head>
+        @Html.Raw(item.Content.Template)
+        </head>
+        <body>
+        @item.Content.Title
+        <br />
+        @Html.Raw(item.Content.Body)
+
+        </body>
+        
+    }
+   
+
+
+
+</html>

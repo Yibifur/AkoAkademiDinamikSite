@@ -7,15 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{DD0C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{23370949-E3B7-4C05-AD10-DA80354EFCE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkoAkademiDinamikSite.BusinessLayer", "Backend\AkoAkademiDinamikSite.BusinessLayer\AkoAkademiDinamikSite.BusinessLayer.csproj", "{E195164D-9D18-4E92-9830-FDC0E03BBAE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkoAkademiDinamikSite.BusinessLayer", "Backend\AkoAkademiDinamikSite.BusinessLayer\AkoAkademiDinamikSite.BusinessLayer.csproj", "{E195164D-9D18-4E92-9830-FDC0E03BBAE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkoAkademiDinamikSite.DataAccessLayer", "Backend\AkoAkademiDinamikSite.DataAccessLayer\AkoAkademiDinamikSite.DataAccessLayer.csproj", "{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkoAkademiDinamikSite.DataAccessLayer", "Backend\AkoAkademiDinamikSite.DataAccessLayer\AkoAkademiDinamikSite.DataAccessLayer.csproj", "{C1F74D2F-10F2-4735-BFAB-0FBD72B098EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkoAkademiDinamikSite.DtoLayer", "Backend\AkoAkademiDinamikSite.DtoLayer\AkoAkademiDinamikSite.DtoLayer.csproj", "{A37CA333-82CF-4A3A-8406-9DC6E5B64B57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkoAkademiDinamikSite.DtoLayer", "Backend\AkoAkademiDinamikSite.DtoLayer\AkoAkademiDinamikSite.DtoLayer.csproj", "{A37CA333-82CF-4A3A-8406-9DC6E5B64B57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkoAkademiDinamikSite.EntityLayer", "Backend\AkoAkademiDinamikSite.EntityLayer\AkoAkademiDinamikSite.EntityLayer.csproj", "{EAE374B4-B649-4BF8-A6B2-F36D1681809E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkoAkademiDinamikSite.EntityLayer", "Backend\AkoAkademiDinamikSite.EntityLayer\AkoAkademiDinamikSite.EntityLayer.csproj", "{EAE374B4-B649-4BF8-A6B2-F36D1681809E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkoAkademiDinamikSite.WebApi", "Backend\AkoAkademiDinamikSite.WebApi\AkoAkademiDinamikSite.WebApi.csproj", "{F2739C2E-429A-4C89-AB1E-87730921A4D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkoAkademiDinamikSite.WebApi", "Backend\AkoAkademiDinamikSite.WebApi\AkoAkademiDinamikSite.WebApi.csproj", "{F2739C2E-429A-4C89-AB1E-87730921A4D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkoAkademiDinamikSite.WebUI", "Frontend\AkoAkademiDinamikSite.WebUI\AkoAkademiDinamikSite.WebUI.csproj", "{046375A6-E004-4ECF-86CF-37E1C8162FD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{F2739C2E-429A-4C89-AB1E-87730921A4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2739C2E-429A-4C89-AB1E-87730921A4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2739C2E-429A-4C89-AB1E-87730921A4D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{046375A6-E004-4ECF-86CF-37E1C8162FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{046375A6-E004-4ECF-86CF-37E1C8162FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{046375A6-E004-4ECF-86CF-37E1C8162FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{046375A6-E004-4ECF-86CF-37E1C8162FD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{A37CA333-82CF-4A3A-8406-9DC6E5B64B57} = {DD0C8456-737F-46E9-B1F6-F4E8D99AF585}
 		{EAE374B4-B649-4BF8-A6B2-F36D1681809E} = {DD0C8456-737F-46E9-B1F6-F4E8D99AF585}
 		{F2739C2E-429A-4C89-AB1E-87730921A4D9} = {DD0C8456-737F-46E9-B1F6-F4E8D99AF585}
+		{046375A6-E004-4ECF-86CF-37E1C8162FD2} = {23370949-E3B7-4C05-AD10-DA80354EFCE4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FC2271C4-5BBA-4626-B745-FDD7367811E8}

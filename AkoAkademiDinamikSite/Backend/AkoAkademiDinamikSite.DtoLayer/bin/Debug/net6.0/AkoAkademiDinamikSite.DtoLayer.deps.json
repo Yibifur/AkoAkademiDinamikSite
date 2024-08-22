@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AkoAkademiDinamikSite.DtoLayer/1.0.0": {
+        "dependencies": {
+          "AkoAkademiDinamikSite.EntityLayer": "1.0.0"
+        },
+        "runtime": {
+          "AkoAkademiDinamikSite.DtoLayer.dll": {}
+        }
+      },
+      "AkoAkademiDinamikSite.EntityLayer/1.0.0": {
+        "runtime": {
+          "AkoAkademiDinamikSite.EntityLayer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AkoAkademiDinamikSite.DtoLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AkoAkademiDinamikSite.EntityLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

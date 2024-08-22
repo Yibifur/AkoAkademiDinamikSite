@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "AkoAkademiDinamikSite.EntityLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/AkoAkademiDinamikSite.EntityLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AkoAkademiDinamikSite.EntityLayer.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AkoAkademiDinamikSite.EntityLayer/1.0.0": {
+      "type": "project",
+      "path": "../AkoAkademiDinamikSite.EntityLayer/AkoAkademiDinamikSite.EntityLayer.csproj",
+      "msbuildProject": "../AkoAkademiDinamikSite.EntityLayer/AkoAkademiDinamikSite.EntityLayer.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "AkoAkademiDinamikSite.EntityLayer >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\yibif\\.nuget\\packages\\": {}
@@ -34,7 +53,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.EntityLayer\\AkoAkademiDinamikSite.EntityLayer.csproj": {
+              "projectPath": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.EntityLayer\\AkoAkademiDinamikSite.EntityLayer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

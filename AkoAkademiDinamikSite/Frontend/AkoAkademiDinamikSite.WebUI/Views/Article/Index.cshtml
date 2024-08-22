@@ -1,0 +1,55 @@
+﻿@model List<ContentViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+}
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed; /* Tablonun genişliğini sabitler */
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        max-height: 100px; /* Hücre maksimum yüksekliği */
+        overflow: hidden; /* Taşan içeriği gizler */
+        text-overflow: ellipsis; /* Taşan içeriği ... ile gösterir */
+        white-space: nowrap; /* Metni tek satırda tutar */
+        vertical-align: top; /* İçeriği üstte hizalar */
+    }
+
+    th {
+        background-color: #f2f2f2;
+        text-align: left;
+    }
+</style>
+<table class="table table-bordered">
+    <tr>
+       <th>#</th>
+       <th>Page ID</th>
+       <th>Title</th>
+       <th>Slug</th>
+        <th>Body</th>
+        <th>Template</th>
+       <th>Delete</th>
+       <th>Update</th>
+       <th>Details</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.PageId</td>
+            <td>@item.ContentId</td>
+            <td>@item.Title</td>
+            <td>@item.Slug</td>
+            <td>@item.Body</td>
+            <td>@item.Template</td>
+            <td><a href="/Article/DeleteContent/@item.ContentId" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Article/UpdateContent/@item.ContentId" class="btn btn-success">Update</a></td>
+            <td><a href="#" class="btn btn-Dark">Details</a></td>
+        </tr>
+    }
+</table>
+<a href="/Article/AddContent" class="btn btn-info">New Content Entry</a>

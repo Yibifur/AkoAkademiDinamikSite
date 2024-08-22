@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AkoAkademiDinamikSite.DataAccessLayer\AkoAkademiDinamikSite.DataAccessLayer.csproj" />
+  </ItemGroup>
+
 </Project>

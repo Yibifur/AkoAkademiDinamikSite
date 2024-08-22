@@ -1,0 +1,29 @@
+﻿@model UpdateContentViewModel
+@{
+    ViewData["Title"] = "UpdateContent";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="ContentId"  />
+    <label>Page ID</label>
+    <input type="text" asp-for="PageId" class="form-control" />
+    <label>Title</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <label>Slug</label>
+    <input type="text" asp-for="Slug" class="form-control" />
+    <label>Body</label>
+    <input type="text" asp-for="Body" class="form-control" />
+    <label>Template</label>
+    <input type="text" asp-for="Template" class="form-control" />
+    <label>Created Date</label>
+    <input type="datetime" asp-for="CreatedDate" class="form-control" />
+    <label>Updated Date</label>
+    <input type="datetime" asp-for="UpdatedDate" class="form-control" />
+    <label>Is Published</label>
+    <input type="checkbox" asp-for="IsPublished" class="form-control" />
+    <button class="btn btn-outline-success">Update Content</button>
+
+
+</form>
+

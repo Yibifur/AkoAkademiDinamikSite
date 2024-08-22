@@ -1,0 +1,111 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AkoAkademiDinamikSite.WebUI
+build_property.RootNamespace = AkoAkademiDinamikSite.WebUI
+build_property.ProjectDir = C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Frontend\AkoAkademiDinamikSite.WebUI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Frontend\AkoAkademiDinamikSite.WebUI
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/AdminLayout/FooterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcRm9vdGVyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/AdminLayout/HeaderPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcSGVhZGVyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/AdminLayout/HeadPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcSGVhZFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/AdminLayout/NavheaderPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcTmF2aGVhZGVyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/AdminLayout/PreloaderPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcUHJlbG9hZGVyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/AdminLayout/ScriptPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcU2NyaXB0UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/AdminLayout/SidebarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcU2lkZWJhclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/AdminLayout/_Adminlayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcX0FkbWlubGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Article/AddContent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxBZGRDb250ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Article/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Article/UpdateContent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxVcGRhdGVDb250ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Default/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Page/AddPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxBZGRQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Page/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Page/UpdatePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxVcGRhdGVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Test/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yibif/Documents/GitHub/AkoAkademiDinamikSite/AkoAkademiDinamikSite/Frontend/AkoAkademiDinamikSite.WebUI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4y05la17cs

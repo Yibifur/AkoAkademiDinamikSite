@@ -1,0 +1,19 @@
+﻿@model AddPageViewModel
+@{
+    ViewData["Title"] = "AddPage";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+}
+
+<form method="post">
+
+    <label>Parent Page ID</label>
+    <input type="text" asp-for="ParentPageId" class="form-control" />
+    <label>Content ID</label>
+    <input type="text" asp-for="ContentId" class="form-control" />
+    <label>Menu Order</label>
+    <input type="text" asp-for="MenuOrder" class="form-control" />
+ 
+    <button class="btn btn-primary">Add Content</button>
+
+
+</form>

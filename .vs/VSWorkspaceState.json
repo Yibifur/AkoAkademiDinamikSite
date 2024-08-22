@@ -1,4 +1,11 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\AkoAkademiDinamikSite",
+    "\\AkoAkademiDinamikSite\\Backend",
+    "\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.EntityLayer",
+    "\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.EntityLayer\\Concrete"
+  ],
+  "SelectedNode": "\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.EntityLayer\\Concrete\\NewsAndBlogsPart.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,12 @@
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\bin\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.deps.json
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\bin\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.dll
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\bin\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.pdb
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.AssemblyInfoInputs.cache
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.AssemblyInfo.cs
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.sourcelink.json
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.dll
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\obj\Debug\net6.0\refint\AkoAkademiDinamikSite.EntityLayer.dll
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.pdb
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.EntityLayer\obj\Debug\net6.0\ref\AkoAkademiDinamikSite.EntityLayer.dll

@@ -1,0 +1,19 @@
+﻿@model UpdatePageViewModel
+@{
+    ViewData["Title"] = "UpdatePage";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="PageId" />
+    <label>Parent Page ID</label>
+    <input type="text" asp-for="ParentPageId" class="form-control" />
+    <label>Content ID</label>
+    <input type="text" asp-for="ContentId" class="form-control" />
+    <label>Menu Order</label>
+    <input type="text" asp-for="MenuOrder" class="form-control" />
+    <button class="btn btn-outline-success">Update Page</button>
+
+
+</form>
+

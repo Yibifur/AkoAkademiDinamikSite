@@ -1,0 +1,16 @@
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\bin\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.deps.json
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\bin\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.dll
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\bin\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.pdb
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\bin\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.dll
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\bin\Debug\net6.0\AkoAkademiDinamikSite.EntityLayer.pdb
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.csproj.AssemblyReference.cache
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.AssemblyInfoInputs.cache
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.AssemblyInfo.cs
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.csproj.CoreCompileInputs.cache
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.sourcelink.json
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\AkoAkade.A9A4E30C.Up2Date
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.dll
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\refint\AkoAkademiDinamikSite.DtoLayer.dll
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\AkoAkademiDinamikSite.DtoLayer.pdb
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.DtoLayer\obj\Debug\net6.0\ref\AkoAkademiDinamikSite.DtoLayer.dll

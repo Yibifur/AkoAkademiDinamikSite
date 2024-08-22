@@ -1,0 +1,224 @@
+[
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.ContentsController",
+    "Method": "GetAllContents",
+    "RelativePath": "api/Contents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.ContentsController",
+    "Method": "CreateContent",
+    "RelativePath": "api/Contents",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.ContentDtos.CreateContentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.ContentsController",
+    "Method": "UpdateContent",
+    "RelativePath": "api/Contents",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.ContentDtos.UpdateContentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.ContentsController",
+    "Method": "DeleteContent",
+    "RelativePath": "api/Contents",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.ContentsController",
+    "Method": "GetContentById",
+    "RelativePath": "api/Contents/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.MediasController",
+    "Method": "GetAllMedias",
+    "RelativePath": "api/Medias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.MediasController",
+    "Method": "CreateMedia",
+    "RelativePath": "api/Medias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.MediaDtos.CreateMediaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.MediasController",
+    "Method": "UpdateMedia",
+    "RelativePath": "api/Medias",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.MediaDtos.UpdateMediaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.MediasController",
+    "Method": "DeleteMedia",
+    "RelativePath": "api/Medias",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.MediasController",
+    "Method": "GetMediaById",
+    "RelativePath": "api/Medias/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.PagesController",
+    "Method": "GetAllPages",
+    "RelativePath": "api/Pages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.PagesController",
+    "Method": "CreatePage",
+    "RelativePath": "api/Pages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.PageDtos.CreatePageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.PagesController",
+    "Method": "UpdatePage",
+    "RelativePath": "api/Pages",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.PageDtos.UpdatePageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.PagesController",
+    "Method": "DeletePage",
+    "RelativePath": "api/Pages",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.PagesController",
+    "Method": "GetPageById",
+    "RelativePath": "api/Pages/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
