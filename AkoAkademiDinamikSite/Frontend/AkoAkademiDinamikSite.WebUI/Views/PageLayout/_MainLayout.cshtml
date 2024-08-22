@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@await Html.PartialAsync("/Views/PageLayout/HeadPartial.cshtml");
+<body>
+    @await Html.PartialAsync("/Views/PageLayout/HeaderPartial.cshtml");
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @await Html.PartialAsync("/Views/PageLayout/FooterPartial.cshtml");
+
+    @await Html.PartialAsync("/Views/PageLayout/ScriptPartial.cshtml");
+
+    @await RenderSectionAsync("Scripts", required: false);
+</body>
+</html>
+
