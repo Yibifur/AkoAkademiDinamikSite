@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Zxef92C2fn4=",
+  "dgSpecHash": "YbAP/y0q2Hs=",
   "success": true,
   "projectFilePath": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.WebApi\\AkoAkademiDinamikSite.WebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\yibif\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\yibif\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\yibif\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\yibif\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -1,0 +1,58 @@
+﻿@model List<LayoutViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+}
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed; /* Tablonun genişliğini sabitler */
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        max-height: 100px; /* Hücre maksimum yüksekliği */
+        overflow: hidden; /* Taşan içeriği gizler */
+        text-overflow: ellipsis; /* Taşan içeriği ... ile gösterir */
+        white-space: nowrap; /* Metni tek satırda tutar */
+        vertical-align: top; /* İçeriği üstte hizalar */
+    }
+
+    th {
+        background-color: #f2f2f2;
+        text-align: left;
+    }
+</style>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Footer Partial</th>
+        <th>Header Partial</th>
+        <th>Head Partial</th>
+        <td>Script Partial</td>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Set Layout</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.LayoutId</td>
+            <td>@item.Title</td>
+            <td>@item.FooterPartial</td>
+            <td>@item.HeaderPartial</td>
+            <td>@item.HeadPartial</td>
+            <td>@item.ScriptPartial</td>
+            <td><a href="/Layout/DeleteLayout/@item.LayoutId" class="btn btn-danger">Delete</a></td>
+            <td><a href="/layout/UpdateLayout/@item.LayoutId" class="btn btn-success">Update</a></td>
+            <td><a href="/layout/SetLayout/@item.LayoutId" class="btn btn-dark">Set Layout</a></td>
+        </tr>
+    }
+</table>
+<a href="/Layout/AddLayout" class="btn btn-info">New Layout Entry</a>
+

@@ -1,5 +1,8 @@
-﻿<footer class="border-top footer text-muted">
+﻿@model LayoutViewModel
+<!-- <footer class="border-top footer text-muted">
     <div class="container">
         &copy; 2024 - AkoAkademiDinamikSite.WebUI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
     </div>
-</footer>
+</footer>  -->
+
+@Html.Raw(Model.FooterPartial)

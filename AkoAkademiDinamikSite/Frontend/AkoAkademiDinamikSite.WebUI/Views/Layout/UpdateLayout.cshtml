@@ -1,0 +1,23 @@
+﻿@model UpdateLayoutViewModel
+@{
+    ViewData["Title"] = "UpdateLayout";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="LayoutId" />
+    <label>Title</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <label>Footer Partial Code</label>
+    <input type="text" asp-for="FooterPartial" class="form-control" />
+    <label>Header Partial Code</label>
+    <input type="text" asp-for="HeaderPartial" class="form-control" />
+    <label>Head Partial Code</label>
+    <input type="text" asp-for="HeadPartial" class="form-control" />
+    <label>Script Partial Code</label>
+    <input type="text" asp-for="ScriptPartial" class="form-control" />
+    <button class="btn btn-outline-success">Update Layout</button>
+
+
+</form>
+

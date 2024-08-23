@@ -16,9 +16,13 @@ namespace AkoAkademiDinamikSite.EntityLayer.ReelConcrete
 
         
         public virtual Content Content { get; set; } // İçerik ile ilişki
-        
-       /* public virtual Page ParentPage { get; set; } // Parent sayfa ile ilişki
-        
-        public virtual List<Page> ChildPages { get; set; } // Alt sayfalar ile ilişki*/
+
+
+        public int? FormId { get; set; }
+        public Form Form { get; set; }
+
+        /* public virtual Page ParentPage { get; set; } // Parent sayfa ile ilişki
+
+         public virtual List<Page> ChildPages { get; set; } // Alt sayfalar ile ilişki*/
     }
 }

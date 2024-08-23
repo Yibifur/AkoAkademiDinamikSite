@@ -74,6 +74,154 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "GetAllForms",
+    "RelativePath": "api/Forms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "CreateForm",
+    "RelativePath": "api/Forms",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.FormDtos.CreateFormDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "UpdateForm",
+    "RelativePath": "api/Forms",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.FormDtos.UpdateFormDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "DeleteForm",
+    "RelativePath": "api/Forms",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "GetFormById",
+    "RelativePath": "api/Forms/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.LayoutsController",
+    "Method": "GetAllLayouts",
+    "RelativePath": "api/Layouts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.LayoutsController",
+    "Method": "CreateLayout",
+    "RelativePath": "api/Layouts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.LayoutDtos.CreateLayoutDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.LayoutsController",
+    "Method": "UpdateLayout",
+    "RelativePath": "api/Layouts",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.LayoutDtos.UpdateLayoutDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.LayoutsController",
+    "Method": "DeleteLayout",
+    "RelativePath": "api/Layouts",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.LayoutsController",
+    "Method": "GetLayoutById",
+    "RelativePath": "api/Layouts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.MediasController",
     "Method": "GetAllMedias",
     "RelativePath": "api/Medias",

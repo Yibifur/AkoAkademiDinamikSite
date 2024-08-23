@@ -77,3 +77,4 @@ C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Back
 C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.WebApi\obj\Debug\net6.0\AkoAkademiDinamikSite.WebApi.pdb
 C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.WebApi\obj\Debug\net6.0\AkoAkademiDinamikSite.WebApi.genruntimeconfig.cache
 C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.WebApi\obj\Debug\net6.0\ref\AkoAkademiDinamikSite.WebApi.dll
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Backend\AkoAkademiDinamikSite.WebApi\bin\Debug\net6.0\AutoMapper.dll

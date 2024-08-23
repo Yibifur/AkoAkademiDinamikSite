@@ -1,22 +1,21 @@
-﻿
+﻿@model LayoutViewModel
 @{
     Layout = null;
 }
 
 <!DOCTYPE html>
 <html lang="en">
-@await Html.PartialAsync("/Views/PageLayout/HeadPartial.cshtml");
+@Html.PartialAsync("HeadPartial", Model)
 <body>
-    @await Html.PartialAsync("/Views/PageLayout/HeaderPartial.cshtml");
+    @Html.PartialAsync("HeaderPartial", Model)
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    @await Html.PartialAsync("/Views/PageLayout/FooterPartial.cshtml");
-
-    @await Html.PartialAsync("/Views/PageLayout/ScriptPartial.cshtml");
+    @Html.PartialAsync("FooterPartial", Model) 
+    @Html.PartialAsync("ScriptPartial", Model)
 
     @await RenderSectionAsync("Scripts", required: false);
 </body>

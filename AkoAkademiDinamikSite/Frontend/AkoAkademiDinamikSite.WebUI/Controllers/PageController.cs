@@ -64,7 +64,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> AddPage(UpdatePageViewModel model)
+        public async Task<IActionResult> AddPage(AddPageViewModel model)
         {
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(model);

@@ -4,7 +4,7 @@ using AkoAkademiDinamikSite.EntityLayer.Concrete;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpClient();
-builder.Services.AddAutoMapper(typeof(Program).Assembly);
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddDbContext<AkoContext>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();

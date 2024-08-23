@@ -59,6 +59,97 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
                     b.ToTable("Contents");
                 });
 
+            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Form", b =>
+                {
+                    b.Property<int>("FormId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FormId"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FormId");
+
+                    b.ToTable("Forms");
+                });
+
+            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormField", b =>
+                {
+                    b.Property<int>("FormFieldId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FormFieldId"), 1L, 1);
+
+                    b.Property<string>("FieldAnswer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FieldName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FieldType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FormId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRequired")
+                        .HasColumnType("bit");
+
+                    b.HasKey("FormFieldId");
+
+                    b.HasIndex("FormId");
+
+                    b.ToTable("FormFields");
+                });
+
+            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Layout", b =>
+                {
+                    b.Property<int>("LayoutId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LayoutId"), 1L, 1);
+
+                    b.Property<string>("FooterPartial")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HeadPartial")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HeaderPartial")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ScriptPartial")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("LayoutId");
+
+                    b.ToTable("Layouts");
+                });
+
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Media", b =>
                 {
                     b.Property<int>("MediaId")
@@ -94,6 +185,9 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
                     b.Property<int?>("ContentId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("FormId")
+                        .HasColumnType("int");
+
                     b.Property<int>("MenuOrder")
                         .HasColumnType("int");
 
@@ -101,7 +195,20 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
 
                     b.HasIndex("ContentId");
 
+                    b.HasIndex("FormId");
+
                     b.ToTable("Pages");
+                });
+
+            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormField", b =>
+                {
+                    b.HasOne("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Form", "Form")
+                        .WithMany("Fields")
+                        .HasForeignKey("FormId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Form");
                 });
 
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Page", b =>
@@ -110,7 +217,18 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
                         .WithMany()
                         .HasForeignKey("ContentId");
 
+                    b.HasOne("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Form", "Form")
+                        .WithMany()
+                        .HasForeignKey("FormId");
+
                     b.Navigation("Content");
+
+                    b.Navigation("Form");
+                });
+
+            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Form", b =>
+                {
+                    b.Navigation("Fields");
                 });
 #pragma warning restore 612, 618
         }
