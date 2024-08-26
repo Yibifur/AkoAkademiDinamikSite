@@ -3801,6 +3801,19 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "AkoAkademiDinamikSite.BusinessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AkoAkademiDinamikSite.DataAccessLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AkoAkademiDinamikSite.BusinessLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AkoAkademiDinamikSite.BusinessLayer.dll": {}
+        }
+      },
       "AkoAkademiDinamikSite.DataAccessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -11004,6 +11017,11 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
+    "AkoAkademiDinamikSite.BusinessLayer/1.0.0": {
+      "type": "project",
+      "path": "../../Backend/AkoAkademiDinamikSite.BusinessLayer/AkoAkademiDinamikSite.BusinessLayer.csproj",
+      "msbuildProject": "../../Backend/AkoAkademiDinamikSite.BusinessLayer/AkoAkademiDinamikSite.BusinessLayer.csproj"
+    },
     "AkoAkademiDinamikSite.DataAccessLayer/1.0.0": {
       "type": "project",
       "path": "../../Backend/AkoAkademiDinamikSite.DataAccessLayer/AkoAkademiDinamikSite.DataAccessLayer.csproj",
@@ -11017,6 +11035,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AkoAkademiDinamikSite.BusinessLayer >= 1.0.0",
       "AkoAkademiDinamikSite.DataAccessLayer >= 1.0.0",
       "AkoAkademiDinamikSite.EntityLayer >= 1.0.0",
       "AutoMapper >= 13.0.1",
@@ -11055,6 +11074,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.BusinessLayer\\AkoAkademiDinamikSite.BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.BusinessLayer\\AkoAkademiDinamikSite.BusinessLayer.csproj"
+            },
             "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj": {
               "projectPath": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj"
             },

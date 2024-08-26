@@ -1,4 +1,8 @@
+using AkoAkademiDinamikSite.BusinessLayer.Abstract;
+using AkoAkademiDinamikSite.BusinessLayer.Concrete;
+using AkoAkademiDinamikSite.DataAccessLayer.Abstract;
 using AkoAkademiDinamikSite.DataAccessLayer.Concrete;
+using AkoAkademiDinamikSite.DataAccessLayer.EntityFramework;
 using AkoAkademiDinamikSite.EntityLayer.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpClient();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddDbContext<AkoContext>();
+builder.Services.AddScoped<ILayoutDal, EfLayoutDal>();
+builder.Services.AddScoped<ILayoutService, LayoutManager>();
+//builder.Services.AddScoped<ILayoutService,LayoutManager>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

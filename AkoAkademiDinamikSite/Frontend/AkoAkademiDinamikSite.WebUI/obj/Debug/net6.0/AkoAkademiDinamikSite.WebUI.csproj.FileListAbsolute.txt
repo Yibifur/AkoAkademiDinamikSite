@@ -253,3 +253,5 @@ C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Fron
 C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Frontend\AkoAkademiDinamikSite.WebUI\obj\Debug\net6.0\AkoAkademiDinamikSite.WebUI.pdb
 C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Frontend\AkoAkademiDinamikSite.WebUI\obj\Debug\net6.0\AkoAkademiDinamikSite.WebUI.genruntimeconfig.cache
 C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Frontend\AkoAkademiDinamikSite.WebUI\obj\Debug\net6.0\ref\AkoAkademiDinamikSite.WebUI.dll
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Frontend\AkoAkademiDinamikSite.WebUI\bin\Debug\net6.0\AkoAkademiDinamikSite.BusinessLayer.dll
+C:\Users\yibif\Documents\GitHub\AkoAkademiDinamikSite\AkoAkademiDinamikSite\Frontend\AkoAkademiDinamikSite.WebUI\bin\Debug\net6.0\AkoAkademiDinamikSite.BusinessLayer.pdb

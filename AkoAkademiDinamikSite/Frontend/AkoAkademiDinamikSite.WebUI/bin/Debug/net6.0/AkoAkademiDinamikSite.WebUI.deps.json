@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "AkoAkademiDinamikSite.WebUI/1.0.0": {
         "dependencies": {
+          "AkoAkademiDinamikSite.BusinessLayer": "1.0.0",
           "AkoAkademiDinamikSite.DataAccessLayer": "1.0.0",
           "AkoAkademiDinamikSite.EntityLayer": "1.0.0",
           "AutoMapper": "13.0.1",
@@ -2560,6 +2561,17 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "AkoAkademiDinamikSite.BusinessLayer/1.0.0": {
+        "dependencies": {
+          "AkoAkademiDinamikSite.DataAccessLayer": "1.0.0"
+        },
+        "runtime": {
+          "AkoAkademiDinamikSite.BusinessLayer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "AkoAkademiDinamikSite.DataAccessLayer/1.0.0": {
         "dependencies": {
           "AkoAkademiDinamikSite.EntityLayer": "1.0.0",
@@ -4122,6 +4134,11 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "AkoAkademiDinamikSite.BusinessLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "AkoAkademiDinamikSite.DataAccessLayer/1.0.0": {
       "type": "project",

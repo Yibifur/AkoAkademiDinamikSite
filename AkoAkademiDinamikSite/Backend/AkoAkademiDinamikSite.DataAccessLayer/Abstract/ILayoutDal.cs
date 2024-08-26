@@ -9,6 +9,6 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Abstract
 {
     public interface ILayoutDal:IGenericDal<Layout>
     {
-
+        Layout GetDefaultlayout();
     }
 }

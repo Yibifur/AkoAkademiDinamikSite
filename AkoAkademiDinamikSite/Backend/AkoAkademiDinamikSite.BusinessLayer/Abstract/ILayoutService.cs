@@ -9,6 +9,6 @@ namespace AkoAkademiDinamikSite.BusinessLayer.Abstract
 {
     public interface ILayoutService:IGenericService<Layout>
     {
-        
+        Layout TGetDefaultlayout();
     }
 }

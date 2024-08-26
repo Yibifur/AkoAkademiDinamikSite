@@ -1,20 +1,26 @@
 ﻿using AkoAkademiDinamikSite.WebUI.Models;
+using AkoAkademiDinamikSite.WebUI.Models.Layout;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Net.Http;
 
 namespace AkoAkademiDinamikSite.WebUI.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        
         public HomeController(ILogger<HomeController> logger)
         {
+            
             _logger = logger;
+          
         }
 
         public IActionResult Index()
         {
+            
             return View();
         }
 

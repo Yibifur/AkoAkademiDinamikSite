@@ -33,6 +33,11 @@ namespace AkoAkademiDinamikSite.BusinessLayer.Concrete
            return  _layoutDal.GetById(id);
         }
 
+        public Layout TGetDefaultlayout()
+        {
+            return _layoutDal.GetDefaultlayout();
+        }
+
         public void TInsert(Layout entity)
         {
            _layoutDal.Insert(entity);

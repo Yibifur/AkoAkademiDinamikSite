@@ -72,5 +72,12 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
             return Ok("Sayfa silindi");
 
         }
+        [HttpGet("GetDefaultLayout")]
+        public IActionResult GetDefaultLayout()
+        {
+            LayoutService.TGetDefaultlayout();
+            return Ok("Sayfa silindi");
+
+        }
     }
 }

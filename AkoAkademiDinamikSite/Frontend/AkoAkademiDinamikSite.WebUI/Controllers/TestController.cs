@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using AkoAkademiDinamikSite.EntityLayer.ReelConcrete;
+using AkoAkademiDinamikSite.WebUI.Models.Layout;
 
 namespace AkoAkademiDinamikSite.WebUI.Controllers
 {
@@ -29,6 +30,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
+            
             var responseMessage = await client.GetAsync($"http://localhost:7029/api/Pages/");
             if (responseMessage.IsSuccessStatusCode)
             {

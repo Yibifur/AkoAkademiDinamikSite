@@ -222,6 +222,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.LayoutsController",
+    "Method": "GetDefaultLayout",
+    "RelativePath": "api/Layouts/GetDefaultLayout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.MediasController",
     "Method": "GetAllMedias",
     "RelativePath": "api/Medias",

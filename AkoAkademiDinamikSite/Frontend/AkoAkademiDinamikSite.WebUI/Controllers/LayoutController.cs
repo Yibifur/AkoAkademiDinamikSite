@@ -1,4 +1,6 @@
-﻿using AkoAkademiDinamikSite.WebUI.Models.Layout;
+﻿using AkoAkademiDinamikSite.DataAccessLayer.Concrete;
+using AkoAkademiDinamikSite.WebUI.Models.Layout;
+using Humanizer;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
@@ -8,11 +10,24 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
     public class LayoutController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-
-        public LayoutController(IHttpClientFactory httpClientFactory)
+        private readonly AkoContext _context;
+        public LayoutController(IHttpClientFactory httpClientFactory, AkoContext context)
         {
             _httpClientFactory = httpClientFactory;
+            _context = context;
         }
+        public void SetDefaultLayout(int layoutId)
+        {
+            var layouts = _context.Layouts.ToList();
+
+            foreach (var layout in layouts)
+            {
+                layout.IsDefault = layout.LayoutId == layoutId;
+            }
+
+            _context.SaveChanges();
+        }
+
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
@@ -80,7 +95,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(model);
             StringContent layout = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync($"http://localhost:7029/api/Layout/", layout);
+            var responseMessage = await client.PutAsync($"http://localhost:7029/api/Layouts/", layout);
             if (responseMessage.IsSuccessStatusCode) { return RedirectToAction("Index"); }
             return View();
 
@@ -89,16 +104,22 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
         [HttpGet]
         public async Task<IActionResult> SetLayout(int id)
         {
+            
             var client = _httpClientFactory.CreateClient();
+            SetDefaultLayout(id);
             var responseMessage = await client.GetAsync($"http://localhost:7029/api/Layouts/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
+
                 var values = JsonConvert.DeserializeObject<LayoutViewModel>(jsonData);
-                return View("/Views/PageLayout/_MainLayout.cshtml",values);
+                TempData["LayoutModel"] = JsonConvert.SerializeObject(values); 
+                //ViewBag.LayoutModel = values;
+                return RedirectToAction("Index");
 
             }
             return View();
         }
+        
     }
 }

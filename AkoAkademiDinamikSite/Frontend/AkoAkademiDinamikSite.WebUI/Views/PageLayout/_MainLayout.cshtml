@@ -1,23 +1,47 @@
-﻿@model LayoutViewModel
+﻿@using AkoAkademiDinamikSite.BusinessLayer.Abstract
+@using Microsoft.Extensions.DependencyInjection
+@using Newtonsoft.Json
+@inject ILayoutService LayoutService
+
 @{
-    Layout = null;
+    // TempData'dan veriyi okuyup, deserialization işlemi yapıyoruz
+    var layoutModelString = TempData["LayoutModel"] as string;
+    LayoutViewModel layoutModel = null;
+
+    if (!string.IsNullOrEmpty(layoutModelString))
+    {
+        layoutModel = JsonConvert.DeserializeObject<LayoutViewModel>(layoutModelString);
+    }
+    else
+    {
+        // Eğer TempData'da veri yoksa, veritabanından default layout'u al
+        var defaultLayout = LayoutService.TGetDefaultlayout();
+        layoutModel = new LayoutViewModel
+                {
+                    HeadPartial = defaultLayout.HeadPartial,
+                    HeaderPartial = defaultLayout.HeaderPartial,
+                    FooterPartial = defaultLayout.FooterPartial,
+                    ScriptPartial = defaultLayout.ScriptPartial
+                };
+    }
 }
 
 <!DOCTYPE html>
 <html lang="en">
-@Html.PartialAsync("HeadPartial", Model)
+<head>
+    @Html.Raw(layoutModel.HeadPartial)
+</head>
 <body>
-    @Html.PartialAsync("HeaderPartial", Model)
+    @Html.Raw(layoutModel.HeaderPartial)
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    @Html.PartialAsync("FooterPartial", Model) 
-    @Html.PartialAsync("ScriptPartial", Model)
+    @Html.Raw(layoutModel.FooterPartial)
+    @Html.Raw(layoutModel.ScriptPartial)
 
-    @await RenderSectionAsync("Scripts", required: false);
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-
