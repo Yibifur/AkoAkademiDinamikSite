@@ -29,25 +29,31 @@
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        
         <th>Content ID</th>
         <th>Menu Order</th>
         <th>Delete</th>
         <th>Update</th>
-        <th>Details</th>
-    </tr>
+        <th>Is Active?</th>
+    </tr> 
+        
+   
     @foreach (var item in Model)
     {
         <tr>
 
             <td>@item.PageId</td>
-           
             <td>@item.ContentId</td>
             <td>@item.MenuOrder</td>
+            
 
             <td><a href="/Page/DeletePage/@item.PageId" class="btn btn-danger">Delete</a></td>
             <td><a href="/Page/UpdatePage/@item.PageId" class="btn btn-success">Update</a></td>
-            <td><a href="#" class="btn btn-Dark">Details</a></td>
+            <td>
+                <a href="#" class="btn @(item.IsActive ? "btn-success" : "btn-danger")">
+                    @(item.IsActive ? "True" : "False")
+                </a>
+            </td>
+            <!-- <td><a href="#" class="btn btn-Dark">Details</a></td> -->
         </tr>
     }
 </table>

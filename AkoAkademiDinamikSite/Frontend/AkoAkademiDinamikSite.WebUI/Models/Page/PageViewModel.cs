@@ -7,6 +7,7 @@ namespace AkoAkademiDinamikSite.WebUI.Models.Page
         //public int? ParentPageId { get; set; } // Parent sayfa ile ilişki
         public int? ContentId { get; set; } // İçerik ile ilişki
         public int MenuOrder { get; set; } // Menü sırası
+        public bool IsActive { get; set; }
 
         public virtual  AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Content Content { get; set; } // İçerik ile ilişki
 

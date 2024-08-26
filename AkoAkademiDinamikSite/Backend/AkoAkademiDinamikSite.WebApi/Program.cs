@@ -17,11 +17,7 @@ builder.Services.AddScoped<IPageService, PageManager>();
 builder.Services.AddScoped<IContentDal, EfContentDal>();
 builder.Services.AddScoped<IContentService, ContentManager>();
 
-builder.Services.AddScoped<IMediaDal, EfMediaDal>();
-builder.Services.AddScoped<IMediaService, MediaManager>();
 
-builder.Services.AddScoped<IFormDal, EfFormDal>();
-builder.Services.AddScoped<IFormService, FormManager>();
 
 builder.Services.AddScoped<ILayoutDal, EfLayoutDal>();
 builder.Services.AddScoped<ILayoutService, LayoutManager>();

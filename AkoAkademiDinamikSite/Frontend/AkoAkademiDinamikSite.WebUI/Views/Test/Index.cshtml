@@ -6,17 +6,18 @@
 <html lang='tr'>
 
     
-    @foreach (var item in Model)
+@foreach (var item in Model.OrderBy(x => x.MenuOrder))
+    {
+    if (item.IsActive) 
     {
         <head>
-        @Html.Raw(item.Content.Template)
+            @Html.Raw(item.Content.Template)
         </head>
         <body>
-        
-        <br />
-        @Html.Raw(item.Content.Body)
-
+            <br />
+            @Html.Raw(item.Content.Body)
         </body>
+    }
         
     }
    

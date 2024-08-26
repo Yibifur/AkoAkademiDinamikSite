@@ -29,6 +29,7 @@
 <table class="table table-bordered">
     <tr>
         <th>#</th>
+        <th>Active</th>
         <th>Title</th>
         <th>Footer Partial</th>
         <th>Header Partial</th>
@@ -43,6 +44,11 @@
         <tr>
 
             <td>@item.LayoutId</td>
+            <td>
+                <a href="#" class="btn @(item.IsDefault ? "btn-success" : "btn-danger")">
+                    @(item.IsDefault ? "True" : "False")
+                </a>
+            </td>
             <td>@item.Title</td>
             <td>@item.FooterPartial</td>
             <td>@item.HeaderPartial</td>

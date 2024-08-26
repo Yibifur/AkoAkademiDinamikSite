@@ -24,7 +24,9 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
                 PageId = page.PageId,
                 ContentId = page.ContentId,
                 MenuOrder = page.MenuOrder,
-                Content = page.Content // Eğer Content de bir ViewModel ise ayrıca dönüştürmek gerekebilir
+                Content = page.Content,
+                IsActive=page.IsActive
+                // Eğer Content de bir ViewModel ise ayrıca dönüştürmek gerekebilir
             };
         }
         public async Task<IActionResult> Index()

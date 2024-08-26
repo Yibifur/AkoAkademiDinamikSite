@@ -43,7 +43,8 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
             {
                 
                 ContentId = model.ContentId,
-                MenuOrder = model.MenuOrder
+                MenuOrder = model.MenuOrder,
+                IsActive = model.IsActive
             };
             
             pageService.TInsert(page);
@@ -58,7 +59,8 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
                 PageId = model.PageId,
                 
                 ContentId = model.ContentId,
-                MenuOrder = model.MenuOrder
+                MenuOrder = model.MenuOrder,
+                IsActive = model.IsActive
             };
 
             pageService.TUpdate(page);

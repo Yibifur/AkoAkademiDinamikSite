@@ -15,12 +15,7 @@ namespace AkoAkademiDinamikSite.WebApi.Mapping
             //Content Mapping
             CreateMap<Content,CreateContentDto>().ReverseMap();
             CreateMap<Content,UpdateContentDto>().ReverseMap();
-            //Form Mapping
-            CreateMap<Form, CreateFormDto>().ReverseMap();
-            CreateMap<Form, UpdateFormDto>().ReverseMap();
-            //Media Mapping
-            CreateMap<Media,CreateMediaDto>().ReverseMap();
-            CreateMap<Media,UpdateMediaDto>().ReverseMap();
+            
             //Page Mapping
             CreateMap<Page, CreatePageDto>().ReverseMap();
             CreateMap<Page, UpdatePageDto>().ReverseMap();

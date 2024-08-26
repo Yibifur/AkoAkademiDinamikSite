@@ -13,13 +13,13 @@ namespace AkoAkademiDinamikSite.EntityLayer.ReelConcrete
        // public int? ParentPageId { get; set; } // Parent sayfa ile ilişki
         public int? ContentId { get; set; } // İçerik ile ilişki
         public int MenuOrder { get; set; } // Menü sırası
+        public bool IsActive { get; set; }
 
-        
         public virtual Content Content { get; set; } // İçerik ile ilişki
 
 
-        public int? FormId { get; set; }
-        public Form Form { get; set; }
+        /*public int? FormId { get; set; }
+        public Form Form { get; set; }*/
 
         /* public virtual Page ParentPage { get; set; } // Parent sayfa ile ilişki
 

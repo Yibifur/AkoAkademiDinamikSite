@@ -24,7 +24,8 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
                 PageId = page.PageId,
                 ContentId = page.ContentId,
                 MenuOrder = page.MenuOrder,
-                Content = page.Content // Eğer Content de bir ViewModel ise ayrıca dönüştürmek gerekebilir
+                Content = page.Content,
+                IsActive=page.IsActive// Eğer Content de bir ViewModel ise ayrıca dönüştürmek gerekebilir
             };
         }
         public AddPageViewModel ConvertToAddPageViewModel(Page page)
@@ -34,6 +35,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
                 
                 ContentId = page.ContentId,
                 MenuOrder = page.MenuOrder,
+                IsActive = page.IsActive
                 // Eğer Content de bir ViewModel ise ayrıca dönüştürmek gerekebilir
             };
         }
@@ -110,5 +112,18 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
 
 
         }
+       /*
+        [HttpPost]
+        public async Task<IActionResult> SetActivePage(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responsemessage = await client.GetAsync();
+            StringContent Page = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PutAsync($"http://localhost:7029/api/Pages/", Page);
+            if (responseMessage.IsSuccessStatusCode) { return RedirectToAction("Index"); }
+            return View();
+
+
+        }*/
     }
 }

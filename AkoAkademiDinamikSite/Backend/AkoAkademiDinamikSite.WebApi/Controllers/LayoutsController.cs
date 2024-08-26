@@ -41,7 +41,8 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
                 FooterPartial = model.FooterPartial,
                 HeaderPartial = model.HeaderPartial,
                 HeadPartial = model.HeadPartial,
-                ScriptPartial = model.ScriptPartial
+                ScriptPartial = model.ScriptPartial,
+                IsDefault = model.IsDefault
             };
 
             LayoutService.TInsert(Layout);
@@ -58,7 +59,8 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
                 FooterPartial=model.FooterPartial,
                 HeaderPartial=model.HeaderPartial,
                 HeadPartial=model.HeadPartial,
-                ScriptPartial=model.ScriptPartial
+                ScriptPartial=model.ScriptPartial,
+                IsDefault = model.IsDefault 
             };
 
             LayoutService.TUpdate(layout);

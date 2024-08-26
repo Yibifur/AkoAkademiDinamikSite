@@ -18,10 +18,9 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Concrete
             optionsBuilder.UseSqlServer(@"Server = YIGITMONSTER\SQLEXPRESS;initial catalog=AkoAkademikDb;integrated security=true");
         }
         public DbSet<Content> Contents { get; set; }
-        public DbSet<Media> Medias { get; set; }
+        
         public DbSet<Page> Pages { get; set; }
-        public DbSet<Form> Forms { get; set; }
-        public DbSet<FormField> FormFields { get; set; }
+        
         public DbSet<Layout> Layouts { get; set; }
 
 
