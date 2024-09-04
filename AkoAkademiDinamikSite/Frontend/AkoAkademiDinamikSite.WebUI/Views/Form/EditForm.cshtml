@@ -4,6 +4,7 @@
     Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
     var formId = (int)Convert.ToInt32(ViewContext.RouteData.Values["id"]);
     Form form = (Form)TempData["Form"];
+   
 }
 
 <style>
@@ -166,34 +167,7 @@
                     </div>
                 </form>
             </div>
-            <div id="AddingFormOption" class="option-container" onchange="handleSelectChange()">
-                <form action="/FormOption/AddFormOption" method="post">
-                    <div class="option-header">
-                        <span>Opsiyonlar</span>
-                        <button type="button" class="btn-remove">Kaldır</button>
-                    </div>
-                    <div class="form-group">
-                       
-                        <input type="hidden" value=""  name="FormElementId" />
-                    </div>
-                    <div class="form-group">
-                        <label for="isim">İsim :</label>
-                        <input type="text" id="isim" name="Name" placeholder="İsim giriniz" />
-                    </div>
-                    <div class="form-group">
-                        <label for="deger">Değer :</label>
-                        <input type="text" id="deger" name="Value" placeholder="Değer giriniz" />
-                    </div>
-                    <div class="form-group">
-                        <label for="sira">Sıra :</label>
-                        <input type="number" id="sira" name="Order" placeholder="Sıra giriniz" />
-                    </div>
-                    <div class="form-actions">
-                        <button type="reset" class="btn btn-cancel">Vazgeç</button>
-                        <button type="submit" class="btn btn-save">Kaydet</button>
-                    </div>
-                </form>
-            </div>
+           
             <div class="preview-section">
                 <div class="form-header">
                     <h2>Form Önizleme</h2>
@@ -206,40 +180,58 @@
                         foreach (var element in form.FormElements.OrderBy(a=>a.Order))
                         {
                             <div class="form-group">
-                                <label>@element.Title</label>
+                                <label>@element.Order-@element.Title</label>
                                 @{
                                     switch (element.ControlType)
                                     {
                                         case "Yazı alanı":
-                                                        <input type="text" placeholder="@element.Title" @(element.IsRequired ? "required" : "") />
+                                           
+                                                        <input type="text" placeholder="yazınını yazın" @(element.IsRequired ? "required" : "") />
                                             break;
                                         case "Şıklı seçim":
-                                                        <input type="checkbox" @(element.IsRequired ? "checked" : "") />
+                                           
+                                            <input type="checkbox" @(element.IsRequired ? "checked" : "") />
                                             break;
                                         case "Listeli seçim":
-                                                        <select>
-                                                            <option>@element.Title</option>
-                                                        </select>
+
+                                            <select>
+                                                @if (element.FormOptions!=null)
+                                                {
+                                                    @foreach (var item in element.FormOptions)
+                                                    {
+                                                        <option>@item.Name</option>
+                                                    }
+                                                }
+                                               
+
+                                            </select>
                                             break;
                                         case "Numara":
+                                          
                                                         <input type="number" />
                                             break;
                                         case "Tarih":
+                                           
                                                         <input type="date" />
                                             break;
                                         case "Email":
+                                            
                                                         <input type="email" placeholder="example@example.com" />
                                             break;
                                         case "Başlık":
+                                           
                                                         <h3>@element.Title</h3>
                                             break;
                                         case "Telefon":
+                                           
                                                         <input type="tel" placeholder="+90 555 555 55 55" />
                                             break;
                                         case "Dosya yükleme":
+                                        
                                                         <input type="file" />
                                             break;
                                         default:
+                                            
                                                         <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
                                             break;
                                     }
@@ -261,23 +253,20 @@
         window.onload = function () {
             document.getElementById('AddingFormOption').style.display = 'none';
         };
-        function handleSelectChange() {
-            const selectElement = document.getElementById('kontrol-tipi');
-        const selectedValue = selectElement.value;
-        const divBlock = document.getElementById('AddingFormElement');
-        const optionBlock = document.getElementById('AddingFormOption');
-            
-            if (selectedValue === 'Listeli seçim') {
+        
+        function handleFormSubmit(event) {
+            // Seçilen kontrol tipini al
+            const controlType = document.getElementById('kontrol-tipi').value;
 
-
-               
-                optionBlock.style.display="block"
-
-            } 
-            else{
-                divBlock.style.display = "block";
-                optionBlock.style.display = "none";
+            // Eğer kontrol tipi 'Şıklı seçim' ise başka bir sayfaya yönlendir
+            if (controlType === 'Şıklı seçim') {
+                event.preventDefault(); // Formun gönderilmesini engelle
+                window.location.href = '/FormOption/AddFormOption'; // Yönlendirilecek sayfanın URL'si
+                return false; // Form gönderilmesini engelle
             }
+
+            // Diğer durumlar için form gönderimine izin ver
+            return true;
         }
     </script>
 </body>

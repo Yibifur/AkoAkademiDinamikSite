@@ -107,11 +107,23 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             var jsonData = JsonConvert.SerializeObject(model);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var responseMessage = await client.PostAsync($"http://localhost:7029/api/FormElements", stringContent);
-            if (responseMessage.IsSuccessStatusCode) { return RedirectToAction("EditForm","Form"); }
+            if (responseMessage.IsSuccessStatusCode) {
+
+                var jsonString = await responseMessage.Content.ReadAsStringAsync();
+                var option = JsonConvert.DeserializeObject<FormElement>(jsonString);
+                int formElementId = option.FormElementId; // Gerçek ID'yi alıyoruz
+
+                // Bu ID'yi form optionları eklemek için kullanabiliriz
+                TempData["FormElementId"] = formElementId; // Geçici olarak ID'yi saklıyoruz
+                if(option.ControlType== "Listeli seçim")
+                {
+                    return RedirectToAction("AddFormOption", "FormOption");
+                }
+                return RedirectToAction("EditForm","Form"); 
+            }
             return View();
         }
+
         
-
-
     }
 }

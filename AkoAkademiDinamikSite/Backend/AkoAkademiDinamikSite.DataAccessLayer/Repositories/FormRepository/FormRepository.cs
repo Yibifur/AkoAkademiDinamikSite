@@ -32,13 +32,13 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Repositories.FormRepository
 
         public List<Form> GetAll()
         {
-            var values = context.Forms.Include(x=>x.FormElements).ToList();
+            var values = context.Forms.Include(x=>x.FormElements).ThenInclude(x=>x.FormOptions).ToList();
             return values;
         }
 
         public Form GetById(int id)
         {
-            var value = context.Forms.Include(x => x.FormElements).FirstOrDefault(f => f.FormId == id); ;  
+            var value = context.Forms.Include(x => x.FormElements).ThenInclude(x => x.FormOptions).FirstOrDefault(f => f.FormId == id); ;  
             return value;
         }
 

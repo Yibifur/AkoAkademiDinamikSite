@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "AddFormOption";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+}
+
+<div id="AddingFormOption" class="option-container">
+    <form action="/FormOption/AddFormOption" method="post">
+        <div class="option-header">
+            <span>Opsiyonlar</span>
+            <button type="button" class="btn-remove">Kaldır</button>
+        </div>
+        <div class="form-group">
+
+            <input type="hidden" value="@TempData["FormElementId"]" name="FormElementId" />
+        </div>
+        <div class="form-group">
+            <label for="isim">İsim :</label>
+            <input type="text" id="isim" name="Name" placeholder="İsim giriniz" />
+        </div>
+        <div class="form-group">
+            <label for="deger">Değer :</label>
+            <input type="text" id="deger" name="Value" placeholder="Değer giriniz" />
+        </div>
+        <div class="form-group">
+            <label for="sira">Sıra :</label>
+            <input type="number" id="sira" name="Order" placeholder="Sıra giriniz" />
+        </div>
+        <div class="form-actions">
+            <button type="reset" class="btn btn-cancel">Vazgeç</button>
+            <button type="submit" class="btn btn-save">Kaydet</button>
+        </div>
+    </form>
+</div>
+

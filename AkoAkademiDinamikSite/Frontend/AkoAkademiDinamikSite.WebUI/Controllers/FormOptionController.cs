@@ -38,10 +38,11 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddFormOption(int FormElementId,string Name, string Value, int Order)
         {
-            // Verileri almak için model kullanmadığınız durumda doğrudan parametreler üzerinden veriler işlenir.
+            
             var formOption = new AddFormOptionViewModel
             {
-                FormElementId= FormElementId,   
+                
+                FormElementId= FormElementId,  
                 Name = Name,
                 Value = Value,
                 Order = Order
@@ -54,7 +55,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
 
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index"); // Başarılı olduğunda Index'e yönlendirme yapar
+                return RedirectToAction("Index","Form"); // Başarılı olduğunda Index'e yönlendirme yapar
             }
 
             // Başarısız durumda tekrar formu görüntülemek için View'a geri döner

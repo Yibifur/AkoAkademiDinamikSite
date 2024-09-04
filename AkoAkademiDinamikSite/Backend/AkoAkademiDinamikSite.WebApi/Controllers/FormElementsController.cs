@@ -46,7 +46,7 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
             };
 
             FormElementService.TInsert(FormElement);
-            return Ok("sayfa eklendi");
+            return Ok(FormElement);
 
         }
         [HttpPut]
