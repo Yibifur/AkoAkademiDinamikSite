@@ -74,6 +74,228 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormElementsController",
+    "Method": "GetAllFormElements",
+    "RelativePath": "api/FormElements",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormElementsController",
+    "Method": "CreateFormElement",
+    "RelativePath": "api/FormElements",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.FormElementDtos.CreateFormElementDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormElementsController",
+    "Method": "UpdateFormElement",
+    "RelativePath": "api/FormElements",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.FormElementDtos.UpdateFormElementDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormElementsController",
+    "Method": "DeleteFormElement",
+    "RelativePath": "api/FormElements",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormElementsController",
+    "Method": "GetFormElementById",
+    "RelativePath": "api/FormElements/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormOptionsController",
+    "Method": "GetAllFormOptions",
+    "RelativePath": "api/FormOptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormOptionsController",
+    "Method": "CreateFormOption",
+    "RelativePath": "api/FormOptions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.FormOptionDtos.CreateFormOptionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormOptionsController",
+    "Method": "UpdateFormOption",
+    "RelativePath": "api/FormOptions",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.FormOptionDtos.UpdateFormOptionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormOptionsController",
+    "Method": "DeleteFormOption",
+    "RelativePath": "api/FormOptions",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormOptionsController",
+    "Method": "GetFormOptionById",
+    "RelativePath": "api/FormOptions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "GetAllForms",
+    "RelativePath": "api/Forms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "CreateForm",
+    "RelativePath": "api/Forms",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.FormDtos.CreateFormDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "UpdateForm",
+    "RelativePath": "api/Forms",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.FormDtos.UpdateFormDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "DeleteForm",
+    "RelativePath": "api/Forms",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "GetFormById",
+    "RelativePath": "api/Forms/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.LayoutsController",
     "Method": "GetAllLayouts",
     "RelativePath": "api/Layouts",

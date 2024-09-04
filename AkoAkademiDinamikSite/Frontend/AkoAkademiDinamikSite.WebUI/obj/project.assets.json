@@ -3830,6 +3830,19 @@
           "bin/placeholder/AkoAkademiDinamikSite.DataAccessLayer.dll": {}
         }
       },
+      "AkoAkademiDinamikSite.DtoLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AkoAkademiDinamikSite.EntityLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AkoAkademiDinamikSite.DtoLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AkoAkademiDinamikSite.DtoLayer.dll": {}
+        }
+      },
       "AkoAkademiDinamikSite.EntityLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -11027,6 +11040,11 @@
       "path": "../../Backend/AkoAkademiDinamikSite.DataAccessLayer/AkoAkademiDinamikSite.DataAccessLayer.csproj",
       "msbuildProject": "../../Backend/AkoAkademiDinamikSite.DataAccessLayer/AkoAkademiDinamikSite.DataAccessLayer.csproj"
     },
+    "AkoAkademiDinamikSite.DtoLayer/1.0.0": {
+      "type": "project",
+      "path": "../../Backend/AkoAkademiDinamikSite.DtoLayer/AkoAkademiDinamikSite.DtoLayer.csproj",
+      "msbuildProject": "../../Backend/AkoAkademiDinamikSite.DtoLayer/AkoAkademiDinamikSite.DtoLayer.csproj"
+    },
     "AkoAkademiDinamikSite.EntityLayer/1.0.0": {
       "type": "project",
       "path": "../../Backend/AkoAkademiDinamikSite.EntityLayer/AkoAkademiDinamikSite.EntityLayer.csproj",
@@ -11037,6 +11055,7 @@
     "net6.0": [
       "AkoAkademiDinamikSite.BusinessLayer >= 1.0.0",
       "AkoAkademiDinamikSite.DataAccessLayer >= 1.0.0",
+      "AkoAkademiDinamikSite.DtoLayer >= 1.0.0",
       "AkoAkademiDinamikSite.EntityLayer >= 1.0.0",
       "AutoMapper >= 13.0.1",
       "Microsoft.EntityFrameworkCore >= 6.0.33",
@@ -11079,6 +11098,9 @@
             },
             "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj": {
               "projectPath": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DataAccessLayer\\AkoAkademiDinamikSite.DataAccessLayer.csproj"
+            },
+            "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DtoLayer\\AkoAkademiDinamikSite.DtoLayer.csproj": {
+              "projectPath": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.DtoLayer\\AkoAkademiDinamikSite.DtoLayer.csproj"
             },
             "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.EntityLayer\\AkoAkademiDinamikSite.EntityLayer.csproj": {
               "projectPath": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.EntityLayer\\AkoAkademiDinamikSite.EntityLayer.csproj"

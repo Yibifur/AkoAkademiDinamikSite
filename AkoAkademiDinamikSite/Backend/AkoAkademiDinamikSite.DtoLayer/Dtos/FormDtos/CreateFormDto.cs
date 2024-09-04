@@ -9,12 +9,13 @@ namespace AkoAkademiDinamikSite.DtoLayer.Dtos.FormDtos
 {
     public class CreateFormDto
     {
-        
-        public string Name { get; set; }
-        public string Description { get; set; }
+
         public string Title { get; set; }
+        public bool ShowTitle { get; set; }
+        public string FormType { get; set; }
+        public string Description { get; set; }
 
         // Bir Form, birden fazla FormField (form alanı) ile ilişkilidir
-        
+
     }
 }

@@ -5,6 +5,7 @@ using AkoAkademiDinamikSite.DataAccessLayer.Concrete;
 using AkoAkademiDinamikSite.DataAccessLayer.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,11 +18,24 @@ builder.Services.AddScoped<IPageService, PageManager>();
 builder.Services.AddScoped<IContentDal, EfContentDal>();
 builder.Services.AddScoped<IContentService, ContentManager>();
 
-
-
 builder.Services.AddScoped<ILayoutDal, EfLayoutDal>();
 builder.Services.AddScoped<ILayoutService, LayoutManager>();
-builder.Services.AddControllers();
+
+builder.Services.AddScoped<IFormDal, EfFormDal>();
+builder.Services.AddScoped<IFormService, FormManager>();
+
+builder.Services.AddScoped<IFormElementDal, EfFormElementDal>();
+builder.Services.AddScoped<IFormElementService, FormElementManager>();
+
+builder.Services.AddScoped<IFormOptionDal, EfFormOptionDal>();
+builder.Services.AddScoped<IFormOptionService, FormOptionManager>();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore; // Döngüsel referanslarý yoksay
+        options.SerializerSettings.Formatting = Formatting.Indented; // Daha okunabilir JSON çýktýsý
+    });
+
 /*builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;

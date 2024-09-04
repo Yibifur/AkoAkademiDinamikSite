@@ -29,6 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Backend\AkoAkademiDinamikSite.BusinessLayer\AkoAkademiDinamikSite.BusinessLayer.csproj" />
     <ProjectReference Include="..\..\Backend\AkoAkademiDinamikSite.DataAccessLayer\AkoAkademiDinamikSite.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\..\Backend\AkoAkademiDinamikSite.DtoLayer\AkoAkademiDinamikSite.DtoLayer.csproj" />
     <ProjectReference Include="..\..\Backend\AkoAkademiDinamikSite.EntityLayer\AkoAkademiDinamikSite.EntityLayer.csproj" />
   </ItemGroup>
 

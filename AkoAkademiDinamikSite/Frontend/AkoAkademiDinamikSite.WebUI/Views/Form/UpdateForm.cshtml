@@ -1,0 +1,22 @@
+﻿@model UpdateFormViewModel
+@{
+    ViewData["Title"] = "UpdateForm";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+}
+
+<form method="post">
+
+    <input type="hidden" asp-for="FormId" />
+    <label>Title</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <label>Show Title?</label>
+    <input type="button" asp-for="ShowTitle" class="form-control" />
+    <label>Form Type</label>
+    <input type="text" asp-for="FormType" class="form-control" />
+    <label>Description</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <button class="btn btn-primary">Add Form</button>
+
+
+</form>
+

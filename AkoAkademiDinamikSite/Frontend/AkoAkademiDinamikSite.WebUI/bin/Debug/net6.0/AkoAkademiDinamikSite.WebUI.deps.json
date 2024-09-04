@@ -10,6 +10,7 @@
         "dependencies": {
           "AkoAkademiDinamikSite.BusinessLayer": "1.0.0",
           "AkoAkademiDinamikSite.DataAccessLayer": "1.0.0",
+          "AkoAkademiDinamikSite.DtoLayer": "1.0.0",
           "AkoAkademiDinamikSite.EntityLayer": "1.0.0",
           "AutoMapper": "13.0.1",
           "Microsoft.EntityFrameworkCore": "6.0.33",
@@ -2586,6 +2587,17 @@
           }
         }
       },
+      "AkoAkademiDinamikSite.DtoLayer/1.0.0": {
+        "dependencies": {
+          "AkoAkademiDinamikSite.EntityLayer": "1.0.0"
+        },
+        "runtime": {
+          "AkoAkademiDinamikSite.DtoLayer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "AkoAkademiDinamikSite.EntityLayer/1.0.0": {
         "runtime": {
           "AkoAkademiDinamikSite.EntityLayer.dll": {
@@ -4141,6 +4153,11 @@
       "sha512": ""
     },
     "AkoAkademiDinamikSite.DataAccessLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AkoAkademiDinamikSite.DtoLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,0 +1,119 @@
+﻿@model AddFormElementViewModel
+@{
+    Form form = (Form)TempData["Form"];
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Önizleme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-container">
+        <div class="top-info">
+            <p>Form Üst Bilgi</p>
+        </div>
+        <div class="main-container">
+            <div class="form-section">
+                <div class="form-header">
+                    <h2>Form Oluşturucu</h2>
+                </div>
+                <form method="post">
+                    <div>
+                        <input type="text" value="@Model.FormId" asp-for="FormId" />
+                    </div>
+                    <div class="form-group">
+                        <label>Başlık</label>
+                        <input type="text" asp-for="Title" id="baslik">
+                    </div>
+                    <div class="form-group">
+                        <label>Zorunlu Alan</label>
+                        <input type="checkbox" asp-for="IsRequired" id="zorunlu-alan">
+                    </div>
+                    <div class="form-group">
+                        <label>Sıra</label>
+                        <input type="number" asp-for="Order" id="sira" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Kontrol Tipi</label>
+                        <select asp-for="ControlType" id="kontrol-tipi">
+                            <option value="Yazı alanı">Yazı alanı</option>
+                            <option value="Şıklı seçim">Şıklı seçim</option>
+                            <option value="Listeli seçim">Listeli seçim</option>
+                            <option value="Numara">Numara</option>
+                            <option value="Tarih">Tarih</option>
+                            <option value="Email">Email</option>
+                            <option value="Başlık">Başlık</option>
+                            <option value="Telefon">Telefon</option>
+                            <option value="Dosya yükleme">Dosya yükleme</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="reset" class="btn btn-cancel">Vazgeç</button>
+                        <button type="submit" class="btn btn-primary">Form Elemanı Ekle</button>
+                    </div>
+                </form>
+            </div>
+            <div class="preview-section">
+                <div class="form-header">
+                    <h2>Form Önizleme</h2>
+                </div>
+                <div id="form-preview">
+                    @if (form != null)
+                    {
+                     
+                        foreach (var element in form.FormElements)
+                        {
+                            <div class="form-element">
+                                <label>@element.Title</label>
+                                @{
+                                    switch (element.ControlType)
+                                    {
+                                        case "Yazı alanı":
+                                            <input type="text" placeholder="@element.Title" @(element.IsRequired ? "required" : "") />
+                                            break;
+                                        case "Şıklı seçim":
+                                            <input type="checkbox" @(element.IsRequired ? "checked" : "") />
+                                            break;
+                                        case "Listeli seçim":
+                                            <select>
+                                                <option>@element.Title</option>
+                                            </select>
+                                            break;
+                                        case "Numara":
+                                            <input type="number" />
+                                            break;
+                                        case "Tarih":
+                                            <input type="date" />
+                                            break;
+                                        case "Email":
+                                            <input type="email" placeholder="example@example.com" />
+                                            break;
+                                        case "Başlık":
+                                            <h3>@element.Title</h3>
+                                            break;
+                                        case "Telefon":
+                                            <input type="tel" placeholder="+90 555 555 55 55" />
+                                            break;
+                                        case "Dosya yükleme":
+                                            <input type="file" />
+                                            break;
+                                        default:
+                                            <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
+                                            break;
+                                    }
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="save-changes">
+            <button type="reset" class="btn btn-cancel">Değişiklikleri Kaydet</button>
+        </div>
+    </div>
+</body>
+</html>
