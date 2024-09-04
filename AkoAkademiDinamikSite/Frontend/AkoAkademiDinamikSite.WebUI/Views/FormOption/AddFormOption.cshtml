@@ -2,7 +2,9 @@
 @{
     ViewData["Title"] = "AddFormOption";
     Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+    var formElementId = (int)Convert.ToInt32(ViewContext.RouteData.Values["id"]);
 }
+
 
 <div id="AddingFormOption" class="option-container">
     <form action="/FormOption/AddFormOption" method="post">
@@ -12,7 +14,7 @@
         </div>
         <div class="form-group">
 
-            <input type="hidden" value="@TempData["FormElementId"]" name="FormElementId" />
+            <input type="hidden" value="@formElementId" name="FormElementId" />
         </div>
         <div class="form-group">
             <label for="isim">İsim :</label>

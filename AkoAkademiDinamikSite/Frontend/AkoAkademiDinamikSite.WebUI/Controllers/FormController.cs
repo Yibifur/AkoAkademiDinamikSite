@@ -115,10 +115,10 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
 
                 // Bu ID'yi form optionları eklemek için kullanabiliriz
                 TempData["FormElementId"] = formElementId; // Geçici olarak ID'yi saklıyoruz
-                if(option.ControlType== "Listeli seçim")
-                {
-                    return RedirectToAction("AddFormOption", "FormOption");
-                }
+                //if(option.ControlType== "Listeli seçim")
+                //{
+                //    return RedirectToAction("AddFormOption", "FormOption");
+                //}
                 return RedirectToAction("EditForm","Form"); 
             }
             return View();

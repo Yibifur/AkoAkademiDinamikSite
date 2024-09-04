@@ -202,16 +202,18 @@
                                                         <option>@item.Name</option>
                                                     }
                                                 }
-                                               
 
-                                            </select>
+
+                                            </select> <button type="button" class="plus-button" onclick="openModal(this)"  data-elementId="@element.FormElementId">Seçenek Ekle</button>
+                                            
+                                           
                                             break;
                                         case "Numara":
                                           
                                                         <input type="number" />
                                             break;
                                         case "Tarih":
-                                           
+                                                
                                                         <input type="date" />
                                             break;
                                         case "Email":
@@ -246,14 +248,62 @@
             <button type="reset" class="btn btn-cancel">Değişiklikleri Kaydet</button>
         </div>
     </div>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="AddingFormOption" class="option-container">
+                        <form id="formOption" method="post">
+                            <div class="option-header">
+                                <span>Opsiyonlar</span>
+                                <button type="button" class="btn-remove">Kaldır</button>
+                            </div>
+                            <div class="form-group">
 
+                                <input type="text" value="" id="FormElementId" name="FormElementId" />
+                            </div>
+                            <div class="form-group">
+                                <label for="isim">İsim :</label>
+                                <input type="text" id="isim" name="Name" placeholder="İsim giriniz" />
+                            </div>
+                            <div class="form-group">
+                                <label for="deger">Değer :</label>
+                                <input type="text" id="deger" name="Value" placeholder="Değer giriniz" />
+                            </div>
+                            <div class="form-group">
+                                <label for="sira">Sıra :</label>
+                                <input type="number" id="sira" name="Order" placeholder="Sıra giriniz" />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="reset" class="btn btn-secondary btn-cancel" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
 
     <script>
 
-        window.onload = function () {
-            document.getElementById('AddingFormOption').style.display = 'none';
-        };
         
+        function openModal(button) {
+            // Modal'ı açar
+            $("#exampleModalLong").modal('show'); // Modalı açar
+
+            var value = button.getAttribute('data-elementId');
+            var formElement = document.getElementById('FormElementId');
+            formElement.value = value;
+
+        }
         function handleFormSubmit(event) {
             // Seçilen kontrol tipini al
             const controlType = document.getElementById('kontrol-tipi').value;
@@ -268,6 +318,32 @@
             // Diğer durumlar için form gönderimine izin ver
             return true;
         }
+
+        $(document).ready(function () {
+            $('#formOption').on('submit', function (e) {
+                e.preventDefault(); // Formun normal şekilde gönderilmesini engeller.
+
+                // Form verilerini alıyoruz.
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/FormOption/AddFormOption', // Sunucu tarafında formu işleyecek URL
+                    data: formData,
+                    success: function (response) {
+                        // Başarılı işlem sonrasında yapılacaklar
+                        alert('Form başarıyla gönderildi!');
+                    },
+                    error: function (xhr, status, error) {
+                        // Hata durumunda yapılacaklar
+                        console.error('AJAX Hatası:', error);
+                        console.log('Durum:', status);
+                        console.log('Hata Yanıtı:', xhr.responseText);
+                        alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>

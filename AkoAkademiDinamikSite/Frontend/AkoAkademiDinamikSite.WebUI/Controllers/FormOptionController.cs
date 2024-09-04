@@ -55,11 +55,11 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
 
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index","Form"); // Başarılı olduğunda Index'e yönlendirme yapar
+                return Json(responseMessage); // Başarılı olduğunda Index'e yönlendirme yapar
             }
 
             // Başarısız durumda tekrar formu görüntülemek için View'a geri döner
-            return View();
+            return Json(responseMessage);
         }
 
         public async Task<IActionResult> DeleteFormOption(int id)
