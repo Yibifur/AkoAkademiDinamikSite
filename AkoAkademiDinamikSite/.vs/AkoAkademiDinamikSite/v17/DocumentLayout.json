@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\controllers\\formcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\controllers\\formoptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\controllers\\formoptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EAE374B4-B649-4BF8-A6B2-F36D1681809E}|Backend\\AkoAkademiDinamikSite.EntityLayer\\AkoAkademiDinamikSite.EntityLayer.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\backend\\akoakademidinamiksite.entitylayer\\reelconcrete\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EAE374B4-B649-4BF8-A6B2-F36D1681809E}|Backend\\AkoAkademiDinamikSite.EntityLayer\\AkoAkademiDinamikSite.EntityLayer.csproj|solutionrelative:backend\\akoakademidinamiksite.entitylayer\\reelconcrete\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,11 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormOptionController.cs",
+              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormOptionController.cs",
+              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormOptionController.cs",
+              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormOptionController.cs",
+              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormOptionController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwD0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T08:30:09.727Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,7 +61,7 @@
               "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Form\\EditForm.cshtml",
               "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Form\\EditForm.cshtml",
               "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Views\\Form\\EditForm.cshtml",
-              "ViewState": "AgIAABYBAAAAAAAAAAAowCABAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAALAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-04T06:20:31.609Z",
               "EditorCaption": ""
@@ -57,14 +74,14 @@
               "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormController.cs",
               "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormController.cs",
               "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAuwGcAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAuwFcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T06:15:32.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form.cs",
               "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.EntityLayer\\ReelConcrete\\Form.cs",
               "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.EntityLayer\\ReelConcrete\\Form.cs",
@@ -77,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FormOption.cs",
               "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.EntityLayer\\ReelConcrete\\FormOption.cs",
               "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.EntityLayer\\ReelConcrete\\FormOption.cs",
@@ -90,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FormElement.cs",
               "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Backend\\AkoAkademiDinamikSite.EntityLayer\\ReelConcrete\\FormElement.cs",
               "RelativeDocumentMoniker": "Backend\\AkoAkademiDinamikSite.EntityLayer\\ReelConcrete\\FormElement.cs",

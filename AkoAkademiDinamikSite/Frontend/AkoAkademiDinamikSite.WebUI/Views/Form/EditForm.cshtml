@@ -126,7 +126,7 @@
             <p>Form Üst Bilgi</p>
         </div>
         <div class="main-container">
-            <div class="form-section">
+            <div id="AddingFormElement"class="form-section">
                 <div class="form-header">
                     <h2>Form Oluşturucu</h2>
                 </div>
@@ -148,7 +148,7 @@
                     </div>
                     <div class="form-group">
                         <label>Kontrol Tipi</label>
-                        <select asp-for="ControlType" id="kontrol-tipi">
+                        <select asp-for="ControlType" id="kontrol-tipi" onchange="handleSelectChange()">
                             <option value="Yazı alanı">Yazı alanı</option>
                             <option value="Şıklı seçim">Şıklı seçim</option>
                             <option value="Listeli seçim">Listeli seçim</option>
@@ -166,6 +166,34 @@
                     </div>
                 </form>
             </div>
+            <div id="AddingFormOption" class="option-container" onchange="handleSelectChange()">
+                <form action="/FormOption/AddFormOption" method="post">
+                    <div class="option-header">
+                        <span>Opsiyonlar</span>
+                        <button type="button" class="btn-remove">Kaldır</button>
+                    </div>
+                    <div class="form-group">
+                       
+                        <input type="hidden" value=""  name="FormElementId" />
+                    </div>
+                    <div class="form-group">
+                        <label for="isim">İsim :</label>
+                        <input type="text" id="isim" name="Name" placeholder="İsim giriniz" />
+                    </div>
+                    <div class="form-group">
+                        <label for="deger">Değer :</label>
+                        <input type="text" id="deger" name="Value" placeholder="Değer giriniz" />
+                    </div>
+                    <div class="form-group">
+                        <label for="sira">Sıra :</label>
+                        <input type="number" id="sira" name="Order" placeholder="Sıra giriniz" />
+                    </div>
+                    <div class="form-actions">
+                        <button type="reset" class="btn btn-cancel">Vazgeç</button>
+                        <button type="submit" class="btn btn-save">Kaydet</button>
+                    </div>
+                </form>
+            </div>
             <div class="preview-section">
                 <div class="form-header">
                     <h2>Form Önizleme</h2>
@@ -175,44 +203,44 @@
                     @if (form != null)
                     {
 
-                        foreach (var element in form.FormElements)
+                        foreach (var element in form.FormElements.OrderBy(a=>a.Order))
                         {
-                            <div class="form-element">
+                            <div class="form-group">
                                 <label>@element.Title</label>
                                 @{
                                     switch (element.ControlType)
                                     {
                                         case "Yazı alanı":
-                                            <input type="text" placeholder="@element.Title" @(element.IsRequired ? "required" : "") />
+                                                        <input type="text" placeholder="@element.Title" @(element.IsRequired ? "required" : "") />
                                             break;
                                         case "Şıklı seçim":
-                                            <input type="checkbox" @(element.IsRequired ? "checked" : "") />
+                                                        <input type="checkbox" @(element.IsRequired ? "checked" : "") />
                                             break;
                                         case "Listeli seçim":
-                                            <select>
-                                                <option>@element.Title</option>
-                                            </select>
+                                                        <select>
+                                                            <option>@element.Title</option>
+                                                        </select>
                                             break;
                                         case "Numara":
-                                            <input type="number" />
+                                                        <input type="number" />
                                             break;
                                         case "Tarih":
-                                            <input type="date" />
+                                                        <input type="date" />
                                             break;
                                         case "Email":
-                                            <input type="email" placeholder="example@example.com" />
+                                                        <input type="email" placeholder="example@example.com" />
                                             break;
                                         case "Başlık":
-                                            <h3>@element.Title</h3>
+                                                        <h3>@element.Title</h3>
                                             break;
                                         case "Telefon":
-                                            <input type="tel" placeholder="+90 555 555 55 55" />
+                                                        <input type="tel" placeholder="+90 555 555 55 55" />
                                             break;
                                         case "Dosya yükleme":
-                                            <input type="file" />
+                                                        <input type="file" />
                                             break;
                                         default:
-                                            <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
+                                                        <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
                                             break;
                                     }
                                 }
@@ -229,81 +257,27 @@
 
 
     <script>
-        function handleFormSubmit(event) {
-           /*  event.preventDefault(); */ // Formun varsayılan submit işlemini engeller
 
-            // Form verilerini almak
-            const title = document.getElementById('baslik').value;
-            const isRequired = document.getElementById('zorunlu-alan').checked;
-            const order = document.getElementById('sira').value;
-            const controlType = document.getElementById('kontrol-tipi').value;
+        window.onload = function () {
+            document.getElementById('AddingFormOption').style.display = 'none';
+        };
+        function handleSelectChange() {
+            const selectElement = document.getElementById('kontrol-tipi');
+        const selectedValue = selectElement.value;
+        const divBlock = document.getElementById('AddingFormElement');
+        const optionBlock = document.getElementById('AddingFormOption');
+            
+            if (selectedValue === 'Listeli seçim') {
 
-            // Önizleme alanı
-            const previewSection = document.getElementById('form-preview');
 
-            // Başlık ve sırayı gösteren etiketler
-            const titleLabel = document.createElement('p');
-            titleLabel.textContent = `${order}.${title}`;
-            previewSection.appendChild(titleLabel);
+               
+                optionBlock.style.display="block"
 
-            /*const orderLabel = document.createElement('p');
-            orderLabel.textContent = `Sıra: ${order}`;
-            previewSection.appendChild(orderLabel);*/
-
-            // ControlType'e göre eleman oluşturma
-            let previewElement;
-            switch (controlType) {
-                case 'Yazı alanı':
-                    previewElement = document.createElement('input');
-                    previewElement.type = 'text';
-                    previewElement.placeholder = title;
-                    break;
-                case 'Şıklı seçim':
-                    previewElement = document.createElement('input');
-                    previewElement.type = 'checkbox';
-                    previewElement.checked = isRequired;
-                    break;
-                case 'Listeli seçim':
-                    previewElement = document.createElement('select');
-                    const option = document.createElement('option');
-                    option.text = title;
-                    previewElement.add(option);
-                    break;
-                case 'Numara':
-                    previewElement = document.createElement('input');
-                    previewElement.type = 'number';
-                    break;
-                case 'Tarih':
-                    previewElement = document.createElement('input');
-                    previewElement.type = 'date';
-                    break;
-                case 'Email':
-                    previewElement = document.createElement('input');
-                    previewElement.type = 'email';
-                    break;
-                case 'Başlık':
-                    previewElement = document.createElement('h3');
-                    previewElement.innerText = title;
-                    break;
-                case 'Telefon':
-                    previewElement = document.createElement('input');
-                    previewElement.type = 'tel';
-                    break;
-                case 'Dosya yükleme':
-                    previewElement = document.createElement('input');
-                    previewElement.type = 'file';
-                    break;
-                default:
-                    previewElement = document.createElement('span');
-                    previewElement.innerText = 'Bilinmeyen kontrol tipi';
+            } 
+            else{
+                divBlock.style.display = "block";
+                optionBlock.style.display = "none";
             }
-
-            // Oluşturulan elemanı önizleme alanına ekle
-            if (previewElement) {
-                previewSection.appendChild(previewElement); // Elemanı önizleme alanına ekler
-                previewSection.appendChild(document.createElement('br')); // Altına boşluk ekler
-            }
-            return true;
         }
     </script>
 </body>
