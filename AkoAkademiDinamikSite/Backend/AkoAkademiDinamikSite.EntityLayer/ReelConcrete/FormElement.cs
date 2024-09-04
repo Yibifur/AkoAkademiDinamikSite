@@ -8,10 +8,7 @@ namespace AkoAkademiDinamikSite.EntityLayer.ReelConcrete
 {
     public class FormElement
     {
-        public FormElement()
-        {
-            FormOptions = new List<FormOption>();
-        }
+       
         public int FormElementId { get; set; }
         public string Title { get; set; }
         public bool IsRequired { get; set; }

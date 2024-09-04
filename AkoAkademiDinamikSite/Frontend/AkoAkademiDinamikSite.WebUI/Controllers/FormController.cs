@@ -87,7 +87,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
         [HttpGet]
         public async Task<IActionResult> EditForm(int id)
         {
-            AddFormElementViewModel f = new AddFormElementViewModel();
+           
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync($"http://localhost:7029/api/Forms/{id}");
             if (responseMessage.IsSuccessStatusCode)
@@ -95,11 +95,10 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                var  form = JsonConvert.DeserializeObject<Form>(jsonData);
                 TempData["Form"]= form;
-                ViewBag.Kayit= form;
-                f.FormId = form.FormId;
+                
             }
 
-            return View(f);
+            return View();
         }
         [HttpPost]
         public async Task<IActionResult> EditForm(AddFormElementViewModel model)

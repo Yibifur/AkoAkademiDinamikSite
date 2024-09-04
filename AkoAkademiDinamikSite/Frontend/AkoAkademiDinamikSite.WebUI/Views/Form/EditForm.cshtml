@@ -1,13 +1,123 @@
 ﻿@model AddFormElementViewModel
 @{
+    ViewData["Title"] = "EditForm";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+    var formId = (int)Convert.ToInt32(ViewContext.RouteData.Values["id"]);
     Form form = (Form)TempData["Form"];
 }
+
+<style>
+    /* CSS stilleriniz burada */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .top-container {
+    }
+
+    .top-info {
+        background-color: #3e6fc9;
+        color: white;
+        text-align: left;
+        padding: 1px;
+        font-size: 10px;
+    }
+
+    .main-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 15px;
+    }
+
+    .form-section, .preview-section {
+        background-color: #ffffff;
+        border: 1px solid #3e6fc9;
+        width: 45%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-header {
+        background-color: #3e6fc9;
+        font-size: 8px;
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+        padding: 2px;
+        border-radius: 4px 4px 0 0;
+        text-align: left;
+    }
+
+    .form-group {
+        padding: 10px 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group select {
+        width: calc(100% - 10px);
+        padding: 2px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .form-group input[type="checkbox"] {
+        margin-top: 5px;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 20px;
+        background-color: #f1f1f1;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        margin-left: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-cancel {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .btn-save {
+        background-color: #ffc107;
+        color: white;
+    }
+
+    .save-changes {
+        text-align: right;
+        margin: 20px;
+    }
+
+    .btn-save-changes {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Önizleme</title>
+    <title>Form Oluşturucu</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -22,7 +132,7 @@
                 </div>
                 <form method="post">
                     <div>
-                        <input type="text" value="@Model.FormId" asp-for="FormId" />
+                        <input type="hidden" value="@formId" asp-for="FormId" />
                     </div>
                     <div class="form-group">
                         <label>Başlık</label>
@@ -61,9 +171,10 @@
                     <h2>Form Önizleme</h2>
                 </div>
                 <div id="form-preview">
+                    <!-- Form önizleme alanı buraya gelecek -->
                     @if (form != null)
                     {
-                     
+
                         foreach (var element in form.FormElements)
                         {
                             <div class="form-element">
@@ -115,5 +226,85 @@
             <button type="reset" class="btn btn-cancel">Değişiklikleri Kaydet</button>
         </div>
     </div>
+
+
+    <script>
+        function handleFormSubmit(event) {
+           /*  event.preventDefault(); */ // Formun varsayılan submit işlemini engeller
+
+            // Form verilerini almak
+            const title = document.getElementById('baslik').value;
+            const isRequired = document.getElementById('zorunlu-alan').checked;
+            const order = document.getElementById('sira').value;
+            const controlType = document.getElementById('kontrol-tipi').value;
+
+            // Önizleme alanı
+            const previewSection = document.getElementById('form-preview');
+
+            // Başlık ve sırayı gösteren etiketler
+            const titleLabel = document.createElement('p');
+            titleLabel.textContent = `${order}.${title}`;
+            previewSection.appendChild(titleLabel);
+
+            /*const orderLabel = document.createElement('p');
+            orderLabel.textContent = `Sıra: ${order}`;
+            previewSection.appendChild(orderLabel);*/
+
+            // ControlType'e göre eleman oluşturma
+            let previewElement;
+            switch (controlType) {
+                case 'Yazı alanı':
+                    previewElement = document.createElement('input');
+                    previewElement.type = 'text';
+                    previewElement.placeholder = title;
+                    break;
+                case 'Şıklı seçim':
+                    previewElement = document.createElement('input');
+                    previewElement.type = 'checkbox';
+                    previewElement.checked = isRequired;
+                    break;
+                case 'Listeli seçim':
+                    previewElement = document.createElement('select');
+                    const option = document.createElement('option');
+                    option.text = title;
+                    previewElement.add(option);
+                    break;
+                case 'Numara':
+                    previewElement = document.createElement('input');
+                    previewElement.type = 'number';
+                    break;
+                case 'Tarih':
+                    previewElement = document.createElement('input');
+                    previewElement.type = 'date';
+                    break;
+                case 'Email':
+                    previewElement = document.createElement('input');
+                    previewElement.type = 'email';
+                    break;
+                case 'Başlık':
+                    previewElement = document.createElement('h3');
+                    previewElement.innerText = title;
+                    break;
+                case 'Telefon':
+                    previewElement = document.createElement('input');
+                    previewElement.type = 'tel';
+                    break;
+                case 'Dosya yükleme':
+                    previewElement = document.createElement('input');
+                    previewElement.type = 'file';
+                    break;
+                default:
+                    previewElement = document.createElement('span');
+                    previewElement.innerText = 'Bilinmeyen kontrol tipi';
+            }
+
+            // Oluşturulan elemanı önizleme alanına ekle
+            if (previewElement) {
+                previewSection.appendChild(previewElement); // Elemanı önizleme alanına ekler
+                previewSection.appendChild(document.createElement('br')); // Altına boşluk ekler
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
