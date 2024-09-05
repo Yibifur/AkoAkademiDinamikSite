@@ -24,6 +24,12 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
             return Ok(entities);
 
         }
+        [HttpGet("ByFormElementId/{id}")]
+        public IActionResult GetAllFormOptionsByFormElementId(int id)
+        {
+            var entities = FormOptionService.TGetFormOptionsByFormElementId(id);
+            return Ok(entities);
+        }
         [HttpGet("{id}")]
         public IActionResult GetFormOptionById(int id)
         {

@@ -9,5 +9,6 @@ namespace AkoAkademiDinamikSite.BusinessLayer.Abstract
 {
     public interface IFormOptionService : IGenericService<FormOption>
     {
+        List<FormOption> TGetFormOptionsByFormElementId(int id);  
     }
 }

@@ -30,6 +30,20 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             }
             return View();
         }
+        public async Task<IActionResult> GetFormOptionsByFormElementId(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:7029/api/FormOptions/ByFormElementId/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<FormOptionViewModel>>(jsonData);
+                return Ok(values);
+
+            }
+            return View();
+        }
         [HttpGet]
         public IActionResult AddFormOption()
         {
@@ -55,11 +69,11 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
 
             if (responseMessage.IsSuccessStatusCode)
             {
-                return Json(responseMessage); // Başarılı olduğunda Index'e yönlendirme yapar
+                return Ok(Name); // Başarılı olduğunda Index'e yönlendirme yapar
             }
 
             // Başarısız durumda tekrar formu görüntülemek için View'a geri döner
-            return Json(responseMessage);
+            return Ok();
         }
 
         public async Task<IActionResult> DeleteFormOption(int id)
@@ -68,7 +82,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             var responseMessage = await client.DeleteAsync($"http://localhost:7029/api/FormOptions?id={id}");
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index");
+                return Ok();
 
             }
             return View();

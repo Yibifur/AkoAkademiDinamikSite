@@ -32,6 +32,20 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             }
             return View();
         }
+        public async Task<IActionResult> GetFormElementById(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:7029/api/FormElements/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<FormElementViewModel>(jsonData);
+                return Ok();
+
+            }
+            return View();
+        }
         [HttpGet]
         public IActionResult AddForm()
         {
@@ -124,6 +138,18 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             return View();
         }
 
-        
+        public async Task<IActionResult> DeleteFormElement(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.DeleteAsync($"http://localhost:7029/api/FormElements?id={id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return Ok(responseMessage);
+
+            }
+            return View();
+        }
+
+
     }
 }

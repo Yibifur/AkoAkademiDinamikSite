@@ -34,6 +34,11 @@ namespace AkoAkademiDinamikSite.BusinessLayer.Concrete
             return FormOptionDal.GetById(id);
         }
 
+        public List<FormOption> TGetFormOptionsByFormElementId(int id)
+        {
+            return FormOptionDal.GetFormOptionsByFormElementId(id);
+        }
+
         public void TInsert(FormOption entity)
         {
             FormOptionDal.Insert(entity);
