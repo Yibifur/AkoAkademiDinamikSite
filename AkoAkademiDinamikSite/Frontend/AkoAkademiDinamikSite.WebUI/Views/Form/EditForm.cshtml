@@ -180,7 +180,7 @@
 
                         foreach (var element in form.FormElements.OrderBy(a=>a.Order))
                         {
-                            globalFormElementId = element.FormElementId;
+                           
                             <div class="form-group">
                                @*  <label id="labelkisim">@element.Order-@element.Title</label> *@
                                 @{
@@ -188,112 +188,112 @@
                                     {
                                         case "Yazı alanı":
 
-                                                    <div class="form-element">
-                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                        <input type="text" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
-                                                        <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                            <i class="fas fa-trash"></i> Sil
-                                                        </button>
-                                                    </div>
+                                                        <div class="form-element">
+                                                            <label id="labelkisim">@element.Order-@element.Title</label>
+                                                            <input type="text" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
+                                                            <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                <i class="fas fa-trash"></i> Sil
+                                                            </button>
+                                                        </div>
                                             break;
                                         case "Şıklı seçim":
                                             
-                                                    <div class="form-element">
-                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                    <input type="checkbox" @(element.IsRequired ? "checked" : "") />
-                                                        <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                            <i class="fas fa-trash"></i> Sil
-                                                        </button>
-                                                    </div>
+                                                        <div class="form-element">
+                                                            <label id="labelkisim">@element.Order-@element.Title</label>
+                                                        <input type="checkbox" @(element.IsRequired ? "checked" : "") />
+                                                            <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                <i class="fas fa-trash"></i> Sil
+                                                            </button>
+                                                        </div>
                                             break;
                                         case "Listeli seçim":
-                                                    <div class="form-element">
-                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                    <select >
-                                                        @if (element.FormOptions != null)
+                                                        <div class="form-element">
+                                                            <label id="labelkisim">@element.Order-@element.Title</label>
+                                                        <select id="selectoptions">
+                                                            @if (element.FormOptions != null)
                                                 {
-                                                            @foreach (var item in element.FormOptions)
-                                                    {
+                                                                @foreach (var item in element.FormOptions)
+                                                            {
 
                                                        
 
-                                                                <option>@item.Name</option>
+                                                                    <option>@item.Name</option>
                                                        
 
 
-                                                    }
+                                                            }
                                                 }
 
 
-                                                    </select> <button type="button" class="plus-button" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
-                                                        <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                            <i class="fas fa-trash"></i> Sil
-                                                        </button>
-                                                      </div>
+                                                        </select> <button type="button" class="plus-button" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
+                                                            <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                <i class="fas fa-trash"></i> Sil
+                                                            </button>
+                                                          </div>
                                            
                                             break;
                                         case "Numara":
-                                                    <div class="form-element">
-                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                <input type="number" />
-                                                        <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                            <i class="fas fa-trash"></i> Sil
-                                                        </button>
-                                                    </div>
+                                                        <div class="form-element">
+                                                            <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                    <input type="number" />
+                                                            <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                <i class="fas fa-trash"></i> Sil
+                                                            </button>
+                                                        </div>
                                             break;
                                         case "Tarih":
-                                                        <div class="form-element">
-                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                <input type="date" />
-                                                        <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                            <i class="fas fa-trash"></i> Sil
-                                                        </button>
-                                                    </div>
+                                                            <div class="form-element">
+                                                            <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                    <input type="date" />
+                                                            <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                <i class="fas fa-trash"></i> Sil
+                                                            </button>
+                                                        </div>
                                             break;
                                         case "Email":
-                                                            <div class="form-element">
-                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                <input type="email" placeholder="example@example.com" />
-                                                        <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                            <i class="fas fa-trash"></i> Sil
-                                                        </button>
-                                                    </div>
+                                                                <div class="form-element">
+                                                            <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                    <input type="email" placeholder="example@example.com" />
+                                                            <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                <i class="fas fa-trash"></i> Sil
+                                                            </button>
+                                                        </div>
                                             break;
                                         case "Başlık":
-                                                                <div class="form-element">
-                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                <h3>@element.Title</h3>
-                                                        <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                            <i class="fas fa-trash"></i> Sil
-                                                        </button>
-                                                    </div>
+                                                                    <div class="form-element">
+                                                            <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                    <h3>@element.Title</h3>
+                                                            <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                <i class="fas fa-trash"></i> Sil
+                                                            </button>
+                                                        </div>
                                             break;
                                         case "Telefon":
-                                                                    <div class="form-element">
-                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                <input type="tel" placeholder="+90 555 555 55 55" />
-                                                        <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                            <i class="fas fa-trash"></i> Sil
-                                                        </button>
-                                                    </div>
+                                                                        <div class="form-element">
+                                                            <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                    <input type="tel" placeholder="+90 555 555 55 55" />
+                                                            <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                <i class="fas fa-trash"></i> Sil
+                                                            </button>
+                                                        </div>
                                             break;
                                         case "Dosya yükleme":
-                                                                        <div class="form-element">
-                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                <input type="file" />
-                                                        <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                            <i class="fas fa-trash"></i> Sil
-                                                        </button>
-                                                    </div>
+                                                                            <div class="form-element">
+                                                            <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                    <input type="file" />
+                                                            <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                <i class="fas fa-trash"></i> Sil
+                                                            </button>
+                                                        </div>
                                             break;
                                         default:
-                                                                            <div class="form-element">
-                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
-                                                        <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                            <i class="fas fa-trash"></i> Sil
-                                                        </button>
-                                                    </div>
+                                                                                <div class="form-element">
+                                                            <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                    <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
+                                                            <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                <i class="fas fa-trash"></i> Sil
+                                                            </button>
+                                                        </div>
                                             break;
                                     }
                                 }
@@ -324,16 +324,7 @@
 
 
 
-                                @foreach (var item in form.FormElements.FirstOrDefault(x => x.FormElementId == globalFormElementId).FormOptions)
-                                {
-
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span>@item.Name</span>
-                                        <button type="button" data-id="@item.FormOptionId" class="btn btn-danger btn-sm btn-remove" onclick="deleteFormOption(this)">
-                                            <i class="fas fa-trash-alt"></i> Kaldır
-                                        </button>
-                                    </li>
-                                }
+                               
 
                             </ul>
                         </div>
@@ -357,7 +348,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="reset" class="btn btn-secondary btn-cancel" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <button type="submit" data-elementId="@globalFormElementId" class="btn btn-primary" onclick="getFormOptionsInMainList(this)">Save changes</button>
                             </div>
                         </form>
                     </div>
@@ -370,9 +361,9 @@
     <script>
         function openModal(button) {
             // Modal'ı açar
-         
+       
             $("#exampleModalLong").modal('show'); // Modalı açar
-
+            debugger
             // Data attribute'den FormElementId değerini al
             var value = button.getAttribute('data-elementId');
          
@@ -384,6 +375,22 @@
         
     
     
+        }
+        function getFormOptionsInMainList(button) {
+           
+            debugger
+           
+            // Data attribute'den FormElementId değerini al
+            // var value = button.getAttribute('data-elementId');
+            value = globalFormElementId;
+
+            getFormOptions(value);
+
+
+
+
+
+
         }
 
         $(document).ready(function () {
@@ -412,14 +419,13 @@
                 });
             });
         });
-
         function handleFormSubmit(button) {
             // Seçilen kontrol tipini al
             var value = button.getAttribute('data-elementId');
             const controlType = document.getElementById('kontrol-tipi').value;
 
             // Eğer kontrol tipi 'Şıklı seçim' ise başka bir sayfaya yönlendir
-            if (controlType === 'Şıklı seçim') {
+            if (controlType === 'Listeli seçim') {
                 window.location.href = '/FormOption/AddFormOption'; // Yönlendirilecek sayfanın URL'si
                 return false; // Form gönderilmesini engelle
             }
@@ -427,12 +433,21 @@
             // Diğer durumlar için form gönderimine izin ver
             return true;
         }
-        function useGlobalFormElementId() {
-            if (globalFormElementId !== null) {
-                return globalFormElementId
-                
-            } 
+        function handleFormSubmit(button) {
+            // Seçilen kontrol tipini al
+            var value = button.getAttribute('data-elementId');
+            const controlType = document.getElementById('kontrol-tipi').value;
+
+            // Eğer kontrol tipi 'Şıklı seçim' ise başka bir sayfaya yönlendir
+            if (controlType === 'Listeli seçim') {
+                window.location.href = '/FormOption/AddFormOption'; // Yönlendirilecek sayfanın URL'si
+                return false; // Form gönderilmesini engelle
+            }
+
+            // Diğer durumlar için form gönderimine izin ver
+            return true;
         }
+        
         function deleteFormElement(button) {
             
             var formElementId = $(button).data('id'); // Butondan FormElementId al
@@ -481,6 +496,7 @@
         }
 
         function getFormOptions(value){
+            debugger
             $.ajax({
                 type: 'GET',
                 url: `/FormOption/GetFormOptionsByFormElementId/${value}`, // API endpoint
