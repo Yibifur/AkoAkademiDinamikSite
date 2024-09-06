@@ -209,20 +209,8 @@
                                         case "Listeli seçim":
                                                         <div class="form-element">
                                                             <label id="labelkisim">@element.Order-@element.Title</label>
-                                                        <select id="selectoptions">
-                                                            @if (element.FormOptions != null)
-                                                {
-                                                                @foreach (var item in element.FormOptions)
-                                                            {
-
-                                                       
-
-                                                                    <option>@item.Name</option>
-                                                       
-
-
-                                                            }
-                                                }
+                                                        <select id="selectoptions-@element.FormElementId" onclick="loadOptions(@element.FormElementId)">
+                                                            
 
 
                                                         </select> <button type="button" class="plus-button" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
@@ -527,7 +515,29 @@
                     }
                     });
         }
+        function loadOptions(formElementId) {
+    // AJAX çağrısı
+    $.ajax({
+        type: 'GET',
+        url: `/FormOption/GetFormOptionsByFormElementId/${formElementId}`, // API endpoint
+        success: function (response) {
+            // Başarılı olursa, select öğesini bulup verileri ekleyin
+            var selectElement = $(`#selectoptions-${formElementId}`);
+            selectElement.empty(); // Mevcut seçenekleri temizle
 
+            // Gelen verilerle seçenekleri doldur
+            response.forEach(function (option) {
+                var optionItem = `<option value="${option.formOptionId}">${option.name}</option>`;
+                selectElement.append(optionItem);
+            });
+        },
+        error: function (error) {
+            // Hata durumunda yapılacaklar
+            console.error('Veri alınırken bir hata oluştu:', error);
+            alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
+        }
+    });
+}
         
 
     </script>
