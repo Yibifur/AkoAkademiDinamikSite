@@ -46,7 +46,8 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
                 FormElementId = model.FormElementId,
                 Name = model.Name,  
                 Value = model.Value,
-                Order = model.Order
+                Order = model.Order,
+                IsSelected = model.IsSelected  
             };
 
             FormOptionService.TInsert(FormOption);
@@ -62,7 +63,8 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
                 FormOptionId = model.FormOptionId,
                 Name = model.Name,
                 Value = model.Value,
-                Order = model.Order
+                Order = model.Order,
+                IsSelected = model.IsSelected
             };
 
             FormOptionService.TUpdate(FormOption);

@@ -31,6 +31,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             return View();
         }
         public async Task<IActionResult> GetFormOptionsByFormElementId(int id)
+        
         {
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync($"http://localhost:7029/api/FormOptions/ByFormElementId/{id}");
@@ -50,12 +51,12 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> AddFormOption(int FormElementId,string Name, string Value, int Order)
+        public async Task<IActionResult> AddFormOption(string ControlType,int FormElementId,string Name, string Value, int Order)
         {
             
             var formOption = new AddFormOptionViewModel
             {
-                
+                ControlType = ControlType,
                 FormElementId= FormElementId,  
                 Name = Name,
                 Value = Value,
@@ -69,7 +70,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
 
             if (responseMessage.IsSuccessStatusCode)
             {
-                return Ok(Name); // Başarılı olduğunda Index'e yönlendirme yapar
+                return Ok(formOption); // Başarılı olduğunda Index'e yönlendirme yapar
             }
 
             // Başarısız durumda tekrar formu görüntülemek için View'a geri döner
@@ -113,31 +114,6 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
 
 
         }
-        //[HttpGet]
-        //public async Task<IActionResult> EditFormOption(int id)
-        //{
-
-        //    var client = _httpClientFactory.CreateClient();
-        //    var responseMessage = await client.GetAsync($"http://localhost:7029/api/FormOptions/{id}");
-        //    if (responseMessage.IsSuccessStatusCode)
-        //    {
-        //        var jsonData = await responseMessage.Content.ReadAsStringAsync();
-        //        var FormOption = JsonConvert.DeserializeObject<FormOption>(jsonData);
-        //        TempData["FormOption"] = FormOption;
-
-        //    }
-
-        //    return View();
-        //}
-        //[HttpPost]
-        //public async Task<IActionResult> EditFormOption(AddFormOptionElementViewModel model)
-        //{
-        //    var client = _httpClientFactory.CreateClient();
-        //    var jsonData = JsonConvert.SerializeObject(model);
-        //    StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-        //    var responseMessage = await client.PostAsync($"http://localhost:7029/api/FormOptionElements", stringContent);
-        //    if (responseMessage.IsSuccessStatusCode) { return RedirectToAction("EditFormOption", "FormOption"); }
-        //    return View();
-        //}
+        
     }
 }

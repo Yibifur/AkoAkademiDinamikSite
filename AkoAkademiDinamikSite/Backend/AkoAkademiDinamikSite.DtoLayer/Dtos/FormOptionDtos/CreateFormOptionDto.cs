@@ -13,5 +13,7 @@ namespace AkoAkademiDinamikSite.DtoLayer.Dtos.FormOptionDtos
         public string? Name { get; set; }
         public string? Value { get; set; }
         public int? Order { get; set; }
+        //Şıklı Seçim
+        public bool? IsSelected { get; set; } // Varsayılan olarak seçili olup olmadığını belirler
     }
 }

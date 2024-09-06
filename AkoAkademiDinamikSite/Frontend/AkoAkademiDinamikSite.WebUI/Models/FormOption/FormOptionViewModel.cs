@@ -8,5 +8,6 @@
         public string? Name { get; set; }
         public string? Value { get; set; }
         public int? Order { get; set; }
+        //public bool? IsSelected { get; set; } // Varsayılan olarak seçili olup olmadığını belirler
     }
 }
