@@ -182,7 +182,7 @@
                         {
                            
                             <div class="form-group">
-                               @*  <label id="labelkisim">@element.Order-@element.Title</label> *@
+                              
                                 @{
                                     switch (element.ControlType)
                                     {
@@ -200,7 +200,33 @@
                                             
                                                         <div class="form-element">
                                                             <label id="labelkisim">@element.Order-@element.Title</label>
-                                                        <input type="checkbox" @(element.IsRequired ? "checked" : "") />
+                                                       
+                                                <form>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="language" id="radio1" value="python">
+                                                        <label class="form-check-label" for="radio1">
+                                                            Python
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="language" id="radio2" value="javascript">
+                                                        <label class="form-check-label" for="radio2">
+                                                            JavaScript
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="language" id="radio3" value="csharp">
+                                                        <label class="form-check-label" for="radio3">
+                                                            C#
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="language" id="radio4" value="java">
+                                                        <label class="form-check-label" for="radio4">
+                                                            Java
+                                                        </label>
+                                                    </div>
+                                                </form>
                                                             <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
                                                                 <i class="fas fa-trash"></i> Sil
                                                             </button>
@@ -344,202 +370,204 @@
             </div>
         </div>
     </div>
+   
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            function openModal(button) {
+                // Modal'ı açar
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        function openModal(button) {
-            // Modal'ı açar
-       
-            $("#exampleModalLong").modal('show'); // Modalı açar
-            debugger
-            // Data attribute'den FormElementId değerini al
-            var value = button.getAttribute('data-elementId');
-         
-            var formElement = document.getElementById('FormElementId');
-            formElement.value = value;
-            globalFormElementId = value;
+                $("#exampleModalLong").modal('show'); // Modalı açar
+                debugger
+                // Data attribute'den FormElementId değerini al
+                var value = button.getAttribute('data-elementId');
 
-            getFormOptions(value);
-        
-    
-    
-        }
-        function getFormOptionsInMainList(button) {
-           
-            debugger
-           
-            // Data attribute'den FormElementId değerini al
-            // var value = button.getAttribute('data-elementId');
-            value = globalFormElementId;
+                var formElement = document.getElementById('FormElementId');
+                formElement.value = value;
+                globalFormElementId = value;
 
-            getFormOptions(value);
+                getFormOptions(value);
 
 
+
+            }
+            function getFormOptionsInMainList(button) {
+
+                debugger
+
+                // Data attribute'den FormElementId değerini al
+                // var value = button.getAttribute('data-elementId');
+                value = globalFormElementId;
+
+                getFormOptions(value);
 
 
 
 
-        }
 
-        $(document).ready(function () {
-            $('#formOption').on('submit', function (e) {
-                e.preventDefault(); // Formun normal şekilde gönderilmesini engeller.
 
-                // Form verilerini alıyoruz.
-                var formData = $(this).serialize();
-
-                // AJAX ile formu gönderme
-                $.ajax({
-                    type: 'POST',
-                    url: '/FormOption/AddFormOption', // Sunucu tarafında formu işleyecek URL
-                    data: formData,
-                    success: function (response) {
-                        // Başarılı işlem sonrasında yapılacaklar
-                        var newOption = `<option>${response}</option>`;
-                        $('#form-preview select').append(newOption); 
-                        
-                        $('#exampleModalLong').modal('hide'); // Modalı kapat
-                    },
-                    error: function (error) {
-                        // Hata durumunda yapılacaklar
-                       
-                    }
-                });
-            });
-        });
-        function handleFormSubmit(button) {
-            // Seçilen kontrol tipini al
-            var value = button.getAttribute('data-elementId');
-            const controlType = document.getElementById('kontrol-tipi').value;
-
-            // Eğer kontrol tipi 'Şıklı seçim' ise başka bir sayfaya yönlendir
-            if (controlType === 'Listeli seçim') {
-                window.location.href = '/FormOption/AddFormOption'; // Yönlendirilecek sayfanın URL'si
-                return false; // Form gönderilmesini engelle
             }
 
-            // Diğer durumlar için form gönderimine izin ver
-            return true;
-        }
-        function handleFormSubmit(button) {
-            // Seçilen kontrol tipini al
-            var value = button.getAttribute('data-elementId');
-            const controlType = document.getElementById('kontrol-tipi').value;
+            $(document).ready(function () {
+                $('#formOption').on('submit', function (e) {
+                    e.preventDefault(); // Formun normal şekilde gönderilmesini engeller.
 
-            // Eğer kontrol tipi 'Şıklı seçim' ise başka bir sayfaya yönlendir
-            if (controlType === 'Listeli seçim') {
-                window.location.href = '/FormOption/AddFormOption'; // Yönlendirilecek sayfanın URL'si
-                return false; // Form gönderilmesini engelle
-            }
+                    // Form verilerini alıyoruz.
+                    var formData = $(this).serialize();
 
-            // Diğer durumlar için form gönderimine izin ver
-            return true;
-        }
-        
-        function deleteFormElement(button) {
-            
-            var formElementId = $(button).data('id'); // Butondan FormElementId al
+                    // AJAX ile formu gönderme
+                    $.ajax({
+                        type: 'POST',
+                        url: '/FormOption/AddFormOption', // Sunucu tarafında formu işleyecek URL
+                        data: formData,
+                        success: function (response) {
+                            // Başarılı işlem sonrasında yapılacaklar
+                            var newOption = `<option>${response}</option>`;
+                            $('#form-preview select').append(newOption);
 
-            // AJAX çağrısı
-            $.ajax({
-                type: 'POST',
-                url: '/Form/DeleteFormElement', // Silme işlemi için URL
-                data: { id: formElementId }, // Sunucuya gönderilen veri
-                success: function (response) {
-                    // Başarılı olduğunda, DOM'dan elemanı kaldır
-                    $(button).closest('.form-element').remove();
-                    
-                },
-                error: function (error) {
-                    // Hata durumunda yapılacaklar
-                    alert('Silme işlemi sırasında bir hata oluştu. Lütfen tekrar deneyin.');
-                }
-            });
-        }
-        function deleteFormOption(button) {
-            var formElementId = $(button).data('id'); // Butondan FormElementId al
-
-            // AJAX çağrısı
-            $.ajax({
-                type: 'POST',
-                url: '/FormOption/DeleteFormOption', // Silme işlemi için URL
-                data: { id: formElementId }, // Sunucuya gönderilen veri
-                success: function (response) {
-                    // Başarılı olduğunda, DOM'dan elemanı kaldır
-                    // $(button).closest('.form-element').remove();
-                    
-                    
-                    var value = button.getAttribute('data-elementId');
-         
-                    globalFormElementId = value;
-
-                    getFormOptions(value);
-     
+                            $('#exampleModalLong').modal('hide'); // Modalı kapat
                         },
                         error: function (error) {
                             // Hata durumunda yapılacaklar
-                            
+
                         }
                     });
-        }
+                });
+            });
+            function handleFormSubmit(button) {
+                // Seçilen kontrol tipini al
+                var value = button.getAttribute('data-elementId');
+                const controlType = document.getElementById('kontrol-tipi').value;
 
-        function getFormOptions(value){
-            debugger
-            $.ajax({
-                type: 'GET',
-                url: `/FormOption/GetFormOptionsByFormElementId/${value}`, // API endpoint
-                success: function (response) {
-                    // Başarılı işlem sonrasında yapılacaklar
-                    
-                    // Verileri sayfada göstermek için
-                   var optionsList = $('.option-header ul'); // List elementinin sınıfı veya ID'si ile seçildi
-                    optionsList.empty(); // Mevcut listeyi temizle
+                // Eğer kontrol tipi 'Şıklı seçim' ise başka bir sayfaya yönlendir
+                if (controlType === 'Listeli seçim') {
+                    window.location.href = '/FormOption/AddFormOption'; // Yönlendirilecek sayfanın URL'si
+                    return false; // Form gönderilmesini engelle
+                }
 
-                    // Gelen verilerle listeyi doldur
-                    response.forEach(function (option) {
-                        
-                        var listItem = `
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                <span>${option.name}</span>
-                                <button type="button" data-id="${option.formOptionId}" data-elementid="${option.formElementId}"  class="btn btn-danger btn-sm btn-remove" onclick="deleteFormOption(this)">
-                                    <i class="fas fa-trash-alt"></i> Kaldır
-                                </button>
-                            </li>`;
-                        optionsList.append(listItem); // Liste elemanını ekle
-                    });
+                // Diğer durumlar için form gönderimine izin ver
+                return true;
+            }
+            function handleFormSubmit(button) {
+                // Seçilen kontrol tipini al
+                var value = button.getAttribute('data-elementId');
+                const controlType = document.getElementById('kontrol-tipi').value;
+
+                // Eğer kontrol tipi 'Şıklı seçim' ise başka bir sayfaya yönlendir
+                if (controlType === 'Listeli seçim') {
+                    window.location.href = '/FormOption/AddFormOption'; // Yönlendirilecek sayfanın URL'si
+                    return false; // Form gönderilmesini engelle
+                }
+
+                // Diğer durumlar için form gönderimine izin ver
+                return true;
+            }
+
+            function deleteFormElement(button) {
+
+                var formElementId = $(button).data('id'); // Butondan FormElementId al
+
+                // AJAX çağrısı
+                $.ajax({
+                    type: 'POST',
+                    url: '/Form/DeleteFormElement', // Silme işlemi için URL
+                    data: { id: formElementId }, // Sunucuya gönderilen veri
+                    success: function (response) {
+                        // Başarılı olduğunda, DOM'dan elemanı kaldır
+                        $(button).closest('.form-element').remove();
+
                     },
                     error: function (error) {
                         // Hata durumunda yapılacaklar
-                     console.error('Veri alınırken bir hata oluştu:', error);
+                        alert('Silme işlemi sırasında bir hata oluştu. Lütfen tekrar deneyin.');
+                    }
+                });
+            }
+            function deleteFormOption(button) {
+                var formElementId = $(button).data('id'); // Butondan FormElementId al
+
+                // AJAX çağrısı
+                $.ajax({
+                    type: 'POST',
+                    url: '/FormOption/DeleteFormOption', // Silme işlemi için URL
+                    data: { id: formElementId }, // Sunucuya gönderilen veri
+                    success: function (response) {
+                        // Başarılı olduğunda, DOM'dan elemanı kaldır
+                        // $(button).closest('.form-element').remove();
+
+
+                        var value = button.getAttribute('data-elementId');
+
+                        globalFormElementId = value;
+
+                        getFormOptions(value);
+
+                    },
+                    error: function (error) {
+                        // Hata durumunda yapılacaklar
+
+                    }
+                });
+            }
+
+            function getFormOptions(value) {
+                debugger
+                $.ajax({
+                    type: 'GET',
+                    url: `/FormOption/GetFormOptionsByFormElementId/${value}`, // API endpoint
+                    success: function (response) {
+                        // Başarılı işlem sonrasında yapılacaklar
+
+                        // Verileri sayfada göstermek için
+                        var optionsList = $('.option-header ul'); // List elementinin sınıfı veya ID'si ile seçildi
+                        optionsList.empty(); // Mevcut listeyi temizle
+
+                        // Gelen verilerle listeyi doldur
+                        response.forEach(function (option) {
+
+                            var listItem = `
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span>${option.name}</span>
+                                            <button type="button" data-id="${option.formOptionId}" data-elementid="${option.formElementId}"  class="btn btn-danger btn-sm btn-remove" onclick="deleteFormOption(this)">
+                                                <i class="fas fa-trash-alt"></i> Kaldır
+                                            </button>
+                                        </li>`;
+                            optionsList.append(listItem); // Liste elemanını ekle
+                        });
+                    },
+                    error: function (error) {
+                        // Hata durumunda yapılacaklar
+                        console.error('Veri alınırken bir hata oluştu:', error);
                         alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
                     }
-                    });
-        }
-        function loadOptions(formElementId) {
-    // AJAX çağrısı
-    $.ajax({
-        type: 'GET',
-        url: `/FormOption/GetFormOptionsByFormElementId/${formElementId}`, // API endpoint
-        success: function (response) {
-            // Başarılı olursa, select öğesini bulup verileri ekleyin
-            var selectElement = $(`#selectoptions-${formElementId}`);
-            selectElement.empty(); // Mevcut seçenekleri temizle
+                });
+            }
+            function loadOptions(formElementId) {
+                // AJAX çağrısı
+                $.ajax({
+                    type: 'GET',
+                    url: `/FormOption/GetFormOptionsByFormElementId/${formElementId}`, // API endpoint
+                    success: function (response) {
+                        // Başarılı olursa, select öğesini bulup verileri ekleyin
+                        var selectElement = $(`#selectoptions-${formElementId}`);
+                        selectElement.empty(); // Mevcut seçenekleri temizle
 
-            // Gelen verilerle seçenekleri doldur
-            response.forEach(function (option) {
-                var optionItem = `<option value="${option.formOptionId}">${option.name}</option>`;
-                selectElement.append(optionItem);
-            });
-        },
-        error: function (error) {
-            // Hata durumunda yapılacaklar
-            console.error('Veri alınırken bir hata oluştu:', error);
-            alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
-        }
-    });
-}
-        
+                        // Gelen verilerle seçenekleri doldur
+                        response.forEach(function (option) {
+                            var optionItem = `<option value="${option.formOptionId}">${option.name}</option>`;
+                            selectElement.append(optionItem);
+                        });
+                    },
+                    error: function (error) {
+                        // Hata durumunda yapılacaklar
+                        console.error('Veri alınırken bir hata oluştu:', error);
+                        alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
+                    }
+                });
+            }
 
-    </script>
+
+        </script>
+   
+   
 </body>
 </html>
