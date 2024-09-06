@@ -188,101 +188,101 @@
                                     {
                                         case "Yazı alanı":
 
-                                                                            <div class="form-element">
-                                                                                <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                <input type="text" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
-                                                                                <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                    <i class="fas fa-trash"></i> Sil
-                                                                                </button>
-                                                                            </div>
+                                                                                <div class="form-element">
+                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                    <input type="text" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
+                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                        <i class="fas fa-trash"></i> Sil
+                                                                                    </button>
+                                                                                </div>
                                             break;
                                         case "Şıklı seçim":
                                             
-                                                                            <div class="form-element">
-                                                                                <label id="labelkisim">@element.Order-@element.Title</label>
-                                                <button type="button" onclick="loadOptionsForRadioButton(@element.FormElementId)">seçenekleri göster</button>
+                                                                                <div class="form-element">
+                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
+                                                    <button type="button" onclick="loadOptionsForRadioButton(@element.FormElementId)">seçenekleri göster</button>
 
-                                                                    <form id="siklisecim-@element.FormElementId">
+                                                                        <form id="siklisecim-@element.FormElementId">
 
-                                                                    </form><button type="button" class="plus-button" data-controlType="@element.ControlType" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
-                                                                                <button type="button" class="delete-button"  data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                    <i class="fas fa-trash"></i> Sil
-                                                                                </button>
-                                                                            </div>
+                                                                        </form><button type="button" class="plus-button" data-controlType="@element.ControlType" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
+                                                                                    <button type="button" class="delete-button"  data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                        <i class="fas fa-trash"></i> Sil
+                                                                                    </button>
+                                                                                </div>
                                             break;
                                         case "Listeli seçim":
-                                                                            <div class="form-element">
-                                                                                <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                            <select id="selectoptions-@element.FormElementId" onclick="loadOptions(@element.FormElementId)">
-                                                                    </select> <button type="button" class="plus-button" data-controlType="@element.ControlType" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
-                                                                                <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                    <i class="fas fa-trash"></i> Sil
-                                                                                </button>
-                                                                              </div>
+                                                                                <div class="form-element">
+                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                <select id="selectoptions-@element.FormElementId" onclick="loadOptions(@element.FormElementId)">
+                                                                        </select> <button type="button" class="plus-button" data-controlType="@element.ControlType" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
+                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                        <i class="fas fa-trash"></i> Sil
+                                                                                    </button>
+                                                                                  </div>
                                            
                                             break;
                                         case "Numara":
-                                                                            <div class="form-element">
-                                                                                <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                        <input type="number" />
-                                                                                <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                    <i class="fas fa-trash"></i> Sil
-                                                                                </button>
-                                                                            </div>
+                                                                                <div class="form-element">
+                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                            <input type="number" />
+                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                        <i class="fas fa-trash"></i> Sil
+                                                                                    </button>
+                                                                                </div>
                                             break;
                                         case "Tarih":
-                                                                                <div class="form-element">
-                                                                                <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                        <input type="date" />
-                                                                                <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                    <i class="fas fa-trash"></i> Sil
-                                                                                </button>
-                                                                            </div>
+                                                                                    <div class="form-element">
+                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                            <input type="date" />
+                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                        <i class="fas fa-trash"></i> Sil
+                                                                                    </button>
+                                                                                </div>
                                             break;
                                         case "Email":
-                                                                                    <div class="form-element">
-                                                                                <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                        <input type="email" placeholder="example@example.com" />
-                                                                                <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                    <i class="fas fa-trash"></i> Sil
-                                                                                </button>
-                                                                            </div>
+                                                                                        <div class="form-element">
+                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                            <input type="email" placeholder="example@example.com" />
+                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                        <i class="fas fa-trash"></i> Sil
+                                                                                    </button>
+                                                                                </div>
                                             break;
                                         case "Başlık":
-                                                                                        <div class="form-element">
-                                                                                <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                        <h3>@element.Title</h3>
-                                                                                <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                    <i class="fas fa-trash"></i> Sil
-                                                                                </button>
-                                                                            </div>
+                                                                                            <div class="form-element">
+                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                            <h3>@element.Title</h3>
+                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                        <i class="fas fa-trash"></i> Sil
+                                                                                    </button>
+                                                                                </div>
                                             break;
                                         case "Telefon":
-                                                                                            <div class="form-element">
-                                                                                <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                        <input type="tel" placeholder="+90 555 555 55 55" />
-                                                                                <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                    <i class="fas fa-trash"></i> Sil
-                                                                                </button>
-                                                                            </div>
+                                                                                                <div class="form-element">
+                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                            <input type="tel" placeholder="+90 555 555 55 55" />
+                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                        <i class="fas fa-trash"></i> Sil
+                                                                                    </button>
+                                                                                </div>
                                             break;
                                         case "Dosya yükleme":
-                                                                                                <div class="form-element">
-                                                                                <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                        <input type="file" />
-                                                                                <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                    <i class="fas fa-trash"></i> Sil
-                                                                                </button>
-                                                                            </div>
+                                                                                                    <div class="form-element">
+                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                            <input type="file" />
+                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                        <i class="fas fa-trash"></i> Sil
+                                                                                    </button>
+                                                                                </div>
                                             break;
                                         default:
-                                                                                                    <div class="form-element">
-                                                                                <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                        <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
-                                                                                <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                    <i class="fas fa-trash"></i> Sil
-                                                                                </button>
-                                                                            </div>
+                                                                                                        <div class="form-element">
+                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                            <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
+                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                        <i class="fas fa-trash"></i> Sil
+                                                                                    </button>
+                                                                                </div>
                                             break;
                                     }
                                 }
@@ -370,22 +370,43 @@
 
 
             }
-            function getFormOptionsInMainList(button) {
+        function getFormOptionsInMainList(button) {
+            // Data attribute'den FormElementId değerini al
+            // var value = button.getAttribute('data-elementId');
+            value = globalFormElementId;
+            debugger
+            $.ajax({
+                type: 'GET',
+                url: `/FormOption/GetFormOptionsByFormElementId/${value}`, // API endpoint
+                success: function (response) {
+                    if (response.controlType === "Şıklı seçim") {
+                        debugger
+                        var selectElement = $(`#siklisecim-${response.formElementId}`);
+                        selectElement.empty(); // Mevcut seçenekleri temizle
 
-                debugger
+                        // FormOptions üzerinde döngü yapılmalı
+                        response.formOptions.forEach(function (option) {
+                            var optionItem = `<div class="form-check">
+                                                <input class="form-check-input" type="radio" name="IsSelected" id="radio${option.formOptionId}" value="${option.name}">
+                                                <label class="form-check-label" for="radio${option.formOptionId}">
+                                                    ${option.name}
+                                                </label>
+                                              </div>`;
+                            selectElement.append(optionItem);
+                        });
+                    }
 
-                // Data attribute'den FormElementId değerini al
-                // var value = button.getAttribute('data-elementId');
-                value = globalFormElementId;
+                    // getFormOptions fonksiyonunu çağır
+                    getFormOptions(value);
+                },
+                error: function (error) {
+                    console.error('Veri alınırken bir hata oluştu:', error);
+                    alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
+                }
+            });
 
-                getFormOptions(value);
-
-
-
-
-
-
-            }
+        }
+            
 
             $(document).ready(function () {
                 debugger
@@ -417,7 +438,7 @@
                                 element.append(newOption);
 
                             }
-                            
+                            getValues();
 
                             $('#exampleModalLong').modal('hide'); // Modalı kapat
                         },
@@ -566,50 +587,52 @@
                 }
             });
         }
-       document.addEventListener("DOMContentLoaded", function() {
-    debugger
-    
-    var FormID = $('#formidinput').val(); // .value değil .val() kullanılmalı
-    
-    $.ajax({
-        type: 'GET',
-        url: `/Form/GetAllFormElements/${FormID}`, // API endpoint
-        success: function (response) {
-            response.forEach(function (element) {
-                if (element.controlType === "Şıklı seçim") {
-                       debugger
-                    var selectElement = $(`#siklisecim-${element.formElementId}`);
-                    selectElement.empty(); // Mevcut seçenekleri temizle
+        function getValues() {
+            var FormID = $('#formidinput').val(); // .value değil .val() kullanılmalı
 
-                    // FormOptions üzerinde döngü yapılmalı
-                    element.formOptions.forEach(function (option) {
-                        var optionItem = `<div class="form-check">
-                                            <input class="form-check-input" type="radio" name="IsSelected" id="radio${option.formOptionId}" value="${option.name}">
-                                            <label class="form-check-label" for="radio${option.formOptionId}">
-                                                ${option.name}
-                                            </label>
-                                          </div>`;
-                        selectElement.append(optionItem);
-                    });
-                } else if (element.controlType === "Listeli seçim") {
-                       debugger
-                    var selectElement = $(`#selectoptions-${element.formElementId}`);
-                    selectElement.empty(); // Mevcut seçenekleri temizle
+            $.ajax({
+                type: 'GET',
+                url: `/Form/GetAllFormElements/${FormID}`, // API endpoint
+                success: function (response) {
+                    response.forEach(function (element) {
+                        if (element.controlType === "Şıklı seçim") {
+                            debugger
+                            var selectElement = $(`#siklisecim-${element.formElementId}`);
+                            selectElement.empty(); // Mevcut seçenekleri temizle
 
-                    // FormOptions üzerinde döngü yapılmalı
-                    element.formOptions.forEach(function (option) {
-                        var optionItem = `<option value="${option.formOptionId}">${option.name}</option>`;
-                        selectElement.append(optionItem);
+                            // FormOptions üzerinde döngü yapılmalı
+                            element.formOptions.forEach(function (option) {
+                                var optionItem = `<div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="IsSelected" id="radio${option.formOptionId}" value="${option.name}">
+                                                    <label class="form-check-label" for="radio${option.formOptionId}">
+                                                        ${option.name}
+                                                    </label>
+                                                  </div>`;
+                                selectElement.append(optionItem);
+                            });
+                        } else if (element.controlType === "Listeli seçim") {
+                            debugger
+                            var selectElement = $(`#selectoptions-${element.formElementId}`);
+                            selectElement.empty(); // Mevcut seçenekleri temizle
+
+                            // FormOptions üzerinde döngü yapılmalı
+                            element.formOptions.forEach(function (option) {
+                                var optionItem = `<option value="${option.formOptionId}">${option.name}</option>`;
+                                selectElement.append(optionItem);
+                            });
+                        }
                     });
+                },
+                error: function (error) {
+                    console.error('Veri alınırken bir hata oluştu:', error);
+                    alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
                 }
             });
-        },
-        error: function (error) {
-            console.error('Veri alınırken bir hata oluştu:', error);
-            alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
         }
+       document.addEventListener("DOMContentLoaded", function() {
+    debugger
+           getValues();
     });
-});
 
            
        
