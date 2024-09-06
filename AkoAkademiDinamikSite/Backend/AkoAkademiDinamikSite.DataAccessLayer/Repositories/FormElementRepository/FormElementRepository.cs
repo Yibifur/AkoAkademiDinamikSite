@@ -34,10 +34,16 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Repositories.FormElementElementR
             return values;
         }
 
+        public List<FormElement> GetAllFormElementsByFormId(int id)
+        {
+            var values=context.FormElements.Include(x=>x.FormOptions).Where(x=> x.FormId == id).ToList();
+            return values;
+        }
+
         public FormElement GetById(int id)
         {
-            var values = context.FormElements.Include(x => x.FormOptions).Where(x => x.FormElementId == id);
-            return (FormElement)values;
+            var value = context.FormElements.Include(x => x.FormOptions).FirstOrDefault(x => x.FormElementId == id);
+            return value;
         }
 
         public void Insert(FormElement entity)

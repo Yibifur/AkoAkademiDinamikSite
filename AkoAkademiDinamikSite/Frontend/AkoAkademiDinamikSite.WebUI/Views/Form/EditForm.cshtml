@@ -134,7 +134,7 @@
                 </div>
                 <form method="post">
                     <div>
-                        <input type="hidden" value="@formId" asp-for="FormId" />
+                        <input type="hidden" id="formidinput" value="@formId" asp-for="FormId" />
                     </div>
                     <div class="form-group">
                         <label>Başlık</label>
@@ -484,7 +484,7 @@
                     url: `/FormOption/GetFormOptionsByFormElementId/${value}`, // API endpoint
                     success: function (response) {
                         // Başarılı işlem sonrasında yapılacaklar
-
+                        
                         // Verileri sayfada göstermek için
                         var optionsList = $('.option-header ul'); // List elementinin sınıfı veya ID'si ile seçildi
                         optionsList.empty(); // Mevcut listeyi temizle
@@ -566,7 +566,53 @@
                 }
             });
         }
+       document.addEventListener("DOMContentLoaded", function() {
+    debugger
+    
+    var FormID = $('#formidinput').val(); // .value değil .val() kullanılmalı
+    
+    $.ajax({
+        type: 'GET',
+        url: `/Form/GetAllFormElements/${FormID}`, // API endpoint
+        success: function (response) {
+            response.forEach(function (element) {
+                if (element.controlType === "Şıklı seçim") {
+                       debugger
+                    var selectElement = $(`#siklisecim-${element.formElementId}`);
+                    selectElement.empty(); // Mevcut seçenekleri temizle
 
+                    // FormOptions üzerinde döngü yapılmalı
+                    element.formOptions.forEach(function (option) {
+                        var optionItem = `<div class="form-check">
+                                            <input class="form-check-input" type="radio" name="IsSelected" id="radio${option.formOptionId}" value="${option.name}">
+                                            <label class="form-check-label" for="radio${option.formOptionId}">
+                                                ${option.name}
+                                            </label>
+                                          </div>`;
+                        selectElement.append(optionItem);
+                    });
+                } else if (element.controlType === "Listeli seçim") {
+                       debugger
+                    var selectElement = $(`#selectoptions-${element.formElementId}`);
+                    selectElement.empty(); // Mevcut seçenekleri temizle
+
+                    // FormOptions üzerinde döngü yapılmalı
+                    element.formOptions.forEach(function (option) {
+                        var optionItem = `<option value="${option.formOptionId}">${option.name}</option>`;
+                        selectElement.append(optionItem);
+                    });
+                }
+            });
+        },
+        error: function (error) {
+            console.error('Veri alınırken bir hata oluştu:', error);
+            alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
+        }
+    });
+});
+
+           
+       
 
         </script>
    

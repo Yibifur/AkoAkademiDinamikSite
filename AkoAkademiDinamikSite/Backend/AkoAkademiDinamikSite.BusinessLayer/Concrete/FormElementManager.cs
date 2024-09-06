@@ -29,6 +29,11 @@ namespace AkoAkademiDinamikSite.BusinessLayer.Concrete
             return FormElementDal.GetAll();
         }
 
+        public List<FormElement> TGetAllFormElementsByFormId(int id)
+        {
+       return FormElementDal.GetAllFormElementsByFormId(id);
+        }
+
         public FormElement TGetById(int id)
         {
             return FormElementDal.GetById(id);

@@ -9,5 +9,6 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Abstract
 {
     public interface IFormElementDal : IGenericDal<FormElement>
     {
+        List<FormElement> GetAllFormElementsByFormId(int id);
     }
 }

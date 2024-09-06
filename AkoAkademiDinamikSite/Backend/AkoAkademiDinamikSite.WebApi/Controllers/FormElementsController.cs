@@ -32,6 +32,12 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
             return Ok(entity);
 
         }
+        [HttpGet("ByFormId/{id}")]
+        public IActionResult GetAllFormOptionsByFormElementId(int id)
+        {
+            var entities = FormElementService.TGetAllFormElementsByFormId(id);
+            return Ok(entities);
+        }
         [HttpPost]
         public IActionResult CreateFormElement(CreateFormElementDto model)
         {

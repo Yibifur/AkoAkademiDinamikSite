@@ -40,8 +40,8 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             {
 
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<FormElementViewModel>(jsonData);
-                return Ok();
+                var values = JsonConvert.DeserializeObject<FormElement>(jsonData);
+                return Ok(values);
 
             }
             return View();
@@ -149,7 +149,20 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             }
             return View();
         }
+        public async Task<IActionResult> GetAllFormElements(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:7029/api/FormElements/ByFormId/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
 
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<FormElement>>(jsonData);
+                return Ok(values);
+
+            }
+            return View();
+        }
 
     }
 }
