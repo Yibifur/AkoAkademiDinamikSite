@@ -1,0 +1,119 @@
+﻿@model Form
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+}
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+@foreach (var element in Model.FormElements.OrderBy(a => a.Order))
+{
+    <form class="form-group mb-4">
+        <div>
+            <input type="hidden" id="formidinput" value="@Model.FormId" asp-for="FormId" />
+        </div>
+        <label class="font-weight-bold">@element.Order - @element.Title</label>
+        @{
+            switch (element.ControlType)
+            {
+                case "Yazı alanı":
+                    <input type="text" class="form-control" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
+                    break;
+
+                case "Şıklı seçim":
+                    <div id="siklisecim-@element.FormElementId" class="form-check">
+                        @* Radio buttonlar ajax ile doldurulacak *@
+                    </div>
+                    break;
+
+                case "Listeli seçim":
+                    <select id="selectoptions-@element.FormElementId" class="form-control" onclick="loadOptions(@element.FormElementId)">
+                        @* Seçenekler ajax ile doldurulacak *@
+                    </select>
+                    break;
+
+                case "Numara":
+                    <input type="number" class="form-control" />
+                    break;
+
+                case "Tarih":
+                    <input type="date" class="form-control" />
+                    break;
+
+                case "Email":
+                    <input type="email" class="form-control" placeholder="example@example.com" />
+                    break;
+
+                case "Başlık":
+                    <h3 class="font-weight-bold">@element.Title</h3>
+                    break;
+
+                case "Telefon":
+                    <input type="tel" class="form-control" placeholder="+90 555 555 55 55" />
+                    break;
+
+                case "Dosya yükleme":
+                    <input type="file" class="form-control-file" />
+                    break;
+
+                default:
+                    <span class="text-danger">Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
+                    break;
+            }
+        }
+        
+    </form>
+    
+}
+<div class="form-actions">
+    <button type="submit" class="btn btn-primary">Formu Gönder</button>
+</div>
+
+<script>
+    function getValues() {
+        
+
+        $.ajax({
+            type: 'GET',
+            url: `/Form/GetAllFormElements/${@Model.FormId}`, // API endpoint
+            success: function (response) {
+                response.forEach(function (element) {
+                    if (element.controlType === "Şıklı seçim") {
+                        debugger
+                        var selectElement = $(`#siklisecim-${element.formElementId}`);
+                        selectElement.empty(); // Mevcut seçenekleri temizle
+
+                        // FormOptions üzerinde döngü yapılmalı
+                        element.formOptions.forEach(function (option) {
+                            var optionItem = `<div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="IsSelected" id="radio${option.formOptionId}" value="${option.name}">
+                                                        <label class="form-check-label" for="radio${option.formOptionId}">
+                                                            ${option.name}
+                                                        </label>
+                                                      </div>`;
+                            selectElement.append(optionItem);
+                        });
+                    } else if (element.controlType === "Listeli seçim") {
+                        debugger
+                        var selectElement = $(`#selectoptions-${element.formElementId}`);
+                        selectElement.empty(); // Mevcut seçenekleri temizle
+
+                        // FormOptions üzerinde döngü yapılmalı
+                        element.formOptions.forEach(function (option) {
+                            var optionItem = `<option value="${option.formOptionId}">${option.name}</option>`;
+                            selectElement.append(optionItem);
+                        });
+                    }
+                });
+            },
+            error: function (error) {
+                console.error('Veri alınırken bir hata oluştu:', error);
+                alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
+            }
+        });
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        debugger
+        getValues();
+    });
+</script>

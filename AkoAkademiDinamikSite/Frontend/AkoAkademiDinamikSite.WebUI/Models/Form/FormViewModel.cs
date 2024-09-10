@@ -7,5 +7,6 @@
         public bool ShowTitle { get; set; }
         public string FormType { get; set; }
         public string Description { get; set; }
+        public bool IsActive { get; set; }
     }
 }

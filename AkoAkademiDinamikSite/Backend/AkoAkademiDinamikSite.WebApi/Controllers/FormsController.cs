@@ -24,6 +24,14 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
             return Ok(entities);
 
         }
+        [HttpGet("GetDefaultForm")]
+        public IActionResult GetDefaultForm()
+        {
+
+            var entities = FormService.TGetDefaultForm();
+            return Ok(entities);
+
+        }
         [HttpGet("{id}")]
         public IActionResult GetFormById(int id)
         {

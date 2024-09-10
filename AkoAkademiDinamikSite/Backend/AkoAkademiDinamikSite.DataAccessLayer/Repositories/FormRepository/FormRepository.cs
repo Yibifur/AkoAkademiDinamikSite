@@ -42,6 +42,12 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Repositories.FormRepository
             return value;
         }
 
+        public Form GetDefaultForm()
+        {
+            var value = context.Forms.Include(x => x.FormElements).ThenInclude(x => x.FormOptions).FirstOrDefault(x=>x.IsActive==true);
+            return value;
+        }
+
         public void Insert(Form entity)
         {
             context.Forms.Add(entity);

@@ -9,5 +9,6 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Abstract
 {
     public interface IFormDal:IGenericDal<Form>
     {
+        Form GetDefaultForm();
     }
 }

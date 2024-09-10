@@ -29,6 +29,7 @@
 <table class="table table-bordered">
     <tr>
         <th>#</th>
+        <th>Active</th>
         <th>Title</th>
         <th>Form Type</th>
         <th>Description</th>
@@ -36,12 +37,18 @@
         <th>Delete</th>
         <th>Update</th>
         <th>Details</th>
+        <th>Set Form</th>
     </tr>
 @foreach (var item in Model)
 {
     <tr>
          
         <td>@item.FormId</td>
+            <td>
+                <a href="#" class="btn @(item.IsActive ? "btn-success" : "btn-danger")">
+                    @(item.IsActive ? "True" : "False")
+                </a>
+            </td>
         <td>@item.Title</td>
         <td>@item.FormType</td>
         <td>@item.Description</td>
@@ -49,6 +56,7 @@
         <td><a href="/Form/DeleteForm/@item.FormId" class="btn btn-danger">Delete</a></td>
         <td><a href="/Form/UpdateForm/@item.FormId" class="btn btn-success">Update</a></td>
         <td><a href="#" class="btn btn-Dark">Details</a></td>
+        <td><a href="/Form/SetForm/@item.FormId" class="btn btn-dark">Set Form</a></td>
        
     </tr>
 }

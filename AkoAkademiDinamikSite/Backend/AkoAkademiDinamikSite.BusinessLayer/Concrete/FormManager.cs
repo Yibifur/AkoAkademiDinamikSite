@@ -34,6 +34,11 @@ namespace AkoAkademiDinamikSite.BusinessLayer.Concrete
             return FormDal.GetById(id);
         }
 
+        public Form TGetDefaultForm()
+        {
+            return FormDal.GetDefaultForm();
+        }
+
         public void TInsert(Form entity)
         {
             FormDal.Insert(entity);

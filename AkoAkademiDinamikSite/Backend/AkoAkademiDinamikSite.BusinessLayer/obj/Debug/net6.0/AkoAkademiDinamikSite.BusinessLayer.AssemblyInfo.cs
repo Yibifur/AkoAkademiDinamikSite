@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AkoAkademiDinamikSite.BusinessLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a850ea01ea6f25df3b488bcadad0d5f7fbe049c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a8ebb906f8458f5c223aee85199d5ea0d404237")]
 [assembly: System.Reflection.AssemblyProductAttribute("AkoAkademiDinamikSite.BusinessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AkoAkademiDinamikSite.BusinessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

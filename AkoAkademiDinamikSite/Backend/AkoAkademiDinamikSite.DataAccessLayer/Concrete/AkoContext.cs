@@ -25,6 +25,9 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Concrete
         public DbSet<Form> Forms { get; set; }
         public DbSet<FormElement> FormElements { get; set; }
         public DbSet<FormOption> FormOptions { get; set; }
+        public DbSet<FormResponse> FormResponses { get; set; }
+        public DbSet<FormElementResponse> ForElementResponses { get; set; }
+
 
 
         

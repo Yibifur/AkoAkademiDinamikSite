@@ -1,9 +1,12 @@
-﻿using AkoAkademiDinamikSite.DtoLayer.Dtos.FormElementDtos;
+﻿using AkoAkademiDinamikSite.DataAccessLayer.Concrete;
+using AkoAkademiDinamikSite.DtoLayer.Dtos.FormElementDtos;
 using AkoAkademiDinamikSite.EntityLayer.ReelConcrete;
 using AkoAkademiDinamikSite.WebUI.Models.Content;
 using AkoAkademiDinamikSite.WebUI.Models.Form;
 using AkoAkademiDinamikSite.WebUI.Models.FormElement;
+using AkoAkademiDinamikSite.WebUI.Models.Layout;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Text;
 
@@ -12,10 +15,11 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
     public class FormController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-
-        public FormController(IHttpClientFactory httpClientFactory)
+        private readonly AkoContext _context;
+        public FormController(IHttpClientFactory httpClientFactory, AkoContext context)
         {
             _httpClientFactory = httpClientFactory;
+            _context = context;
         }
 
         public async Task<IActionResult> Index()
@@ -127,12 +131,9 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
                 var option = JsonConvert.DeserializeObject<FormElement>(jsonString);
                 int formElementId = option.FormElementId; // Gerçek ID'yi alıyoruz
 
-                // Bu ID'yi form optionları eklemek için kullanabiliriz
+               
                 TempData["FormElementId"] = formElementId; // Geçici olarak ID'yi saklıyoruz
-                //if(option.ControlType== "Listeli seçim")
-                //{
-                //    return RedirectToAction("AddFormOption", "FormOption");
-                //}
+               
                 return RedirectToAction("EditForm","Form"); 
             }
             return View();
@@ -159,6 +160,36 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<FormElement>>(jsonData);
                 return Ok(values);
+
+            }
+            return View();
+        }
+        public void SetDefaultForm(int formId)
+        {
+            var Forms = _context.Forms.ToList();
+
+            foreach (var form in Forms)
+            {
+                form.IsActive = form.FormId == formId;
+            }
+
+            _context.SaveChanges();
+        }
+        [HttpGet]
+        public async Task<IActionResult> SetForm(int id)
+        {
+
+            var client = _httpClientFactory.CreateClient();
+            SetDefaultForm(id);
+            var responseMessage = await client.GetAsync($"http://localhost:7029/api/Forms/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+
+                var values = JsonConvert.DeserializeObject<FormViewModel>(jsonData);
+                TempData["FormModel"] = JsonConvert.SerializeObject(values);
+                TempData["FormID"] = id;
+                return RedirectToAction("Index");
 
             }
             return View();

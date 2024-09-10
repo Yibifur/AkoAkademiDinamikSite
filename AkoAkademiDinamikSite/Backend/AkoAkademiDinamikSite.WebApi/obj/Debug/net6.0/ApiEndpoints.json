@@ -328,6 +328,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormsController",
+    "Method": "GetDefaultForm",
+    "RelativePath": "api/Forms/GetDefaultForm",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.LayoutsController",
     "Method": "GetAllLayouts",
     "RelativePath": "api/Layouts",

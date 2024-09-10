@@ -9,5 +9,6 @@ namespace AkoAkademiDinamikSite.BusinessLayer.Abstract
 {
     public interface IFormService:IGenericService<Form>
     {
+        Form TGetDefaultForm(); 
     }
 }

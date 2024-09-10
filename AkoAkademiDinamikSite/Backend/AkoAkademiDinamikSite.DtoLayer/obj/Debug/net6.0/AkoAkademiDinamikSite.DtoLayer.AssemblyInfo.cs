@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AkoAkademiDinamikSite.DtoLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c6414ea4c9fd84869c895c46d2c15e72a39f100")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a8ebb906f8458f5c223aee85199d5ea0d404237")]
 [assembly: System.Reflection.AssemblyProductAttribute("AkoAkademiDinamikSite.DtoLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AkoAkademiDinamikSite.DtoLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

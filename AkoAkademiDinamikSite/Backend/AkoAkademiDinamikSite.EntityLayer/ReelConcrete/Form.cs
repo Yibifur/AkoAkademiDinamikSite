@@ -15,6 +15,7 @@ namespace AkoAkademiDinamikSite.EntityLayer.ReelConcrete
         public string FormType { get; set; }
         public string Description { get; set; }
         public  List<FormElement>? FormElements { get; set; }
+        public bool IsActive { get; set; }
 
 
     }
