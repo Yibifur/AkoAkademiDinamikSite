@@ -6,68 +6,87 @@
 <head>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<form method="post" action="/FormPage/SaveFormResponses">
 @foreach (var element in Model.FormElements.OrderBy(a => a.Order))
 {
-    <form class="form-group mb-4">
-        <div>
-            <input type="hidden" id="formidinput" value="@Model.FormId" asp-for="FormId" />
-        </div>
+        <div class="form-group mb-4">
+        
         <label class="font-weight-bold">@element.Order - @element.Title</label>
         @{
             switch (element.ControlType)
             {
                 case "Yazı alanı":
-                    <input type="text" class="form-control" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
+                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
+                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
+                                    <input type="text" class="form-control" placeholder="Yazınızı yazın" name="ResponseValue" id="response-@element.FormElementId" @(element.IsRequired ? "required" : "") />
                     break;
 
                 case "Şıklı seçim":
-                    <div id="siklisecim-@element.FormElementId" class="form-check">
+                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
+                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
+                                    <div id="siklisecim-@element.FormElementId" class="form-check">
                         @* Radio buttonlar ajax ile doldurulacak *@
-                    </div>
+                                    </div>
+                                    <input type="hidden" name="ResponseValue" id="response-siklisecim-@element.FormElementId" />
                     break;
 
                 case "Listeli seçim":
-                    <select id="selectoptions-@element.FormElementId" class="form-control" onclick="loadOptions(@element.FormElementId)">
+                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
+                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
+                                    <select id="selectoptions-@element.FormElementId" class="form-control" name="ResponseValue" onclick="loadOptions(@element.FormElementId)">
                         @* Seçenekler ajax ile doldurulacak *@
-                    </select>
+                                    </select>
                     break;
 
                 case "Numara":
-                    <input type="number" class="form-control" />
+                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
+                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
+                                    <input type="number" class="form-control" name="ResponseValue" id="response-numara-@element.FormElementId" />
                     break;
 
                 case "Tarih":
-                    <input type="date" class="form-control" />
+                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
+                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
+                                    <input type="date" class="form-control" name="ResponseValue" id="response-tarih-@element.FormElementId" />
                     break;
 
                 case "Email":
-                    <input type="email" class="form-control" placeholder="example@example.com" />
+                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
+                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
+                                    <input type="email" class="form-control" placeholder="example@example.com" name="ResponseValue" id="response-email-@element.FormElementId" />
                     break;
 
                 case "Başlık":
-                    <h3 class="font-weight-bold">@element.Title</h3>
+                                    <h3 class="font-weight-bold">@element.Title</h3>
                     break;
 
                 case "Telefon":
-                    <input type="tel" class="form-control" placeholder="+90 555 555 55 55" />
+                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
+                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
+                                    <input type="tel" class="form-control" placeholder="+90 555 555 55 55" name="ResponseValue" id="response-telefon-@element.FormElementId" />
                     break;
 
                 case "Dosya yükleme":
-                    <input type="file" class="form-control-file" />
+                                                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
+                                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
+                                    <input type="file" class="form-control-file" name="ResponseValue" id="response-dosya-@element.FormElementId" />
                     break;
 
                 default:
-                    <span class="text-danger">Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
+                                    <span class="text-danger">Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
                     break;
             }
         }
         
-    </form>
+    </div>
     
 }
 <div class="form-actions">
-    <button type="submit" class="btn btn-primary">Formu Gönder</button>
+    <button type="submit" class="btn btn-primary" onclick="WriteConsole(event)">Formu Gönder</button>
 </div>
+</form>
+
+
 
 <script>
     function getValues() {
@@ -116,4 +135,9 @@
         debugger
         getValues();
     });
+
+    function WriteConsole(event){
+        console.log("merhaba");
+
+    }
 </script>

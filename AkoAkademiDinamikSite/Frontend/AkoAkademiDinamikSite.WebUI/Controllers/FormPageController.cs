@@ -1,19 +1,23 @@
-﻿using AkoAkademiDinamikSite.EntityLayer.ReelConcrete;
+﻿using AkoAkademiDinamikSite.DataAccessLayer.Concrete;
+using AkoAkademiDinamikSite.EntityLayer.ReelConcrete;
 using AkoAkademiDinamikSite.WebUI.Models.Page;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace AkoAkademiDinamikSite.WebUI.Controllers
 {
     public class FormPageController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-
-        public FormPageController(IHttpClientFactory httpClientFactory)
+        private readonly AkoContext _context;
+        public FormPageController(IHttpClientFactory httpClientFactory, AkoContext context)
         {
             _httpClientFactory = httpClientFactory;
+            _context = context;
         }
-       
+
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
@@ -30,5 +34,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             }
             return View();
         }
+       
+       
     }
 }

@@ -122,33 +122,6 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
                     b.ToTable("FormElements");
                 });
 
-            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormElementResponse", b =>
-                {
-                    b.Property<int>("FormElementResponseId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FormElementResponseId"), 1L, 1);
-
-                    b.Property<int>("FormElementId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("FormResponseId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ResponseValue")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("FormElementResponseId");
-
-                    b.HasIndex("FormElementId");
-
-                    b.HasIndex("FormResponseId");
-
-                    b.ToTable("ForElementResponses");
-                });
-
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormOption", b =>
                 {
                     b.Property<int>("FormOptionId")
@@ -177,24 +150,6 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
                     b.HasIndex("FormElementId");
 
                     b.ToTable("FormOptions");
-                });
-
-            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormResponse", b =>
-                {
-                    b.Property<int>("FormResponseId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FormResponseId"), 1L, 1);
-
-                    b.Property<int>("FormId")
-                        .HasColumnType("int");
-
-                    b.HasKey("FormResponseId");
-
-                    b.HasIndex("FormId");
-
-                    b.ToTable("FormResponses");
                 });
 
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Layout", b =>
@@ -264,21 +219,6 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
                     b.Navigation("Form");
                 });
 
-            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormElementResponse", b =>
-                {
-                    b.HasOne("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormElement", "FormElement")
-                        .WithMany()
-                        .HasForeignKey("FormElementId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormResponse", null)
-                        .WithMany("FormElementResponses")
-                        .HasForeignKey("FormResponseId");
-
-                    b.Navigation("FormElement");
-                });
-
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormOption", b =>
                 {
                     b.HasOne("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormElement", "FormElement")
@@ -288,17 +228,6 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
                         .IsRequired();
 
                     b.Navigation("FormElement");
-                });
-
-            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormResponse", b =>
-                {
-                    b.HasOne("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Form", "Form")
-                        .WithMany()
-                        .HasForeignKey("FormId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Form");
                 });
 
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Page", b =>
@@ -318,11 +247,6 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormElement", b =>
                 {
                     b.Navigation("FormOptions");
-                });
-
-            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormResponse", b =>
-                {
-                    b.Navigation("FormElementResponses");
                 });
 #pragma warning restore 612, 618
         }
