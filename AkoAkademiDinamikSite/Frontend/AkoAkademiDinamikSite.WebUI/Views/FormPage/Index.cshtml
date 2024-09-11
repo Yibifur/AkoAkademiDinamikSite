@@ -2,7 +2,8 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
-    
+    int order = 0;
+    int a2=order;
 }
 <head>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -21,40 +22,55 @@
                 switch (element.ControlType)
                 {
                     case "Yazı alanı":
-                        <input type="text" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
+                        int a1 = order;
+                        <input type="text" class="form-control" name="FormAnswers[@a1].Value" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
+                        order++;
                         break;
 
                     case "Şıklı seçim":
-                        <div id="siklisecim-@element.FormElementId" class="form-check" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value">
+                         a2 = order;
+                        <div id="siklisecim-@element.FormElementId" class="form-check" name="FormAnswers[@a2].Value">
                             @* Radio buttonlar ajax ile doldurulacak *@
                         </div>
-                        
+                        order++;
                         break;
 
                     case "Listeli seçim":
-                        <select id="selectoptions-@element.FormElementId" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" >
+                        int a3 = order;
+                        <select id="selectoptions-@element.FormElementId" class="form-control" name="FormAnswers[@a3].Value">
                             @* Seçenekler ajax ile doldurulacak *@
                         </select>
+                        order++;
                         break;
 
                     case "Numara":
-                        <input type="number" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" />
+                        int a4 = order;
+                        <input type="number" class="form-control" name="FormAnswers[@a4].Value" />
+                        order++;
                         break;
 
                     case "Tarih":
-                        <input type="date" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" />
+                        int a5 = order;
+                        <input type="date" class="form-control" name="FormAnswers[@a5].Value" />
+                        order++;
                         break;
 
                     case "Email":
-                        <input type="email" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" placeholder="example@example.com" />
+                        int a6 = order;
+                        <input type="email" class="form-control" name="FormAnswers[@a6].Value" placeholder="example@example.com" />
+                        order++;
                         break;
 
                     case "Telefon":
-                        <input type="tel" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" placeholder="+90 555 555 55 55" />
+                        int a7 = order;
+                        <input type="tel" class="form-control" name="FormAnswers[@a7].Value" placeholder="+90 555 555 55 55" />
+                        order++;
                         break;
 
                     case "Dosya yükleme":
-                        <input type="file" class="form-control-file" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" />
+                        int a8 = order;
+                        <input type="file" class="form-control-file" name="FormAnswers[@a8].Value" />
+                        order++;
                         break;
 
                     default:
@@ -91,7 +107,7 @@
                         element.formOptions.forEach(function (option) {
                             debugger
                             var optionItem = `<div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="FormAnswers[2].Value" id="radio${option.formOptionId}" value="${option.value}">
+                                                                <input class="form-check-input" type="radio" name="FormAnswers[@a2].Value" id="radio${option.formOptionId}" value="${option.value}">
                                                         <label class="form-check-label" for="radio${option.formOptionId}">
                                                             ${option.name}
                                                         </label>
