@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|c:\\users\\yibif\\documents\\github\\akoakademidinamiksite\\akoakademidinamiksite\\frontend\\akoakademidinamiksite.webui\\controllers\\formpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{046375A6-E004-4ECF-86CF-37E1C8162FD2}|Frontend\\AkoAkademiDinamikSite.WebUI\\AkoAkademiDinamikSite.WebUI.csproj|solutionrelative:frontend\\akoakademidinamiksite.webui\\controllers\\formpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,24 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormPageController.cs",
-              "DocumentMoniker": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormPageController.cs",
-              "RelativeDocumentMoniker": "Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormPageController.cs",
-              "ToolTip": "C:\\Users\\yibif\\Documents\\GitHub\\AkoAkademiDinamikSite\\AkoAkademiDinamikSite\\Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormPageController.cs",
-              "RelativeToolTip": "Frontend\\AkoAkademiDinamikSite.WebUI\\Controllers\\FormPageController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T12:35:25.54Z",
-              "EditorCaption": ""
             }
           ]
         },

@@ -8,7 +8,7 @@
 <head>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<form method="post" action="/FormPage/SaveFormResponses">
+<form method="post"  action="/FormPage/SaveFormResponses">
     <input type="hidden" name="FormId" value="@Model.FormId" />
 
     @foreach (var element in Model.FormElements.OrderBy(a => a.Order))
@@ -29,7 +29,7 @@
 
                     case "Şıklı seçim":
                          a2 = order;
-                        <div id="siklisecim-@element.FormElementId" class="form-check" name="FormAnswers[@a2].Value">
+                        <div id="siklisecim-@element.FormElementId" class="form-check" name="FormAnswers[@a2].Value" >
                             @* Radio buttonlar ajax ile doldurulacak *@
                         </div>
                         order++;
@@ -37,39 +37,41 @@
 
                     case "Listeli seçim":
                         int a3 = order;
-                        <select id="selectoptions-@element.FormElementId" class="form-control" name="FormAnswers[@a3].Value">
-                            @* Seçenekler ajax ile doldurulacak *@
+                        <select id="selectoptions-@element.FormElementId" class="form-control" name="FormAnswers[@a3].Value" @(element.IsRequired ? "required" : "")>
+                            
+                        @* Seçenekler ajax ile doldurulacak *@
+                           
                         </select>
                         order++;
                         break;
 
                     case "Numara":
                         int a4 = order;
-                        <input type="number" class="form-control" name="FormAnswers[@a4].Value" />
+                        <input type="number" class="form-control" name="FormAnswers[@a4].Value" @(element.IsRequired ? "required" : "") />
                         order++;
                         break;
 
                     case "Tarih":
                         int a5 = order;
-                        <input type="date" class="form-control" name="FormAnswers[@a5].Value" />
+                        <input type="date" class="form-control" name="FormAnswers[@a5].Value" @(element.IsRequired ? "required" : "") />
                         order++;
                         break;
 
                     case "Email":
                         int a6 = order;
-                        <input type="email" class="form-control" name="FormAnswers[@a6].Value" placeholder="example@example.com" />
+                        <input type="email" class="form-control" name="FormAnswers[@a6].Value" placeholder="example@example.com" @(element.IsRequired ? "required" : "") />
                         order++;
                         break;
 
                     case "Telefon":
                         int a7 = order;
-                        <input type="tel" class="form-control" name="FormAnswers[@a7].Value" placeholder="+90 555 555 55 55" />
+                        <input type="tel" class="form-control" name="FormAnswers[@a7].Value" placeholder="+90 555 555 55 55" @(element.IsRequired ? "required" : "") />
                         order++;
                         break;
 
                     case "Dosya yükleme":
                         int a8 = order;
-                        <input type="file" class="form-control-file" name="FormAnswers[@a8].Value" />
+                        <input type="file" class="form-control-file" name="FormAnswers[@a8].Value" @(element.IsRequired ? "required" : "") />
                         order++;
                         break;
 
@@ -80,10 +82,15 @@
             }
         </div>
     }
-
     <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Formu Gönder</button>
+        @if (Model.FormElements != null && Model.FormElements.Any())
+        {
+            <button type="submit" class="btn btn-primary">Formu Gönder</button>
+        }
     </div>
+    
+    
+    
 </form>
 
 
@@ -107,7 +114,7 @@
                         element.formOptions.forEach(function (option) {
                             debugger
                             var optionItem = `<div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="FormAnswers[@a2].Value" id="radio${option.formOptionId}" value="${option.name}">
+                                                                            <input class="form-check-input" type="radio" name="FormAnswers[@a2].Value" id="radio${option.formOptionId}" value="${option.name}" ${element.isRequired ? "required" : ""}>
                                                         <label class="form-check-label" for="radio${option.formOptionId}">
                                                             ${option.name}
                                                         </label>
@@ -118,7 +125,7 @@
                         debugger
                         var selectElement = $(`#selectoptions-${element.formElementId}`);
                         selectElement.empty(); // Mevcut seçenekleri temizle
-
+                        selectElement.append('<option value="">Seçiniz</option>');
                         // FormOptions üzerinde döngü yapılmalı
                         element.formOptions.forEach(function (option) {
                             var optionItem = `<option value="${option.name}">${option.name}</option>`;
@@ -138,8 +145,6 @@
         getValues();
     });
 
-    function WriteConsole(event){
-        console.log("merhaba");
+    
 
-    }
 </script>

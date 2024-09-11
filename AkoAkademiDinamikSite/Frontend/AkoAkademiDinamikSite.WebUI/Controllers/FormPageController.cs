@@ -39,32 +39,39 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> SaveFormResponses(List<FormAnswer> formAnswers)
         {
-            if (formAnswers != null && formAnswers.Any())
+            if (formAnswers == null || formAnswers.Any(answer => string.IsNullOrEmpty(answer.Value)))
             {
-                var client = _httpClientFactory.CreateClient();
+                ModelState.AddModelError("", "Tüm alanları doldurmanız gerekmektedir.");
+                return Ok(); // Form sayfasına geri dön
+            }
+
+            var client = _httpClientFactory.CreateClient();
+
+            foreach (var answer in formAnswers)
+            {
+                
+                if (string.IsNullOrEmpty(answer.Value))
+                {
+                    ModelState.AddModelError("", "Form elemanı değerlerinden biri boş. Lütfen tüm alanları doldurun.");
+                    return Ok();
+                }
 
                 
-                List<Task<HttpResponseMessage>> responseTasks = formAnswers.Select(answer =>
-                {
-                    var jsonData = JsonConvert.SerializeObject(answer);
-                    StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-                    return client.PostAsync("http://localhost:7029/api/FormAnswers", stringContent);
-                }).ToList();
+                var jsonData = JsonConvert.SerializeObject(answer);
+                StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync("http://localhost:7029/api/FormAnswers", stringContent);
 
-               
-                var responses = await Task.WhenAll(responseTasks);
-
-                
-                if (responses.All(response => response.IsSuccessStatusCode))
+                // Eğer cevap hatalıysa işlemi durdur ve hata mesajı döndür
+                if (!response.IsSuccessStatusCode)
                 {
-                    
-                    return RedirectToAction("Index");
+                    ModelState.AddModelError("", "Form kaydedilirken bir hata oluştu.");
+                    // Hatalı durumda form sayfasını yeniden göster
+                    return Ok();
                 }
             }
 
-            // Hatalı durumda tekrar form sayfasını göster
-            ModelState.AddModelError("", "Form kaydedilirken bir hata oluştu.");
-            return Ok();
+            // Eğer tüm işlemler başarılıysa yönlendirme yap
+            return RedirectToAction("Index");
         }
 
 
