@@ -74,6 +74,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormAnswersController",
+    "Method": "GetAllFormAnswers",
+    "RelativePath": "api/FormAnswers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormAnswersController",
+    "Method": "CreateFormAnswer",
+    "RelativePath": "api/FormAnswers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.FormAnswerDtos.CreateFormAnswerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormAnswersController",
+    "Method": "UpdateFormAnswer",
+    "RelativePath": "api/FormAnswers",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AkoAkademiDinamikSite.DtoLayer.Dtos.FormAnswerDtos.UpdateFormAnswerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormAnswersController",
+    "Method": "DeleteFormAnswer",
+    "RelativePath": "api/FormAnswers",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormAnswersController",
+    "Method": "GetFormAnswerById",
+    "RelativePath": "api/FormAnswers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormElementsController",
     "Method": "GetAllFormElements",
     "RelativePath": "api/FormElements",

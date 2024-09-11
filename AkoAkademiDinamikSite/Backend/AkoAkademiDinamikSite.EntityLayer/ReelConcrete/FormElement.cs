@@ -19,5 +19,6 @@ namespace AkoAkademiDinamikSite.EntityLayer.ReelConcrete
         public  Form? Form { get; set; }
 
         public  List<FormOption>? FormOptions { get; set; }
+        
     }
 }

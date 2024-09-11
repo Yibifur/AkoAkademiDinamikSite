@@ -30,6 +30,10 @@ builder.Services.AddScoped<IFormElementService, FormElementManager>();
 builder.Services.AddScoped<IFormOptionDal, EfFormOptionDal>();
 builder.Services.AddScoped<IFormOptionService, FormOptionManager>();
 
+builder.Services.AddScoped<IFormAnswerDal, EfFormAnswerDal>();
+builder.Services.AddScoped<IFormAnswerService, FormAnswerManager>();
+
+
 
 builder.Services.AddControllers()
     .AddNewtonsoftJson(options =>

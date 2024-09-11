@@ -1,5 +1,6 @@
 ﻿using AkoAkademiDinamikSite.DataAccessLayer.Concrete;
 using AkoAkademiDinamikSite.EntityLayer.ReelConcrete;
+using AkoAkademiDinamikSite.WebUI.Models.FormResponse;
 using AkoAkademiDinamikSite.WebUI.Models.Page;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -34,7 +35,38 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
             }
             return View();
         }
-       
-       
+        
+        [HttpPost]
+        public async Task<IActionResult> SaveFormResponses(List<FormAnswer> formAnswers)
+        {
+            if (formAnswers != null && formAnswers.Any())
+            {
+                var client = _httpClientFactory.CreateClient();
+
+                
+                List<Task<HttpResponseMessage>> responseTasks = formAnswers.Select(answer =>
+                {
+                    var jsonData = JsonConvert.SerializeObject(answer);
+                    StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                    return client.PostAsync("http://localhost:7029/api/FormAnswers", stringContent);
+                }).ToList();
+
+               
+                var responses = await Task.WhenAll(responseTasks);
+
+                // Tüm yanıtların başarılı olup olmadığını kontrol et
+                if (responses.All(response => response.IsSuccessStatusCode))
+                {
+                    
+                    return RedirectToAction("Index");
+                }
+            }
+
+            // Hatalı durumda tekrar form sayfasını göster
+            ModelState.AddModelError("", "Form kaydedilirken bir hata oluştu.");
+            return Ok();
+        }
+
+
     }
 }

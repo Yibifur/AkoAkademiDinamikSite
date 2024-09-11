@@ -25,8 +25,28 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Concrete
         public DbSet<Form> Forms { get; set; }
         public DbSet<FormElement> FormElements { get; set; }
         public DbSet<FormOption> FormOptions { get; set; }
+        public DbSet<FormAnswer> FormAnswers { get; set; }
 
-        
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Form ile FormAnswer arasındaki ilişki
+            modelBuilder.Entity<FormAnswer>()
+                .HasOne(fa => fa.Form)
+                .WithMany(f => f.FormAnswers)
+                .HasForeignKey(fa => fa.FormId)
+                .OnDelete(DeleteBehavior.NoAction); // Silme davranışını düzenledik
+
+            // FormElement ile FormAnswer arasındaki bire bir ilişki
+            modelBuilder.Entity<FormAnswer>()
+                .HasOne(fa => fa.FormElement)
+                .WithOne() // FormElement üzerinde karşılık gelen bir koleksiyon veya navigasyon özelliği yok
+                .HasForeignKey<FormAnswer>(fa => fa.FormElementId)
+                .OnDelete(DeleteBehavior.NoAction); // Silme davranışını düzenledik
+        }
+
 
 
 

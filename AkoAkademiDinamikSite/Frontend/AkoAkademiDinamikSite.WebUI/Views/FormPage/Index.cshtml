@@ -7,84 +7,68 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <form method="post" action="/FormPage/SaveFormResponses">
-@foreach (var element in Model.FormElements.OrderBy(a => a.Order))
-{
+    <input type="hidden" name="FormId" value="@Model.FormId" />
+
+    @foreach (var element in Model.FormElements.OrderBy(a => a.Order))
+    {
         <div class="form-group mb-4">
-        
-        <label class="font-weight-bold">@element.Order - @element.Title</label>
-        @{
-            switch (element.ControlType)
-            {
-                case "Yazı alanı":
-                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
-                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
-                                    <input type="text" class="form-control" placeholder="Yazınızı yazın" name="ResponseValue" id="response-@element.FormElementId" @(element.IsRequired ? "required" : "") />
-                    break;
+            <input type="hidden" name="FormAnswers[@Model.FormElements.IndexOf(element)].FormElementId" value="@element.FormElementId" />
+            <input type="hidden" name="FormAnswers[@Model.FormElements.IndexOf(element)].FormId" value="@Model.FormId" />
 
-                case "Şıklı seçim":
-                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
-                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
-                                    <div id="siklisecim-@element.FormElementId" class="form-check">
-                        @* Radio buttonlar ajax ile doldurulacak *@
-                                    </div>
-                                    <input type="hidden" name="ResponseValue" id="response-siklisecim-@element.FormElementId" />
-                    break;
+            <label class="font-weight-bold">@element.Order - @element.Title</label>
+            @{
+                switch (element.ControlType)
+                {
+                    case "Yazı alanı":
+                        <input type="text" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
+                        break;
 
-                case "Listeli seçim":
-                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
-                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
-                                    <select id="selectoptions-@element.FormElementId" class="form-control" name="ResponseValue" onclick="loadOptions(@element.FormElementId)">
-                        @* Seçenekler ajax ile doldurulacak *@
-                                    </select>
-                    break;
+                    case "Şıklı seçim":
+                        <div id="siklisecim-@element.FormElementId" class="form-check" name="FormAnswers[@Model.FormElements.IndexOf(element)].Title">
+                            @* Radio buttonlar ajax ile doldurulacak *@
+                        </div>
+                        
+                        break;
 
-                case "Numara":
-                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
-                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
-                                    <input type="number" class="form-control" name="ResponseValue" id="response-numara-@element.FormElementId" />
-                    break;
+                    case "Listeli seçim":
+                        <select id="selectoptions-@element.FormElementId" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" >
+                            @* Seçenekler ajax ile doldurulacak *@
+                        </select>
+                        break;
 
-                case "Tarih":
-                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
-                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
-                                    <input type="date" class="form-control" name="ResponseValue" id="response-tarih-@element.FormElementId" />
-                    break;
+                    case "Numara":
+                        <input type="number" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" />
+                        break;
 
-                case "Email":
-                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
-                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
-                                    <input type="email" class="form-control" placeholder="example@example.com" name="ResponseValue" id="response-email-@element.FormElementId" />
-                    break;
+                    case "Tarih":
+                        <input type="date" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" />
+                        break;
 
-                case "Başlık":
-                                    <h3 class="font-weight-bold">@element.Title</h3>
-                    break;
+                    case "Email":
+                        <input type="email" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" placeholder="example@example.com" />
+                        break;
 
-                case "Telefon":
-                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
-                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
-                                    <input type="tel" class="form-control" placeholder="+90 555 555 55 55" name="ResponseValue" id="response-telefon-@element.FormElementId" />
-                    break;
+                    case "Telefon":
+                        <input type="tel" class="form-control" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" placeholder="+90 555 555 55 55" />
+                        break;
 
-                case "Dosya yükleme":
-                                                 <input type="hidden" id="formidinput" value="@Model.FormId" name="FormId" />
-                                 <input type="hidden" name="FormElementId" value="@element.FormElementId" />
-                                    <input type="file" class="form-control-file" name="ResponseValue" id="response-dosya-@element.FormElementId" />
-                    break;
+                    case "Dosya yükleme":
+                        <input type="file" class="form-control-file" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value" />
+                        break;
 
-                default:
-                                    <span class="text-danger">Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
-                    break;
+                    default:
+                        <span class="text-danger">Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
+                        break;
+                }
             }
-        }
-        
+        </div>
+    }
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Formu Gönder</button>
     </div>
-    
-}
-<div class="form-actions">
-    <button type="submit" class="btn btn-primary" onclick="WriteConsole(event)">Formu Gönder</button>
-</div>
 </form>
+
 
 
 
@@ -104,8 +88,9 @@
 
                         // FormOptions üzerinde döngü yapılmalı
                         element.formOptions.forEach(function (option) {
+                            debugger
                             var optionItem = `<div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="IsSelected" id="radio${option.formOptionId}" value="${option.name}">
+                                                        <input class="form-check-input" type="radio" name="IsSelected" id="radio${option.formOptionId}" value="${option.value}">
                                                         <label class="form-check-label" for="radio${option.formOptionId}">
                                                             ${option.name}
                                                         </label>
@@ -119,7 +104,7 @@
 
                         // FormOptions üzerinde döngü yapılmalı
                         element.formOptions.forEach(function (option) {
-                            var optionItem = `<option value="${option.formOptionId}">${option.name}</option>`;
+                            var optionItem = `<option value="${option.value}">${option.name}</option>`;
                             selectElement.append(optionItem);
                         });
                     }

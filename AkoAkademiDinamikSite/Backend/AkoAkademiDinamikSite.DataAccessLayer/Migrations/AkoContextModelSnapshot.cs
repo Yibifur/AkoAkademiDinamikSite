@@ -90,6 +90,34 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
                     b.ToTable("Forms");
                 });
 
+            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormAnswer", b =>
+                {
+                    b.Property<int>("FormAnswerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FormAnswerId"), 1L, 1);
+
+                    b.Property<int>("FormElementId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FormId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FormAnswerId");
+
+                    b.HasIndex("FormElementId")
+                        .IsUnique();
+
+                    b.HasIndex("FormId");
+
+                    b.ToTable("FormAnswers");
+                });
+
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormElement", b =>
                 {
                     b.Property<int>("FormElementId")
@@ -208,6 +236,25 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
                     b.ToTable("Pages");
                 });
 
+            modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormAnswer", b =>
+                {
+                    b.HasOne("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormElement", "FormElement")
+                        .WithOne()
+                        .HasForeignKey("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormAnswer", "FormElementId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Form", "Form")
+                        .WithMany("FormAnswers")
+                        .HasForeignKey("FormId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Form");
+
+                    b.Navigation("FormElement");
+                });
+
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.FormElement", b =>
                 {
                     b.HasOne("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Form", "Form")
@@ -241,6 +288,8 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
 
             modelBuilder.Entity("AkoAkademiDinamikSite.EntityLayer.ReelConcrete.Form", b =>
                 {
+                    b.Navigation("FormAnswers");
+
                     b.Navigation("FormElements");
                 });
 
