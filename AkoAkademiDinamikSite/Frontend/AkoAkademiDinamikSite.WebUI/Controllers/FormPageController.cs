@@ -54,7 +54,7 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
                
                 var responses = await Task.WhenAll(responseTasks);
 
-                // Tüm yanıtların başarılı olup olmadığını kontrol et
+                
                 if (responses.All(response => response.IsSuccessStatusCode))
                 {
                     

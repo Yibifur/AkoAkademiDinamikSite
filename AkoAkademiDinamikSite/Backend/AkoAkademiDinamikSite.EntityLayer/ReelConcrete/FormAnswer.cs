@@ -12,7 +12,7 @@ namespace AkoAkademiDinamikSite.EntityLayer.ReelConcrete
         public int FormId { get; set; }
         public Form Form { get; set; }
         public int FormElementId { get; set; }
-        public FormElement FormElement { get; set; }
+        public List<FormElement> FormElements { get; set; }
         public string Value { get; set; }
         
     }

@@ -107,7 +107,7 @@
                         element.formOptions.forEach(function (option) {
                             debugger
                             var optionItem = `<div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="FormAnswers[@a2].Value" id="radio${option.formOptionId}" value="${option.value}">
+                                                                <input class="form-check-input" type="radio" name="FormAnswers[@a2].Value" id="radio${option.formOptionId}" value="${option.name}">
                                                         <label class="form-check-label" for="radio${option.formOptionId}">
                                                             ${option.name}
                                                         </label>
@@ -121,7 +121,7 @@
 
                         // FormOptions üzerinde döngü yapılmalı
                         element.formOptions.forEach(function (option) {
-                            var optionItem = `<option value="${option.value}">${option.name}</option>`;
+                            var optionItem = `<option value="${option.name}">${option.name}</option>`;
                             selectElement.append(optionItem);
                         });
                     }

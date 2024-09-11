@@ -4,6 +4,7 @@ using AkoAkademiDinamikSite.DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AkoAkademiDinamikSite.DataAccessLayer.Migrations
 {
     [DbContext(typeof(AkoContext))]
-    partial class AkoContextModelSnapshot : ModelSnapshot
+    [Migration("20240911121216_mig_1109v4")]
+    partial class mig_1109v4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
