@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+    
 }
 <head>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +25,7 @@
                         break;
 
                     case "Şıklı seçim":
-                        <div id="siklisecim-@element.FormElementId" class="form-check" name="FormAnswers[@Model.FormElements.IndexOf(element)].Title">
+                        <div id="siklisecim-@element.FormElementId" class="form-check" name="FormAnswers[@Model.FormElements.IndexOf(element)].Value">
                             @* Radio buttonlar ajax ile doldurulacak *@
                         </div>
                         
@@ -90,7 +91,7 @@
                         element.formOptions.forEach(function (option) {
                             debugger
                             var optionItem = `<div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="IsSelected" id="radio${option.formOptionId}" value="${option.value}">
+                                                                <input class="form-check-input" type="radio" name="FormAnswers[2].Value" id="radio${option.formOptionId}" value="${option.value}">
                                                         <label class="form-check-label" for="radio${option.formOptionId}">
                                                             ${option.name}
                                                         </label>
