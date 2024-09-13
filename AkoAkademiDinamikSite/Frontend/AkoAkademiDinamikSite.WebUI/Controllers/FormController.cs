@@ -4,11 +4,14 @@ using AkoAkademiDinamikSite.EntityLayer.ReelConcrete;
 using AkoAkademiDinamikSite.WebUI.Models.Content;
 using AkoAkademiDinamikSite.WebUI.Models.Form;
 using AkoAkademiDinamikSite.WebUI.Models.FormElement;
+using AkoAkademiDinamikSite.WebUI.Models.FormOption;
 using AkoAkademiDinamikSite.WebUI.Models.Layout;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Text;
+using System.Xml.Linq;
 
 namespace AkoAkademiDinamikSite.WebUI.Controllers
 {
@@ -193,6 +196,32 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
 
             }
             return View();
+        }
+        [HttpGet]
+        public async Task<IActionResult> UpdateFormElement(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:7029/api/FormElements/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<UpdateFormElementDto>(jsonData);
+                return Ok(values);
+
+            }
+            return View();
+        }
+        [HttpPut]
+        public async Task<IActionResult> UpdateFormElement(UpdateFormElementDto model)
+        {        
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(model);
+            StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PutAsync($"http://localhost:7029/api/FormElements", content);
+            if (responseMessage.IsSuccessStatusCode) { return Ok(); }
+            return Ok();
+
+
         }
 
     }

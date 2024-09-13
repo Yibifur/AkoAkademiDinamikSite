@@ -50,6 +50,7 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Repositories.FormOptionRepositor
 
         public void Update(FormOption entity)
         {
+            
             context.FormOptions.Update(entity);
             context.SaveChanges();
         }

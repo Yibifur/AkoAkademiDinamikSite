@@ -38,7 +38,7 @@ namespace AkoAkademiDinamikSite.BusinessLayer.Concrete
         {
             return FormElementDal.GetById(id);
         }
-
+        
         public void TInsert(FormElement entity)
         {
             FormElementDal.Insert(entity);

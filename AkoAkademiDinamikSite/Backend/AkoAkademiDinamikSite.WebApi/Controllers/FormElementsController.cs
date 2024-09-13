@@ -60,7 +60,7 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
         {
             FormElement FormElement = new FormElement()
             {
-                FormElementId = model.FormId,
+                FormElementId = model.FormElementId,
                 ControlType = model.ControlType,
                 FormId = model.FormId,
                 IsRequired = model.IsRequired,

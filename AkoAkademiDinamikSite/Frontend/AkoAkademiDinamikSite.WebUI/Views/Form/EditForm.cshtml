@@ -188,101 +188,130 @@
                                     {
                                         case "Yazı alanı":
 
-                                                                                <div class="form-element">
-                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                    <input type="text" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
-                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                        <i class="fas fa-trash"></i> Sil
-                                                                                    </button>
-                                                                                </div>
+                                                                                    <div class="form-element">
+                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                        <input type="text" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
+                                                                                        <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                             Sil
+                                                                                        </button>
+                                                <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                                                             Güncelle
+                                                                                        </button>
+                                                                                    </div>
                                             break;
                                         case "Şıklı seçim":
                                             
-                                                                                <div class="form-element">
-                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                          <!-- <button type="button" onclick="loadOptionsForRadioButton(@element.FormElementId)">seçenekleri göster</button>-->
+                                                                                    <div class="form-element">
+                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                              <!-- <button type="button" onclick="loadOptionsForRadioButton(@element.FormElementId)">seçenekleri göster</button>-->
 
-                                                                        <form id="siklisecim-@element.FormElementId">
-
-                                                                        </form><button type="button" class="plus-button" data-controlType="@element.ControlType" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
-                                                                                    <button type="button" class="delete-button"  data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                        <i class="fas fa-trash"></i> Sil
-                                                                                    </button>
-                                                                                </div>
+                                                                            <form id="siklisecim-@element.FormElementId">
+                                                </form><button type="button" class="plus-button btn btn-success" data-controlType="@element.ControlType" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
+                                                <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                             Sil
+                                                                                        </button>
+                                                <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                         Güncelle
+                                                    </button>
+                                                                                    </div>
                                             break;
                                         case "Listeli seçim":
-                                                                                <div class="form-element">
-                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                <select id="selectoptions-@element.FormElementId" onclick="loadOptions(@element.FormElementId)">
-                                                                        </select> <button type="button" class="plus-button" data-controlType="@element.ControlType" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
-                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                        <i class="fas fa-trash"></i> Sil
-                                                                                    </button>
-                                                                                  </div>
+                                                                                    <div class="form-element">
+                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                    <select id="selectoptions-@element.FormElementId" onclick="loadOptions(@element.FormElementId)">
+                                                </select> <button type="button" class="plus-button btn btn-success" data-controlType="@element.ControlType" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
+                                                <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                             Sil
+                                                                                        </button>
+                                                <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                         Güncelle
+                                                    </button>
+                                                                                      </div>
                                            
                                             break;
                                         case "Numara":
-                                                                                <div class="form-element">
-                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                            <input type="number" />
-                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                        <i class="fas fa-trash"></i> Sil
-                                                                                    </button>
-                                                                                </div>
+                                                                                    <div class="form-element">
+                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                                <input type="number" />
+                                                <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                             Sil
+                                                                                        </button>
+                                                <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                         Güncelle
+                                                    </button>
+                                                                                    </div>
                                             break;
                                         case "Tarih":
-                                                                                    <div class="form-element">
-                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                            <input type="date" />
-                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                        <i class="fas fa-trash"></i> Sil
-                                                                                    </button>
-                                                                                </div>
+                                                                                        <div class="form-element">
+                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                                <input type="date" />
+                                                <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                             Sil
+                                                                                        </button>
+                                                <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                         Güncelle
+                                                    </button>
+                                                                                    </div>
                                             break;
                                         case "Email":
-                                                                                        <div class="form-element">
-                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                            <input type="email" placeholder="example@example.com" />
-                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                        <i class="fas fa-trash"></i> Sil
-                                                                                    </button>
-                                                                                </div>
+                                                                                            <div class="form-element">
+                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                                <input type="email" placeholder="example@example.com" />
+                                                <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                             Sil
+                                                                                        </button>
+                                                <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                        Güncelle
+                                                    </button>
+                                                                                    </div>
                                             break;
                                         case "Başlık":
-                                                                                            <div class="form-element">
-                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                            <h3>@element.Title</h3>
-                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                        <i class="fas fa-trash"></i> Sil
-                                                                                    </button>
-                                                                                </div>
+                                                                                                <div class="form-element">
+                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                                <h3>@element.Title</h3>
+                                                <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                             Sil
+                                                                                        </button>
+                                                <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                         Güncelle
+                                                    </button>
+                                                                                    </div>
                                             break;
                                         case "Telefon":
-                                                                                                <div class="form-element">
-                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                            <input type="tel" placeholder="+90 555 555 55 55" />
-                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                        <i class="fas fa-trash"></i> Sil
-                                                                                    </button>
-                                                                                </div>
+                                                                                                    <div class="form-element">
+                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                                <input type="tel" placeholder="+90 555 555 55 55" />
+                                                <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                             Sil
+                                                                                        </button>
+                                                <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                         Güncelle
+                                                    </button>
+                                                                                    </div>
                                             break;
                                         case "Dosya yükleme":
-                                                                                                    <div class="form-element">
-                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                            <input type="file" />
-                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                        <i class="fas fa-trash"></i> Sil
-                                                                                    </button>
-                                                                                </div>
+                                                                                                        <div class="form-element">
+                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                                <input type="file" />
+                                                <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                             Sil
+                                                                                        </button>
+                                                <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                         Güncelle
+                                                    </button>
+                                                                                    </div>
                                             break;
                                         default:
-                                                                                                        <div class="form-element">
-                                                                                    <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                            <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
-                                                                                    <button type="button" class="delete-button" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                        <i class="fas fa-trash"></i> Sil
-                                                                                    </button>
-                                                                                </div>
+                                                                                                            <div class="form-element">
+                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
+                                                                                                <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
+                                                <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                                                             Sil
+                                                                                        </button>
+                                                    <button type="button" class="update-button" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                         Güncelle
+                                                    </button>
+                                                                                    </div>
                                             break;
                                     }
                                 }
@@ -292,9 +321,9 @@
                 </div>
             </div>
         </div>
-        <div class="save-changes">
+        @*<div class="save-changes">
             <button type="reset" class="btn btn-cancel">Değişiklikleri Kaydet</button>
-        </div>
+        </div>*@
     </div>
     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -340,7 +369,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="reset" class="btn btn-secondary btn-cancel" data-dismiss="modal">Close</button>
-                                <button type="submit" data-elementId="@globalFormElementId" class="btn btn-primary" onclick="getFormOptionsInMainList(this)">Save changes</button>
+                                <button type="button" data-elementId="@globalFormElementId" class="btn btn-primary" onclick="getFormOptionsInMainList(this)">Save changes</button>
                             </div>
                         </form>
                     </div>
@@ -348,7 +377,23 @@
             </div>
         </div>
     </div>
-   
+    <div class="modal fade" id="exampleModalLongUpdate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Form Elemanı Güncelle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="UpdatingFormElement" class="option-container">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             function openModal(button) {
@@ -370,6 +415,76 @@
 
 
             }
+        function openModalForUpdate(button) {
+            // Modal'ı açar
+
+            $("#exampleModalLongUpdate").modal('show'); // Modalı açar
+            debugger
+            // Data attribute'den FormElementId değerini al
+            var value = button.getAttribute('data-id');
+            var control = button.getAttribute('data-controlType');
+            var formElement = document.getElementById('FormElementId');
+            var formControlElement = document.getElementById('FormElementControlType');
+            formControlElement.value = control;
+            formElement.value = value;
+            globalFormElementId = value;
+
+            $.ajax({
+                type: 'GET',
+                url: `/Form/UpdateFormElement/${value}`, // API endpoint
+                success: function (response) {
+                    
+                        debugger
+                    var selectElement = document.getElementById('UpdatingFormElement');
+
+
+
+                    selectElement.innerHTML = `<form id="formElementUpdate" method="post">
+
+                                    <h2>Opsiyon Güncelle</h2>
+                                    <div class="form-group">
+                                        <input type="hidden" value="@formId" id="FormId" name="FormId" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" value="${response.controlType}" id="FormElementControlType" name="ControlType" />
+                                    </div>
+                                    <div class="form-group">
+
+                                                <input type="hidden" value="${response.formElementId}" id="FormElementId" name="FormElementId" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="isim">Başlık :</label>
+                                        <input type="text" id="isim" name="Title" placeholder="Başlık giriniz" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="deger">Zorunlu Alan? :</label>
+                                                <input type="checkbox" id="deger" name="IsRequired"  />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sira">Sıra :</label>
+                                        <input type="number" id="sira" name="Order" placeholder="Sıra giriniz" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="reset" class="btn btn-secondary btn-cancel" data-dismiss="modal">Close</button>
+
+                                                <button type="button" data-elementId="@globalFormElementId" class="btn btn-primary" onclick="updateFormElement(this)">Save changes</button>
+                                    </div>
+                                </form>`;
+                   
+                        
+                    
+
+                    // getFormOptions fonksiyonunu çağır
+                    getFormOptions(value);
+                },
+                error: function (error) {
+                    console.error('Veri alınırken bir hata oluştu:', error);
+                    alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
+                }
+            });
+
+
+        }
         function getFormOptionsInMainList(button) {
             // Data attribute'den FormElementId değerini al
             // var value = button.getAttribute('data-elementId');
@@ -422,6 +537,7 @@
                         url: '/FormOption/AddFormOption', // Sunucu tarafında formu işleyecek URL
                         data: formData,
                         success: function (response) {
+                            debugger
                             // Başarılı işlem sonrasında yapılacaklar
                             if (response.controlType === "Listeli seçim") {
                                 var newOption = `<option>${response.name}</option>`;
@@ -634,9 +750,93 @@
            getValues();
     });
 
-           
-       
+        function getUpdateValues() {
+            // Form ID'yi alıyoruz (gerekirse uygun ID ile değiştirilmelidir)
+            var formID = $('#FormId').val(); // Bu ID'nin doğru olduğundan emin olun
 
+            // Form ID'nin varlığını kontrol et
+            if (!formID) {
+                console.error('Form ID bulunamadı.');
+                return;
+            }
+
+            // AJAX çağrısı ile verileri al
+            $.ajax({
+                type: 'GET',
+                url: `/Form/GetAllFormElements/${formID}`, // API endpoint
+                success: function (response) {
+                    response.forEach(function (element) {
+                        debugger
+                        if (element.controlType === "Şıklı seçim") {
+                            // Seçim elemanını bul ve güncelle
+                            var selectElement = $(`#siklisecim-${element.formElementId}`);
+
+                            if (selectElement.length) {
+                                selectElement.empty(); // Mevcut seçenekleri temizle
+
+                                element.formOptions.forEach(function (option) {
+                                    var optionItem = `<div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="IsSelected" id="radio${option.formOptionId}" value="${option.name}">
+                                                        <label class="form-check-label" for="radio${option.formOptionId}">
+                                                            ${option.name}
+                                                        </label>
+                                                      </div>`;
+                                    selectElement.append(optionItem);
+                                });
+                            }
+                        } else if (element.controlType === "Listeli seçim") {
+                            // Seçim listesi elemanını bul ve güncelle
+                            var selectElement = $(`#selectoptions-${element.formElementId}`);
+
+                            if (selectElement.length) {
+                                selectElement.empty(); // Mevcut seçenekleri temizle
+
+                                element.formOptions.forEach(function (option) {
+                                    var optionItem = `<option value="${option.formOptionId}">${option.name}</option>`;
+                                    selectElement.append(optionItem);
+                                });
+                            }
+                        }
+                        else if (element.controlType === "Yazılı alan") {
+                            // Seçim listesi elemanını bul ve güncelle
+                            var selectElement = $(`#selectoptions-${element.formElementId}`);
+
+                            
+                        }
+                    });
+                },
+                error: function (error) {
+                    console.error('Veri alınırken bir hata oluştu:', error);
+                    alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
+                }
+            });
+        }
+        function updateFormElement(button) {
+            // AJAX çağrısı
+            
+            var formData = $("#formElementUpdate").serialize();
+            $.ajax({
+                type: 'PUT',
+                url: `/Form/UpdateFormElement`, // API endpoint
+                data: formData,
+                success: function (response) {
+                    // Başarılı olursa, select öğesini bulup verileri ekleyin
+                   
+                    alert('veriler güncellendi');
+                    location.reload();
+                    // Gelen verilerle seçenekleri doldur
+                    
+                },
+                error: function (error) {
+                    // Hata durumunda yapılacaklar
+                    console.error('Veri alınırken bir hata oluştu:', error);
+                    alert('Veri alınırken bir hata oluştu, lütfen tekrar deneyin.');
+                }
+            });
+
+            return false;
+        }
+            
         </script>
    
    

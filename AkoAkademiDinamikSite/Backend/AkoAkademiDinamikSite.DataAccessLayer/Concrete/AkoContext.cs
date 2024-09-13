@@ -39,12 +39,6 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Concrete
                 .HasForeignKey(fa => fa.FormId)
                 .OnDelete(DeleteBehavior.NoAction); // Silme davranışını düzenledik
 
-            // FormElement ile FormAnswer arasındaki bire bir ilişki
-            //modelBuilder.Entity<FormAnswer>()
-            //    .HasOne(fa => fa.FormElement)
-            //    .WithOne() // FormElement üzerinde karşılık gelen bir koleksiyon veya navigasyon özelliği yok
-            //    .HasForeignKey<FormAnswer>(fa => fa.FormElementId)
-            //    .OnDelete(DeleteBehavior.NoAction); // Silme davranışını düzenledik
         }
 
 

@@ -36,7 +36,7 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Repositories.FormElementElementR
 
         public List<FormElement> GetAllFormElementsByFormId(int id)
         {
-            var values=context.FormElements.Include(x=>x.FormOptions).Where(x=> x.FormId == id).ToList();
+            var values = context.FormElements.Include(x => x.FormOptions).Where(x => x.FormId == id).ToList();
             return values;
         }
 
