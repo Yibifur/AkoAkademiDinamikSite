@@ -120,6 +120,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Oluşturucu</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -128,7 +131,7 @@
             <p>Form Üst Bilgi</p>
         </div>
         <div class="main-container">
-            <div id="AddingFormElement"class="form-section">
+            <div id="AddingFormElement" class="form-section">
                 <div class="form-header">
                     <h2>Form Oluşturucu</h2>
                 </div>
@@ -168,7 +171,7 @@
                     </div>
                 </form>
             </div>
-           
+
             <div class="preview-section">
                 <div class="form-header">
                     <h2>Form Önizleme</h2>
@@ -178,140 +181,140 @@
                     @if (form != null)
                     {
 
-                        foreach (var element in form.FormElements.OrderBy(a=>a.Order))
+                        foreach (var element in form.FormElements.OrderBy(a => a.Order))
                         {
-                           
+
                             <div class="form-group">
-                              
+
                                 @{
                                     switch (element.ControlType)
                                     {
                                         case "Yazı alanı":
 
-                                                                                    <div class="form-element">
-                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                        <input type="text" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
-                                                                                        <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                             Sil
-                                                                                        </button>
+                                            <div class="form-element">
+                                                <label id="labelkisim">@element.Order-@element.Title</label>
+                                                <input type="text" placeholder="Yazınızı yazın" @(element.IsRequired ? "required" : "") />
+                                                <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
+                                                    Sil
+                                                </button>
                                                 <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
-                                                                                             Güncelle
-                                                                                        </button>
-                                                                                    </div>
+                                                    Güncelle
+                                                </button>
+                                            </div>
                                             break;
                                         case "Şıklı seçim":
-                                            
-                                                                                    <div class="form-element">
-                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                              <!-- <button type="button" onclick="loadOptionsForRadioButton(@element.FormElementId)">seçenekleri göster</button>-->
 
-                                                                            <form id="siklisecim-@element.FormElementId">
+                                            <div class="form-element">
+                                                <label id="labelkisim">@element.Order-@element.Title</label>
+                                                <!-- <button type="button" onclick="loadOptionsForRadioButton(@element.FormElementId)">seçenekleri göster</button>-->
+
+                                                <form id="siklisecim-@element.FormElementId">
                                                 </form><button type="button" class="plus-button btn btn-success" data-controlType="@element.ControlType" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
                                                 <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                             Sil
-                                                                                        </button>
+                                                    Sil
+                                                </button>
                                                 <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
-                                                         Güncelle
-                                                    </button>
-                                                                                    </div>
+                                                    Güncelle
+                                                </button>
+                                            </div>
                                             break;
                                         case "Listeli seçim":
-                                                                                    <div class="form-element">
-                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                    <select id="selectoptions-@element.FormElementId" onclick="loadOptions(@element.FormElementId)">
+                                            <div class="form-element">
+                                                <label id="labelkisim">@element.Order-@element.Title</label>
+                                                <select id="selectoptions-@element.FormElementId" onclick="loadOptions(@element.FormElementId)">
                                                 </select> <button type="button" class="plus-button btn btn-success" data-controlType="@element.ControlType" data-elementId="@element.FormElementId" onclick="openModal(this)"> Seçenek Ekle</button>
                                                 <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                             Sil
-                                                                                        </button>
+                                                    Sil
+                                                </button>
                                                 <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
-                                                         Güncelle
-                                                    </button>
-                                                                                      </div>
-                                           
+                                                    Güncelle
+                                                </button>
+                                            </div>
+
                                             break;
                                         case "Numara":
-                                                                                    <div class="form-element">
-                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                                <input type="number" />
+                                            <div class="form-element">
+                                                <label id="labelkisim">@element.Order-@element.Title</label>
+                                                <input type="number" />
                                                 <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                             Sil
-                                                                                        </button>
+                                                    Sil
+                                                </button>
                                                 <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
-                                                         Güncelle
-                                                    </button>
-                                                                                    </div>
+                                                    Güncelle
+                                                </button>
+                                            </div>
                                             break;
                                         case "Tarih":
-                                                                                        <div class="form-element">
-                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                                <input type="date" />
+                                            <div class="form-element">
+                                                <label id="labelkisim">@element.Order-@element.Title</label>
+                                                <input type="date" />
                                                 <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                             Sil
-                                                                                        </button>
+                                                    Sil
+                                                </button>
                                                 <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
-                                                         Güncelle
-                                                    </button>
-                                                                                    </div>
+                                                    Güncelle
+                                                </button>
+                                            </div>
                                             break;
                                         case "Email":
-                                                                                            <div class="form-element">
-                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                                <input type="email" placeholder="example@example.com" />
+                                            <div class="form-element">
+                                                <label id="labelkisim">@element.Order-@element.Title</label>
+                                                <input type="email" placeholder="example@example.com" />
                                                 <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                             Sil
-                                                                                        </button>
+                                                    Sil
+                                                </button>
                                                 <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
-                                                        Güncelle
-                                                    </button>
-                                                                                    </div>
+                                                    Güncelle
+                                                </button>
+                                            </div>
                                             break;
                                         case "Başlık":
-                                                                                                <div class="form-element">
-                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                                <h3>@element.Title</h3>
+                                            <div class="form-element">
+                                                <label id="labelkisim">@element.Order-@element.Title</label>
+                                                <h3>@element.Title</h3>
                                                 <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                             Sil
-                                                                                        </button>
+                                                    Sil
+                                                </button>
                                                 <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
-                                                         Güncelle
-                                                    </button>
-                                                                                    </div>
+                                                    Güncelle
+                                                </button>
+                                            </div>
                                             break;
                                         case "Telefon":
-                                                                                                    <div class="form-element">
-                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                                <input type="tel" placeholder="+90 555 555 55 55" />
+                                            <div class="form-element">
+                                                <label id="labelkisim">@element.Order-@element.Title</label>
+                                                <input type="tel" placeholder="+90 555 555 55 55" />
                                                 <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                             Sil
-                                                                                        </button>
+                                                    Sil
+                                                </button>
                                                 <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
-                                                         Güncelle
-                                                    </button>
-                                                                                    </div>
+                                                    Güncelle
+                                                </button>
+                                            </div>
                                             break;
                                         case "Dosya yükleme":
-                                                                                                        <div class="form-element">
-                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                                <input type="file" />
+                                            <div class="form-element">
+                                                <label id="labelkisim">@element.Order-@element.Title</label>
+                                                <input type="file" />
                                                 <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                             Sil
-                                                                                        </button>
+                                                    Sil
+                                                </button>
                                                 <button type="button" class="update-button btn btn-primary" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
-                                                         Güncelle
-                                                    </button>
-                                                                                    </div>
+                                                    Güncelle
+                                                </button>
+                                            </div>
                                             break;
                                         default:
-                                                                                                            <div class="form-element">
-                                                                                        <label id="labelkisim">@element.Order-@element.Title</label>
-                                                                                                <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
+                                            <div class="form-element">
+                                                <label id="labelkisim">@element.Order-@element.Title</label>
+                                                <span>Desteklenmeyen Kontrol Tipi: @element.ControlType</span>
                                                 <button type="button" class="delete-button btn btn-danger" data-id="@element.FormElementId" onclick="deleteFormElement(this)">
-                                                                                             Sil
-                                                                                        </button>
-                                                    <button type="button" class="update-button" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
-                                                         Güncelle
-                                                    </button>
-                                                                                    </div>
+                                                    Sil
+                                                </button>
+                                                <button type="button" class="update-button" data-id="@element.FormElementId" onclick="openModalForUpdate(this)">
+                                                    Güncelle
+                                                </button>
+                                            </div>
                                             break;
                                     }
                                 }
@@ -321,10 +324,10 @@
                 </div>
             </div>
         </div>
-        @*<div class="save-changes">
-            <button type="reset" class="btn btn-cancel">Değişiklikleri Kaydet</button>
-        </div>*@
+        
     </div>
+        
+    
     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

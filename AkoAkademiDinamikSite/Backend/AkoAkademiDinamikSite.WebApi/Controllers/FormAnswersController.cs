@@ -37,6 +37,8 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
         {
             FormAnswer FormAnswer = new FormAnswer()
             {
+                
+                
                 FormElementId = model.FormElementId,
                 FormId = model.FormId,
                 Value = model.Value

@@ -1,0 +1,62 @@
+﻿@model List<FormAnswer>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_Adminlayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible=" IE="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Cevapları</title>
+    <!-- Bootstrap CSS Kütüphanesi -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Form Cevapları</h1>
+        <div class="row">
+            <!-- Formlar için örnek veri döngüsü -->
+            @foreach (var form in Model.OrderBy(f => f.FormId))
+            {
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h4>Form ID: @form.FormId</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <!-- Form Elemanları için döngü -->
+                                
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="border p-3">
+                                            <h5>Form Element ID: @form.FormElementId</h5>
+                                            <ul class="list-group">
+                                                <!-- Eleman cevapları -->
+                                                
+                                                    <li class="list-group-item">
+                                                        <strong>Cevap:</strong> @form.Value
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Bootstrap JS ve jQuery Kütüphaneleri -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
