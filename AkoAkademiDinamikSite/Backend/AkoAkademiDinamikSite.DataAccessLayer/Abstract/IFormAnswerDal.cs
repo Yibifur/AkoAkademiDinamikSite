@@ -10,5 +10,6 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Abstract
 {
     public interface IFormAnswerDal:IGenericDal<FormAnswer>
     {
+        List<FormAnswer> GetAllFormAnswersByFormElementId(int formElementId);
     }
 }

@@ -25,10 +25,12 @@ namespace AkoAkademiDinamikSite.WebUI.Controllers
 
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<FormAnswer>>(jsonData);
+                
                 return View(values);
 
             }
             return View();
         }
+        
     }
 }

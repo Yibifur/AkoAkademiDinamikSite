@@ -148,6 +148,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormAnswersController",
+    "Method": "GetFormAnswersByFormElementId",
+    "RelativePath": "api/FormAnswers/formanswersbyformelementid",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AkoAkademiDinamikSite.WebApi.Controllers.FormElementsController",
     "Method": "GetAllFormElements",
     "RelativePath": "api/FormElements",

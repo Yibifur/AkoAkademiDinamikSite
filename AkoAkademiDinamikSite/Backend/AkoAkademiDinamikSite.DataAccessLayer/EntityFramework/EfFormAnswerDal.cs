@@ -1,6 +1,7 @@
 ﻿using AkoAkademiDinamikSite.DataAccessLayer.Abstract;
 using AkoAkademiDinamikSite.DataAccessLayer.Concrete;
 using AkoAkademiDinamikSite.DataAccessLayer.Repositories;
+using AkoAkademiDinamikSite.DataAccessLayer.Repositories.FormAnswerRepository;
 using AkoAkademiDinamikSite.EntityLayer.ReelConcrete;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace AkoAkademiDinamikSite.DataAccessLayer.EntityFramework
 {
-    public class EfFormAnswerDal : GenericRepository<FormAnswer>, IFormAnswerDal
+    public class EfFormAnswerDal : FormAnswerRepository, IFormAnswerDal
     {
         public EfFormAnswerDal(AkoContext context) : base(context)
         {

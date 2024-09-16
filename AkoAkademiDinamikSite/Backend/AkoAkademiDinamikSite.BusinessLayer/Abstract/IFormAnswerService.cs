@@ -9,5 +9,6 @@ namespace AkoAkademiDinamikSite.BusinessLayer.Abstract
 {
     public interface IFormAnswerService : IGenericService<FormAnswer>
     {
+        List<FormAnswer> TGetAllFormAnswersByFormElementId(int formElementId);
     }
 }

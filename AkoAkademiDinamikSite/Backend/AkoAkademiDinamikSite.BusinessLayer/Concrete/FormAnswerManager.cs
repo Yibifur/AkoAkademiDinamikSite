@@ -18,6 +18,11 @@ namespace AkoAkademiDinamikSite.BusinessLayer.Concrete
             this.FormAnswerDal = FormAnswerDal;
         }
 
+        public List<FormAnswer> TGetAllFormAnswersByFormElementId(int formElementId)
+        {
+            return FormAnswerDal.GetAllFormAnswersByFormElementId(formElementId);
+        }
+
         public void TDelete(int id)
         {
             FormAnswerDal.Delete(id);

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AkoAkademiDinamikSite.DataAccessLayer.Repositories.FormAnswerRepository
 {
-    internal class FormAnswerRepository:IFormAnswerDal
+    public class FormAnswerRepository:IFormAnswerDal
     {
         private readonly AkoContext context;
         public FormAnswerRepository(AkoContext context)
@@ -30,15 +30,19 @@ namespace AkoAkademiDinamikSite.DataAccessLayer.Repositories.FormAnswerRepositor
 
         public List<FormAnswer> GetAll()
         {
-            var values = context.FormAnswers.Include(x => x.FormElements).ToList();
+            var values = context.FormAnswers.Include(x=>x.FormElement).ToList();
             return values;
         }
 
-       
+        public List<FormAnswer> GetAllFormAnswersByFormElementId(int formElementId)
+        {
+            var values=context.FormAnswers.Where(x=>x.FormElementId == formElementId).ToList();
+            return values;
+        }
 
         public FormAnswer GetById(int id)
         {
-            var value = context.FormAnswers.Include(x => x.FormElements).FirstOrDefault(x => x.FormAnswerId == id);
+            var value = context.FormAnswers.FirstOrDefault(x => x.FormAnswerId == id);
             return value;
         }
 

@@ -15,5 +15,6 @@ namespace AkoAkademiDinamikSite.DtoLayer.Dtos.FormElementDtos
         public string ControlType { get; set; }
         public int FormId { get; set; }
         
+
     }
 }

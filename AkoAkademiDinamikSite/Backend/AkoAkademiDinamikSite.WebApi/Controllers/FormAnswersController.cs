@@ -39,7 +39,7 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
             {
                 
                 
-                FormElementId = model.FormElementId,
+               FormElementId = model.FormElementId,
                 FormId = model.FormId,
                 Value = model.Value
                 
@@ -54,8 +54,9 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
         {
             FormAnswer FormAnswer = new FormAnswer()
             {
+                
                 FormAnswerId=model.FormAnswerId,
-                FormElementId=model.FormElementId,  
+                FormElementId=model.FormElementId,
                 FormId = model.FormId,
                 Value = model.Value
             };
@@ -68,6 +69,13 @@ namespace AkoAkademiDinamikSite.WebApi.Controllers
         public IActionResult DeleteFormAnswer(int id)
         {
             FormAnswerService.TDelete(id);
+            return Ok("Sayfa silindi");
+
+        }
+        [HttpGet("formanswersbyformelementid")]
+        public IActionResult GetFormAnswersByFormElementId(int id)
+        {
+            FormAnswerService.TGetAllFormAnswersByFormElementId(id);
             return Ok("Sayfa silindi");
 
         }
