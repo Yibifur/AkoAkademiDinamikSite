@@ -24,16 +24,17 @@
                     <h2 class="accordion-header" id="heading-@group.Key">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@group.Key" aria-expanded="true" aria-controls="collapseOne">
                             Form  ID:@group.FirstOrDefault().FormId
-                            Form Element ID: @group.Key -> @group.FirstOrDefault().FormElement.Title
+                            Form Element ID: @group.Key -> <strong>Başlık:</strong> @group.FirstOrDefault().FormElement.Title
                         </button>
                     </h2>
-                    <div id="collapse-@group.Key" class="accordion-collapse collapse show" aria-labelledby="heading-@group.Key" data-bs-parent="#accordionExample">
+                    <div id="collapse-@group.Key" class="accordion-collapse collapse" aria-labelledby="heading-@group.Key" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <ul class="list-group">
                                 <!-- Gruplandırılmış FormAnswer değerlerinin listelenmesi -->
                                 @foreach (var formAnswer in group)
                                 {
                                     <li class="list-group-item">
+                                        <strong>ID:</strong> @formAnswer.FormAnswerId
                                         <strong>Cevap:</strong> @formAnswer.Value
                                     </li>
                                 }
